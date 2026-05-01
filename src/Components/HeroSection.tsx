@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
@@ -24,8 +24,25 @@ const HeroSection = () => {
   const [telefone, setTelefone] = useState("");
   const [email, setEmail] = useState("");
   const [faturamento, setFaturamento] = useState("");
+  const [segmento, setSegmento] = useState("");
   const [enviado, setEnviado] = useState(false);
   const [carregando, setCarregando] = useState(false);
+
+  useEffect(() => {
+    const handleOpen = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+
+      setTimeout(() => {
+        setIsFormOpen(true);
+      }, 500);
+    };
+
+    window.addEventListener("open-diagnosis-modal", handleOpen);
+
+    return () => {
+      window.removeEventListener("open-diagnosis-modal", handleOpen);
+    };
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -38,6 +55,7 @@ const HeroSection = () => {
         telefone,
         email,
         faturamento,
+        segmento,
       },
     ]);
 
@@ -50,6 +68,7 @@ const HeroSection = () => {
       setTelefone("");
       setEmail("");
       setFaturamento("");
+      setSegmento("");
 
       setTimeout(() => {
         setIsFormOpen(false);
@@ -65,21 +84,17 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-background pt-24 md:pt-28">
-      {/* Background premium */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,hsl(var(--primary)/0.22),transparent_35%),radial-gradient(circle_at_80%_10%,rgba(168,85,247,0.18),transparent_32%),linear-gradient(180deg,rgba(0,0,0,0.1),hsl(var(--background)))]" />
       <div className="absolute left-1/2 top-1/3 h-[620px] w-[620px] -translate-x-1/2 rounded-full bg-primary/10 blur-[150px] animate-pulse" />
       <div className="absolute -right-40 top-28 h-[420px] w-[420px] rounded-full bg-purple-500/10 blur-[120px]" />
       <div className="absolute -left-40 bottom-10 h-[360px] w-[360px] rounded-full bg-primary/10 blur-[120px]" />
-
-      {/* Grid visual */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:80px_80px] opacity-20" />
 
       <div className="section-container relative z-10 grid min-h-[calc(100vh-7rem)] items-center gap-16 py-16 lg:grid-cols-[1.08fr_0.92fr] lg:py-20">
-        {/* Left content */}
         <div className="text-center lg:text-left">
           <div className="mb-10 flex justify-center lg:justify-start opacity-0 animate-fade-in">
             <img
-              src="/logo-pubird-full.png"
+              src="/logo-pubird.png"
               alt="Pubird"
               className="w-[250px] max-w-[80vw] opacity-95 drop-shadow-[0_0_45px_rgba(139,92,246,0.48)] transition duration-500 hover:scale-105 md:w-[330px]"
             />
@@ -142,13 +157,14 @@ const HeroSection = () => {
                 className="flex items-start gap-2 rounded-xl border border-border/40 bg-card/35 p-3 backdrop-blur-xl transition duration-300 hover:border-primary/40 hover:bg-primary/10"
               >
                 <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                <span className="text-sm text-muted-foreground">{benefit}</span>
+                <span className="text-sm text-muted-foreground">
+                  {benefit}
+                </span>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Right visual */}
         <div
           className="relative mx-auto w-full max-w-[490px] opacity-0 animate-fade-in-slow lg:mx-0"
           style={{ animationDelay: "0.42s" }}
@@ -192,7 +208,9 @@ const HeroSection = () => {
               <div className="grid grid-cols-3 gap-3">
                 <div className="rounded-2xl border border-border/40 bg-background/45 p-4 text-center">
                   <Target className="mx-auto mb-2 h-5 w-5 text-primary" />
-                  <p className="text-lg font-extrabold text-foreground">Funil</p>
+                  <p className="text-lg font-extrabold text-foreground">
+                    Funil
+                  </p>
                   <p className="mt-1 text-[11px] text-muted-foreground">
                     otimizado
                   </p>
@@ -208,7 +226,9 @@ const HeroSection = () => {
 
                 <div className="rounded-2xl border border-border/40 bg-background/45 p-4 text-center">
                   <Sparkles className="mx-auto mb-2 h-5 w-5 text-primary" />
-                  <p className="text-lg font-extrabold text-foreground">360°</p>
+                  <p className="text-lg font-extrabold text-foreground">
+                    360°
+                  </p>
                   <p className="mt-1 text-[11px] text-muted-foreground">
                     estratégia
                   </p>
@@ -229,10 +249,9 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Form modal */}
       {isFormOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm animate-fade-in">
-          <div className="relative w-full max-w-md rounded-2xl border border-primary/20 bg-card p-7 shadow-2xl">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 p-4 backdrop-blur-sm animate-fade-in">
+          <div className="relative w-full max-w-md rounded-[28px] border border-primary/20 bg-card/95 p-7 md:p-8 shadow-[0_0_90px_rgba(139,92,246,0.3)] backdrop-blur-2xl">
             <button
               type="button"
               aria-label="Fechar formulário"
@@ -244,81 +263,90 @@ const HeroSection = () => {
 
             {!enviado ? (
               <>
-                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-primary">
                   Diagnóstico gratuito
                 </p>
-                <h2 className="mb-2 text-2xl font-extrabold text-foreground">
-                  Vamos entender seu cenário
+
+                <h2 className="mb-7 text-2xl font-extrabold text-foreground">
+                  Receba uma análise do seu negócio
                 </h2>
-                <p className="mb-6 text-sm leading-6 text-muted-foreground">
-                  Preencha os dados e nosso time monta o primeiro direcionamento
-                  estratégico para o seu crescimento.
-                </p>
 
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                   <input
-                    value={nome}
-                    onChange={(e) => setNome(e.target.value)}
-                    placeholder="Seu nome"
-                    required
-                    className="w-full rounded-lg border border-border bg-background/60 px-4 py-3 text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
-                  />
-
-                  <input
                     value={nomeCompleto}
                     onChange={(e) => setNomeCompleto(e.target.value)}
-                    placeholder="Nome completo"
+                    placeholder="Qual é o seu nome e sobrenome?"
                     required
-                    className="w-full rounded-lg border border-border bg-background/60 px-4 py-3 text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
-                  />
-
-                  <input
-                    value={telefone}
-                    onChange={(e) => setTelefone(e.target.value)}
-                    placeholder="Telefone com WhatsApp"
-                    required
-                    className="w-full rounded-lg border border-border bg-background/60 px-4 py-3 text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                    className="h-14 w-full rounded-lg border border-border/50 bg-background/80 px-4 text-foreground placeholder:text-muted-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
                   />
 
                   <input
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     type="email"
-                    placeholder="Seu melhor e-mail"
+                    placeholder="Qual seu e-mail corporativo?"
                     required
-                    className="w-full rounded-lg border border-border bg-background/60 px-4 py-3 text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                    className="h-14 w-full rounded-lg border border-border/50 bg-background/80 px-4 text-foreground placeholder:text-muted-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                  />
+
+                  <input
+                    value={nome}
+                    onChange={(e) => setNome(e.target.value)}
+                    placeholder="Qual o nome da sua empresa?"
+                    required
+                    className="h-14 w-full rounded-lg border border-border/50 bg-background/80 px-4 text-foreground placeholder:text-muted-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                  />
+
+                  <input
+                    value={telefone}
+                    onChange={(e) => setTelefone(e.target.value)}
+                    placeholder="🇧🇷 Qual seu telefone?"
+                    required
+                    className="h-14 w-full rounded-lg border border-border/50 bg-background/80 px-4 text-foreground placeholder:text-muted-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
                   />
 
                   <select
                     value={faturamento}
                     onChange={(e) => setFaturamento(e.target.value)}
                     required
-                    className="w-full cursor-pointer rounded-lg border border-border bg-background/60 px-4 py-3 text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                    className="h-14 w-full cursor-pointer rounded-lg border border-border/50 bg-background/80 px-4 text-muted-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
                   >
-                    <option value="">Qual sua média de faturamento anual?</option>
-                    <option value="De 70 mil a 100 mil">
-                      De 70 mil a 100 mil
+                    <option value="">
+                      Qual o faturamento mensal da sua empresa?
                     </option>
-                    <option value="De 150 mil a 300 mil">
-                      De 150 mil a 300 mil
+                    <option value="Até 10 mil">Até R$10 mil</option>
+                    <option value="De 10 mil a 50 mil">
+                      De R$10 mil a R$50 mil
                     </option>
-                    <option value="De 400 mil a 600 mil">
-                      De 400 mil a 600 mil
+                    <option value="De 50 mil a 100 mil">
+                      De R$50 mil a R$100 mil
                     </option>
-                    <option value="De 1 milhão a 2 milhões">
-                      De 1 milhão a 2 milhões
+                    <option value="De 100 mil a 300 mil">
+                      De R$100 mil a R$300 mil
                     </option>
-                    <option value="Acima de 2 milhões">
-                      Acima de 2 milhões
-                    </option>
+                    <option value="Acima de 300 mil">Acima de R$300 mil</option>
+                  </select>
+
+                  <select
+                    value={segmento}
+                    onChange={(e) => setSegmento(e.target.value)}
+                    required
+                    className="h-14 w-full cursor-pointer rounded-lg border border-border/50 bg-background/80 px-4 text-muted-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                  >
+                    <option value="">Qual o seu segmento?</option>
+                    <option value="E-commerce">E-commerce</option>
+                    <option value="Serviços">Serviços</option>
+                    <option value="Infoproduto">Infoproduto</option>
+                    <option value="Negócio local">Negócio local</option>
+                    <option value="Outro">Outro</option>
                   </select>
 
                   <button
                     type="submit"
                     disabled={carregando}
-                    className="mt-2 w-full rounded-xl bg-primary px-5 py-3 font-semibold text-white transition hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-60"
+                    className="mt-2 h-14 w-full rounded-lg bg-primary px-5 text-base font-bold text-white shadow-[0_0_35px_rgba(139,92,246,0.35)] transition hover:scale-[1.02] hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-60"
                   >
-                    {carregando ? "Enviando..." : "Enviar meu diagnóstico"}
+                    {carregando ? "Enviando..." : "Receber mais informações"}
                   </button>
                 </form>
               </>
@@ -331,8 +359,7 @@ const HeroSection = () => {
                   Enviado com sucesso!
                 </h3>
                 <p className="text-sm leading-6 text-muted-foreground">
-                  Nosso time entrará em contato em breve. Prepare-se para
-                  escalar.
+                  Nosso time entrará em contato em breve.
                 </p>
               </div>
             )}
