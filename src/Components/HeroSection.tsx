@@ -309,7 +309,9 @@ const HeroSection = () => {
                     value={faturamento}
                     onChange={(e) => setFaturamento(e.target.value)}
                     required
-                    className="h-14 w-full cursor-pointer rounded-lg border border-border/50 bg-background/80 px-4 text-muted-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                    className={`h-14 w-full cursor-pointer rounded-lg border border-border/50 bg-background/80 px-4 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20 ${
+                      faturamento ? "text-white" : "text-muted-foreground"
+                    }`}
                   >
                     <option value="">
                       Qual o faturamento mensal da sua empresa?
@@ -331,7 +333,9 @@ const HeroSection = () => {
                     value={segmento}
                     onChange={(e) => setSegmento(e.target.value)}
                     required
-                    className="h-14 w-full cursor-pointer rounded-lg border border-border/50 bg-background/80 px-4 text-muted-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                    className={`h-14 w-full cursor-pointer rounded-lg border border-border/50 bg-background/80 px-4 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20 ${
+                      segmento ? "text-white" : "text-muted-foreground"
+                    }`}
                   >
                     <option value="">Qual o seu segmento?</option>
                     <option value="E-commerce">E-commerce</option>
