@@ -103,3 +103,45 @@
     @apply max-w-6xl mx-auto px-6 md:px-8;
   }
 }
+
+@layer utilities {
+
+  .marquee-wrapper {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 60s linear infinite;
+    will-change: transform;
+  }
+
+  .marquee-wrapper:hover {
+    animation-play-state: paused;
+  }
+
+  .marquee-group {
+    display: flex;
+    gap: 1.5rem;
+    padding-right: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  @keyframes marquee-scroll {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+
+    to {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+
+  .card-marquee {
+    @apply min-w-[340px] md:min-w-[460px] min-h-[230px] md:min-h-[270px] p-8 rounded-3xl border border-border/40 bg-card/60 backdrop-blur-xl flex flex-col items-center justify-center text-center gap-3 transition-all duration-300;
+  }
+
+  .card-marquee:hover {
+    @apply border-primary/40 bg-primary/10;
+    box-shadow: 0 0 55px rgba(139, 92, 246, 0.28);
+    transform: translateY(-6px);
+  }
+
+}
