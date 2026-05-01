@@ -5,7 +5,7 @@ const stats = [
   { value: "10x", label: "ROI médio" },
 ];
 
-const clients = ["Pr. Alexandre Meneghini", "Profeta Evanólio Vale", "VortexAI", "Growthly", "NeoPay"];
+const clients = ["Pr. Alexandre Meneghini", "Profeta Evanio Vale", "VortexAI", "Growthly", "NeoPay"];
 
 const SocialProofSection = () => {
   return (
