@@ -34,7 +34,7 @@ const Navbar = () => {
           className="text-sm font-semibold px-5 py-2 h-auto shadow-[0_0_25px_rgba(139,92,246,0.4)]"
         >
           <a
-            href="https://wa.me/5511999999999"
+            href="https://wa.me/5587988289498"
             target="_blank"
             rel="noopener noreferrer"
           >
