@@ -25,6 +25,7 @@ const HeroSection = () => {
   const [email, setEmail] = useState("");
   const [faturamento, setFaturamento] = useState("");
   const [segmento, setSegmento] = useState("");
+  const [cnpj, setCnpj] = useState("");
   const [enviado, setEnviado] = useState(false);
   const [carregando, setCarregando] = useState(false);
 
@@ -48,16 +49,17 @@ const HeroSection = () => {
     e.preventDefault();
     setCarregando(true);
 
-    const { error } = await supabase.from("leads").insert([
-      {
-        nome,
-        nome_completo: nomeCompleto,
-        telefone,
-        email,
-        faturamento,
-        segmento,
-      },
-    ]);
+  const { error } = await supabase.from("leads").insert([
+    {
+      nome,
+      nome_completo: nomeCompleto,
+      telefone,
+      email,
+      faturamento,
+      segmento,
+      cnpj,
+    },
+  ]);
 
     setCarregando(false);
 
@@ -69,7 +71,7 @@ const HeroSection = () => {
       setEmail("");
       setFaturamento("");
       setSegmento("");
-
+      setCnpj("");
       setTimeout(() => {
         setIsFormOpen(false);
         setEnviado(false);
@@ -344,6 +346,16 @@ const HeroSection = () => {
                     <option value="Negócio local">Negócio local</option>
                     <option value="Outro">Outro</option>
                   </select>
+                    
+                    {faturamento && segmento && (
+                      <input
+                        value={cnpj}
+                        onChange={(e) => setCnpj(e.target.value)}
+                        placeholder="Qual o CNPJ da sua empresa?"
+                        required
+                        className="h-14 w-full rounded-lg border border-border/50 bg-background/80 px-4 text-foreground placeholder:text-muted-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                      />
+                    )}
 
                   <button
                     type="submit"
