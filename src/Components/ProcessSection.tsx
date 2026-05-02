@@ -40,7 +40,7 @@ const ProcessSection = () => {
 
       <div className="section-container relative z-10 grid items-center gap-20 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-primary">
+          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-primary animate-fade-up">
             Inteligência Artificial e Tecnologia
           </p>
 
@@ -56,7 +56,7 @@ const ProcessSection = () => {
 
           <div className="mt-9 space-y-5">
             {bullets.map((item) => (
-              <div key={item} className="flex gap-3">
+              <div key={item} className="flex gap-3 animate-fade-up">
                 <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/15 text-primary">
                   <Check className="h-3.5 w-3.5" />
                 </div>
@@ -70,7 +70,7 @@ const ProcessSection = () => {
           <Button
               variant="hero"
               size="lg"
-              className="group mt-10 h-auto rounded-full px-8 py-6 text-base font-semibold shadow-[0_0_45px_hsl(var(--primary)/0.3)]"
+              className="group mt-10 h-auto rounded-full px-8 py-6 text-base font-semibold shadow-[0_0_45px_hsl(var(--primary)/0.3)] animate-fade-up"
               onClick={() => {
                 window.dispatchEvent(new Event("open-diagnosis-modal"));
               }}
@@ -87,7 +87,7 @@ const ProcessSection = () => {
             <img
               src="/logo-pubird-icon.png"
               alt="Pubird"
-              className="w-28 md:w-36"
+              className="w-28 md:w-36 animate-float-soft"
             />
           </div>
 

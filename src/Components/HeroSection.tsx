@@ -98,7 +98,7 @@ const HeroSection = () => {
             <img
               src="/logo-pubird.png"
               alt="Pubird"
-              className="w-[250px] max-w-[80vw] opacity-95 drop-shadow-[0_0_45px_rgba(139,92,246,0.48)] transition duration-500 hover:scale-105 md:w-[330px]"
+              className="w-[250px] max-w-[80vw] opacity-95 drop-shadow-[0_0_45px_rgba(139,92,246,0.48)] transition duration-500 hover:scale-105 md:w-[330px] animate-float-soft"
             />
           </div>
 
@@ -110,7 +110,7 @@ const HeroSection = () => {
           </div>
 
           <h1
-            className="mx-auto max-w-5xl text-5xl font-extrabold leading-[1.03] tracking-[-0.045em] text-foreground opacity-0 animate-fade-in sm:text-6xl md:text-7xl lg:mx-0"
+            className="mx-auto max-w-5xl text-5xl font-extrabold leading-[1.03] tracking-[-0.045em] text-foreground opacity-0 animate-fade-in sm:text-6xl md:text-7xl lg:mx-0 animate-fade-up"
             style={{ animationDelay: "0.12s" }}
           >
             Transformamos atenção em{" "}
@@ -118,7 +118,7 @@ const HeroSection = () => {
           </h1>
 
           <p
-            className="mx-auto mt-7 max-w-2xl text-base leading-8 text-muted-foreground opacity-0 animate-fade-in-slow md:text-xl lg:mx-0"
+            className="mx-auto mt-7 max-w-2xl text-base leading-8 text-muted-foreground opacity-0 animate-fade-in-slow md:text-xl lg:mx-0 animate-fade-up"
             style={{ animationDelay: "0.24s" }}
           >
             A Pubird cria sistemas de aquisição com tráfego, funis, automação,
@@ -126,7 +126,7 @@ const HeroSection = () => {
           </p>
 
           <div
-            className="mt-9 flex flex-col justify-center gap-4 opacity-0 animate-fade-in-slow sm:flex-row lg:justify-start"
+            className="mt-9 flex flex-col justify-center gap-4 opacity-0 animate-fade-up sm:flex-row lg:justify-start"
             style={{ animationDelay: "0.36s" }}
           >
             <Button
@@ -168,7 +168,7 @@ const HeroSection = () => {
         </div>
 
         <div
-          className="relative mx-auto w-full max-w-[490px] opacity-0 animate-fade-in-slow lg:mx-0"
+          className="relative overflow-hidden rounded-[2rem] border border-primary/20 bg-card/70 p-6 shadow-2xl backdrop-blur-2xl animate-glow"
           style={{ animationDelay: "0.42s" }}
         >
           <div className="absolute -inset-6 rounded-[2rem] bg-primary/20 blur-3xl animate-pulse" />
