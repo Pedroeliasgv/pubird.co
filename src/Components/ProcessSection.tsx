@@ -13,9 +13,9 @@ import {
 import { Button } from "@/components/ui/button";
 
 const bullets = [
-  "Identificação de soluções de IA para automatizar processos e reduzir custos.",
-  "Implementação rápida de tecnologia em campanhas, funis e operações.",
-  "Análise contínua de dados para otimizar conversão e aumentar margem.",
+  "Mapeamos onde você está perdendo dinheiro hoje — e corrigimos isso rápido.",
+  "Estruturamos aquisição, funil e conversão como um sistema previsível.",
+  "Transformamos dados em decisões que aumentam lucro, não só métricas.",
 ];
 
 const aiTools = [
@@ -45,13 +45,13 @@ const ProcessSection = () => {
           </p>
 
           <h2 className="max-w-xl text-4xl font-extrabold leading-tight tracking-[-0.04em] text-foreground md:text-6xl">
-            Tecnologia certa para transformar operação em{" "}
+            Transformamos tráfego, dados e tecnologia em crescimento previsível.{" "}
             <span className="text-gradient">crescimento.</span>
           </h2>
 
           <p className="mt-6 max-w-lg text-base leading-8 text-muted-foreground md:text-lg">
-            Fazemos a curadoria, implementação e integração das ferramentas
-            certas para o seu negócio vender mais com menos desperdício.
+            Não usamos ferramentas por usar. Criamos sistemas de aquisição e conversão
+            que escalam com controle, previsibilidade e margem.
           </p>
 
           <div className="mt-9 space-y-5">
