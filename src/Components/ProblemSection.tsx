@@ -1,37 +1,92 @@
+import { AlertTriangle, BarChart3, Flame, TrendingDown, Workflow } from "lucide-react";
+
 const problems = [
-  { icon: "📊", text: "Você investe em marketing, mas não consegue rastrear o retorno.", label: "Sem visibilidade" },
-  { icon: "🎲", text: "Seu crescimento depende mais de sorte do que de estratégia.", label: "Sem previsibilidade" },
-  { icon: "💸", text: "Seus custos de aquisição estão altos e o ticket médio caiu.", label: "Margens apertadas" },
-  { icon: "🔥", text: "A equipe fica presa em demandas urgentes, sem tempo para escalar.", label: "Operação reativa" },
+  {
+    icon: BarChart3,
+    label: "Sem visibilidade",
+    title: "Você investe, mas não sabe exatamente o que volta.",
+    text: "Campanhas, criativos e canais rodando sem clareza de ROI real.",
+  },
+  {
+    icon: TrendingDown,
+    label: "Sem previsibilidade",
+    title: "O crescimento depende de sorte, indicação ou campanha pontual.",
+    text: "Sem processo claro, cada mês vira uma tentativa diferente.",
+  },
+  {
+    icon: AlertTriangle,
+    label: "Margem apertada",
+    title: "O custo para vender sobe, mas o lucro não acompanha.",
+    text: "Aquisição cara, ticket médio pressionado e pouca inteligência comercial.",
+  },
+  {
+    icon: Workflow,
+    label: "Operação reativa",
+    title: "Sua equipe vive apagando incêndio.",
+    text: "Muito esforço manual, pouca automação e pouco tempo para escalar.",
+  },
 ];
 
 const ProblemSection = () => {
   return (
-    <section className="py-24 border-t border-border/20">
-      <div className="section-container">
-        <div className="max-w-3xl mb-16">
-          <p className="text-xs md:text-sm uppercase tracking-widest font-semibold text-primary mb-4">O Desafio</p>
-          <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-foreground mb-6">
-            Se você se identifica com{" "}
-            <span className="text-gradient">algum desses problemas</span>, é hora de agir
+    <section className="relative overflow-hidden py-28 border-t border-border/20">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,hsl(var(--primary)/0.14),transparent_35%),radial-gradient(circle_at_90%_80%,rgba(168,85,247,0.10),transparent_35%)]" />
+      <div className="absolute left-1/2 top-0 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-primary/10 blur-[130px]" />
+
+      <div className="section-container relative z-10">
+        <div className="mx-auto mb-16 max-w-3xl text-center animate-fade-up">
+          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-2 shadow-[0_0_35px_hsl(var(--primary)/0.16)]">
+            <Flame className="h-4 w-4 text-primary" />
+            <span className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">
+              O problema não é só marketing
+            </span>
+          </div>
+
+          <h2 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-[-0.04em] text-foreground">
+            Onde sua empresa está{" "}
+            <span className="text-gradient">perdendo crescimento?</span>
           </h2>
-          <p className="text-lg text-muted-foreground">A maioria das empresas com faturamento de 70k+ está deixando dinheiro sobre a mesa.</p>
+
+          <p className="mt-6 text-lg leading-8 text-muted-foreground">
+            A maioria das empresas não precisa de mais posts. Precisa de clareza,
+            processo, aquisição previsível e decisões guiadas por dados.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-5">
-          {problems.map((problem, i) => (
-            <div
-              key={i}
-              className="group flex items-start gap-4 p-6 rounded-lg border border-border/40 bg-card hover:border-primary/30 hover:bg-primary/5 transition-all duration-300 opacity-0 animate-fade-in"
-              style={{ animationDelay: `${i * 0.1}s` }}
-            >
-              <div className="flex-shrink-0 text-3xl mt-0.5">{problem.icon}</div>
-              <div className="flex-1">
-                <p className="text-xs font-bold text-primary uppercase tracking-widest mb-2">{problem.label}</p>
-                <p className="text-foreground/85 font-medium leading-relaxed">{problem.text}</p>
+        <div className="grid gap-5 md:grid-cols-2">
+          {problems.map((problem, i) => {
+            const Icon = problem.icon;
+
+            return (
+              <div
+                key={problem.label}
+                className="group relative overflow-hidden rounded-3xl border border-border/40 bg-card/55 p-7 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-primary/40 hover:bg-primary/10 hover:shadow-[0_0_55px_rgba(139,92,246,0.22)] animate-fade-up"
+                style={{ animationDelay: `${i * 0.12}s` }}
+              >
+                <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-primary/10 blur-3xl transition group-hover:bg-primary/20" />
+
+                <div className="relative z-10 flex gap-5">
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-primary/20 bg-primary/10 text-primary shadow-[0_0_35px_rgba(139,92,246,0.16)] transition group-hover:scale-110 group-hover:bg-primary/20">
+                    <Icon className="h-7 w-7" />
+                  </div>
+
+                  <div>
+                    <p className="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-primary">
+                      {problem.label}
+                    </p>
+
+                    <h3 className="text-xl font-extrabold leading-snug text-foreground">
+                      {problem.title}
+                    </h3>
+
+                    <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                      {problem.text}
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
