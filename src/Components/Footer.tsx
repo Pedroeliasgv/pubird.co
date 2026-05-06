@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img src="/pubird-logo.jpg" alt="Pubird" className="h-8 w-auto rounded-lg" />
+              <img src="/logo-pubird-icon.png" alt="Pubird" className="h-8 w-auto" />
               <span className="text-lg font-bold text-gradient">Pubird</span>
             </div>
             <p className="text-sm text-muted-foreground">Growth engine para negócios ambiciosos. Crescimento previsível e escalável.</p>

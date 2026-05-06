@@ -49,22 +49,40 @@ const HeroSection = () => {
     e.preventDefault();
     setCarregando(true);
 
-  const { error } = await supabase.from("leads").insert([
-    {
-      nome,
-      nome_completo: nomeCompleto,
-      telefone,
-      email,
-      faturamento,
-      segmento,
-      cnpj,
-    },
-  ]);
+    const { error } = await supabase.from("leads").insert([
+      {
+        empresa: nome,
+        nome_completo: nomeCompleto,
+        telefone,
+        email,
+        faturamento,
+        segmento,
+        cnpj,
+      },
+    ]);
 
-    setCarregando(false);
 
     if (!error) {
+      const { data: emailData, error: emailError } =
+        await supabase.functions.invoke("send-lead-email", {
+          body: {
+            nome,
+            nomeCompleto,
+            telefone,
+            email,
+            faturamento,
+            segmento,
+            cnpj,
+          },
+        });
+
+console.log("EMAIL DATA:", emailData);
+console.log("EMAIL ERROR:", emailError);
+
+      setCarregando(false);
+      
       setEnviado(true);
+
       setNome("");
       setNomeCompleto("");
       setTelefone("");
