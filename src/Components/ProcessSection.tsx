@@ -2,7 +2,6 @@ import {
   ArrowRight,
   Check,
   Cpu,
-  Database,
   LineChart,
   MousePointerClick,
   Sparkles,
@@ -13,34 +12,39 @@ import {
 import { Button } from "@/components/ui/button";
 
 const bullets = [
-  "Diagnóstico rápido para encontrar onde sua operação está vazando dinheiro.",
-  "Estratégia de aquisição conectando tráfego, funil, CRM e automações.",
-  "Otimização contínua para transformar dados em lucro, não só relatórios.",
+  "Entendemos o cenário atual e os principais gargalos.",
+  "Definimos prioridades com base no que pode gerar retorno mais rápido.",
+  "Executamos, medimos e ajustamos continuamente.",
 ];
 
 const processCards = [
   {
     icon: Target,
     title: "Diagnóstico",
-    desc: "Mapeamos gargalos de aquisição, conversão e operação.",
+    desc: "Mapeamos dores, canais, oferta e oportunidades.",
   },
   {
     icon: Workflow,
-    title: "Sistema",
-    desc: "Criamos uma estrutura previsível para gerar e nutrir leads.",
+    title: "Estratégia",
+    desc: "Criamos um plano claro para aquisição e conversão.",
+  },
+  {
+    icon: Zap,
+    title: "Execução",
+    desc: "Colocamos campanhas, páginas e processos para rodar.",
   },
   {
     icon: LineChart,
-    title: "Otimização",
-    desc: "Acompanhamos métricas reais e ajustamos o que gera retorno.",
+    title: "Escala",
+    desc: "Otimizamos o que funciona e cortamos desperdícios.",
   },
 ];
 
 const techStack = [
   { icon: Cpu, label: "IA" },
-  { icon: Database, label: "Dados" },
-  { icon: Zap, label: "Automação" },
   { icon: MousePointerClick, label: "Tráfego" },
+  { icon: Workflow, label: "Funil" },
+  { icon: LineChart, label: "Dados" },
 ];
 
 const ProcessSection = () => {
@@ -66,13 +70,12 @@ const ProcessSection = () => {
           </div>
 
           <h2 className="max-w-xl text-4xl font-extrabold leading-tight tracking-[-0.04em] text-foreground md:text-6xl">
-            Da atenção ao crescimento, com{" "}
-            <span className="text-gradient">sistema e previsibilidade.</span>
+            Um processo claro para escalar com {" "}
+            <span className="text-gradient">consistência.</span>
           </h2>
 
           <p className="mt-6 max-w-lg text-base leading-8 text-muted-foreground md:text-lg">
-            Não vendemos ações soltas. Construímos uma esteira de crescimento:
-            diagnóstico, aquisição, conversão, dados e melhoria contínua.
+            Diagnóstico, estratégia, execução e otimização contínua. Sem ações soltas.
           </p>
 
           <div className="mt-9 space-y-5">
@@ -98,7 +101,7 @@ const ProcessSection = () => {
             className="group mt-10 h-auto rounded-full px-8 py-6 text-base font-semibold shadow-[0_0_45px_hsl(var(--primary)/0.3)]"
             onClick={openDiagnosisModal}
           >
-            Quero entender meu crescimento
+            Solicitar diagnóstico
             <ArrowRight className="ml-2 h-4 w-4 transition group-hover:translate-x-1" />
           </Button>
         </div>
@@ -112,10 +115,10 @@ const ProcessSection = () => {
             <div className="mb-7 flex items-center justify-between border-b border-border/30 pb-5">
               <div>
                 <p className="text-sm font-bold text-foreground">
-                  Growth Operating System
+                  Growth System
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground">
-                  Estrutura aplicada ao seu negócio
+                  Caminho simples do diagnóstico à escala
                 </p>
               </div>
 

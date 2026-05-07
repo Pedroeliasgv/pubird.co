@@ -38,18 +38,18 @@ const ProblemSection = () => {
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-2 shadow-[0_0_35px_hsl(var(--primary)/0.16)]">
             <Flame className="h-4 w-4 text-primary" />
             <span className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">
-              O problema não é só marketing
+              O desafio
             </span>
           </div>
 
           <h2 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-[-0.04em] text-foreground">
-            Onde sua empresa está{" "}
+            Onde sua empresa está {" "}
             <span className="text-gradient">perdendo crescimento?</span>
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            A maioria das empresas não precisa de mais posts. Precisa de clareza,
-            processo, aquisição previsível e decisões guiadas por dados.
+            Muitas empresas crescem no improviso. O problema aparece quando o
+            crescimento para de acompanhar o esforço.
           </p>
         </div>
 

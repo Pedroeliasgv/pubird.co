@@ -1,18 +1,18 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2, Sparkles, Clock } from "lucide-react";
+import { ArrowRight, CheckCircle2, Clock, Sparkles } from "lucide-react";
 
 const benefits = [
   {
-    title: "Análise personalizada",
-    desc: "Entendemos seu cenário antes de sugerir qualquer estratégia.",
+    title: "Análise objetiva",
+    desc: "Entendemos seu cenário sem enrolação.",
   },
   {
-    title: "Plano claro de crescimento",
-    desc: "Você sai com próximos passos objetivos para aquisição e conversão.",
+    title: "Próximos passos claros",
+    desc: "Você entende onde agir primeiro.",
   },
   {
-    title: "Contato com especialista",
-    desc: "Uma conversa direta para identificar oportunidades reais.",
+    title: "Contato direto",
+    desc: "Uma conversa prática com visão estratégica.",
   },
 ];
 
@@ -37,13 +37,12 @@ const CtaSection = () => {
             </div>
 
             <h2 className="text-4xl font-extrabold leading-tight tracking-[-0.04em] text-foreground md:text-6xl">
-              Pronto para transformar atenção em{" "}
-              <span className="text-gradient">crescimento previsível?</span>
+              Vamos analisar o potencial do {" "}
+              <span className="text-gradient">seu negócio.</span>
             </h2>
 
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">
-              Receba um diagnóstico profissional da Pubird e descubra onde sua
-              empresa pode vender mais com estratégia, dados e tecnologia.
+              Receba uma análise rápida e descubra os próximos passos para escalar.
             </p>
           </div>
 
@@ -76,7 +75,7 @@ const CtaSection = () => {
               onClick={openDiagnosisModal}
               className="group h-auto rounded-full px-9 py-6 text-base font-bold shadow-[0_0_45px_rgba(139,92,246,0.35)] transition duration-300 hover:scale-[1.03]"
             >
-              Quero meu diagnóstico gratuito
+              Solicitar diagnóstico
               <ArrowRight className="ml-2 h-4 w-4 transition group-hover:translate-x-1" />
             </Button>
 

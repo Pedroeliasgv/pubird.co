@@ -12,9 +12,9 @@ import {
 import { supabase } from "@/lib/supabaseClient";
 
 const benefits = [
-  "Diagnóstico estratégico gratuito",
-  "Plano claro para aquisição",
-  "Análise de tráfego, funil e conversão",
+  "Estratégia personalizada",
+  "Aquisição com foco em conversão",
+  "Diagnóstico rápido e objetivo",
 ];
 
 const HeroSection = () => {
@@ -61,7 +61,6 @@ const HeroSection = () => {
       },
     ]);
 
-
     if (!error) {
       const { data: emailData, error: emailError } =
         await supabase.functions.invoke("send-lead-email", {
@@ -76,11 +75,10 @@ const HeroSection = () => {
           },
         });
 
-console.log("EMAIL DATA:", emailData);
-console.log("EMAIL ERROR:", emailError);
+      console.log("EMAIL DATA:", emailData);
+      console.log("EMAIL ERROR:", emailError);
 
       setCarregando(false);
-      
       setEnviado(true);
 
       setNome("");
@@ -90,6 +88,7 @@ console.log("EMAIL ERROR:", emailError);
       setFaturamento("");
       setSegmento("");
       setCnpj("");
+
       setTimeout(() => {
         setIsFormOpen(false);
         setEnviado(false);
@@ -98,6 +97,7 @@ console.log("EMAIL ERROR:", emailError);
       return;
     }
 
+    setCarregando(false);
     console.error(error);
     alert("Erro ao enviar. Tente novamente!");
   };
@@ -123,24 +123,24 @@ console.log("EMAIL ERROR:", emailError);
           <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 shadow-[0_0_35px_hsl(var(--primary)/0.18)] backdrop-blur-xl opacity-0 animate-fade-in">
             <Sparkles className="h-4 w-4 text-primary" />
             <span className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">
-              Marketing, tecnologia e crescimento
+              Estratégia, tráfego e tecnologia
             </span>
           </div>
 
           <h1
-            className="mx-auto max-w-5xl text-5xl font-extrabold leading-[1.03] tracking-[-0.045em] text-foreground opacity-0 animate-fade-in sm:text-6xl md:text-7xl lg:mx-0 animate-fade-up"
+            className="mx-auto max-w-5xl text-5xl font-extrabold leading-[1.03] tracking-[-0.045em] text-foreground opacity-0 animate-fade-up sm:text-6xl md:text-7xl lg:mx-0"
             style={{ animationDelay: "0.12s" }}
           >
-            Transformamos atenção em{" "}
-            <span className="text-gradient">receita previsível.</span>
+            Marketing e aquisição para empresas que querem {" "}
+            <span className="text-gradient">crescer com clareza.</span>
           </h1>
 
           <p
-            className="mx-auto mt-7 max-w-2xl text-base leading-8 text-muted-foreground opacity-0 animate-fade-in-slow md:text-xl lg:mx-0 animate-fade-up"
+            className="mx-auto mt-7 max-w-2xl text-base leading-8 text-muted-foreground opacity-0 animate-fade-up md:text-xl lg:mx-0"
             style={{ animationDelay: "0.24s" }}
           >
-            A Pubird cria sistemas de aquisição com tráfego, funis, automação,
-            dados e tecnologia para empresas que querem crescer com controle.
+            Estruturamos aquisição, posicionamento e conversão para transformar
+            tráfego em clientes reais.
           </p>
 
           <div
@@ -153,7 +153,7 @@ console.log("EMAIL ERROR:", emailError);
               className="group h-auto rounded-xl px-8 py-6 text-base font-semibold shadow-[0_0_45px_hsl(var(--primary)/0.3)] transition duration-300 hover:scale-[1.03]"
               onClick={() => setIsFormOpen(true)}
             >
-              Receber diagnóstico gratuito
+              Solicitar diagnóstico
               <ArrowRight className="ml-2 h-4 w-4 transition duration-300 group-hover:translate-x-1" />
             </Button>
 
@@ -163,12 +163,12 @@ console.log("EMAIL ERROR:", emailError);
               className="h-auto rounded-xl px-8 py-6 text-base font-semibold backdrop-blur-xl transition duration-300 hover:scale-[1.03]"
               asChild
             >
-              <a href="#processo">Ver como funciona</a>
+              <a href="#servicos">Ver soluções</a>
             </Button>
           </div>
 
           <div
-            className="mt-8 grid gap-3 text-left opacity-0 animate-fade-in-slow sm:grid-cols-3"
+            className="mt-8 grid gap-3 text-left opacity-0 animate-fade-up sm:grid-cols-3"
             style={{ animationDelay: "0.48s" }}
           >
             {benefits.map((benefit) => (
@@ -177,9 +177,7 @@ console.log("EMAIL ERROR:", emailError);
                 className="flex items-start gap-2 rounded-xl border border-border/40 bg-card/35 p-3 backdrop-blur-xl transition duration-300 hover:border-primary/40 hover:bg-primary/10"
               >
                 <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                <span className="text-sm text-muted-foreground">
-                  {benefit}
-                </span>
+                <span className="text-sm text-muted-foreground">{benefit}</span>
               </div>
             ))}
           </div>
@@ -200,7 +198,7 @@ console.log("EMAIL ERROR:", emailError);
                   Growth Dashboard
                 </p>
                 <p className="text-xs text-muted-foreground">
-                  Visão estratégica em tempo real
+                  Visão clara do funil
                 </p>
               </div>
 
@@ -228,29 +226,25 @@ console.log("EMAIL ERROR:", emailError);
               <div className="grid grid-cols-3 gap-3">
                 <div className="rounded-2xl border border-border/40 bg-background/45 p-4 text-center">
                   <Target className="mx-auto mb-2 h-5 w-5 text-primary" />
-                  <p className="text-lg font-extrabold text-foreground">
-                    Funil
-                  </p>
+                  <p className="text-lg font-extrabold text-foreground">Funil</p>
                   <p className="mt-1 text-[11px] text-muted-foreground">
-                    otimizado
+                    mais claro
                   </p>
                 </div>
 
                 <div className="rounded-2xl border border-border/40 bg-background/45 p-4 text-center">
                   <Zap className="mx-auto mb-2 h-5 w-5 text-primary" />
-                  <p className="text-lg font-extrabold text-foreground">ROI</p>
+                  <p className="text-lg font-extrabold text-foreground">Leads</p>
                   <p className="mt-1 text-[11px] text-muted-foreground">
-                    rastreado
+                    qualificados
                   </p>
                 </div>
 
                 <div className="rounded-2xl border border-border/40 bg-background/45 p-4 text-center">
                   <Sparkles className="mx-auto mb-2 h-5 w-5 text-primary" />
-                  <p className="text-lg font-extrabold text-foreground">
-                    360°
-                  </p>
+                  <p className="text-lg font-extrabold text-foreground">Marca</p>
                   <p className="mt-1 text-[11px] text-muted-foreground">
-                    estratégia
+                    posicionada
                   </p>
                 </div>
               </div>
@@ -260,8 +254,8 @@ console.log("EMAIL ERROR:", emailError);
                   Próxima ação recomendada
                 </p>
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                  Mapear gargalos, priorizar canais, estruturar CRM e criar uma
-                  esteira de conversão com métricas reais.
+                  Entender gargalos, priorizar canais e criar uma estrutura de
+                  conversão com acompanhamento real.
                 </p>
               </div>
             </div>
@@ -337,15 +331,9 @@ console.log("EMAIL ERROR:", emailError);
                       Qual o faturamento mensal da sua empresa?
                     </option>
                     <option value="Até 10 mil">Até R$10 mil</option>
-                    <option value="De 10 mil a 50 mil">
-                      De R$10 mil a R$50 mil
-                    </option>
-                    <option value="De 50 mil a 100 mil">
-                      De R$50 mil a R$100 mil
-                    </option>
-                    <option value="De 100 mil a 300 mil">
-                      De R$100 mil a R$300 mil
-                    </option>
+                    <option value="De 10 mil a 50 mil">De R$10 mil a R$50 mil</option>
+                    <option value="De 50 mil a 100 mil">De R$50 mil a R$100 mil</option>
+                    <option value="De 100 mil a 300 mil">De R$100 mil a R$300 mil</option>
                     <option value="Acima de 300 mil">Acima de R$300 mil</option>
                   </select>
 
@@ -364,23 +352,23 @@ console.log("EMAIL ERROR:", emailError);
                     <option value="Negócio local">Negócio local</option>
                     <option value="Outro">Outro</option>
                   </select>
-                    
-                    {faturamento && segmento && (
-                      <input
-                        value={cnpj}
-                        onChange={(e) => setCnpj(e.target.value)}
-                        placeholder="Qual o CNPJ da sua empresa?"
-                        required
-                        className="h-14 w-full rounded-lg border border-border/50 bg-background/80 px-4 text-foreground placeholder:text-muted-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
-                      />
-                    )}
+
+                  {faturamento && segmento && (
+                    <input
+                      value={cnpj}
+                      onChange={(e) => setCnpj(e.target.value)}
+                      placeholder="Qual o CNPJ da sua empresa?"
+                      required
+                      className="h-14 w-full rounded-lg border border-border/50 bg-background/80 px-4 text-foreground placeholder:text-muted-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                    />
+                  )}
 
                   <button
                     type="submit"
                     disabled={carregando}
                     className="mt-2 h-14 w-full rounded-lg bg-primary px-5 text-base font-bold text-white shadow-[0_0_35px_rgba(139,92,246,0.35)] transition hover:scale-[1.02] hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-60"
                   >
-                    {carregando ? "Enviando..." : "Receber mais informações"}
+                    {carregando ? "Enviando..." : "Receber análise"}
                   </button>
                 </form>
               </>
