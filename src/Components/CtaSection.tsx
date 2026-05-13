@@ -3,16 +3,16 @@ import { ArrowRight, CheckCircle2, Clock, Sparkles } from "lucide-react";
 
 const benefits = [
   {
-    title: "Análise objetiva",
-    desc: "Entendemos seu cenário sem enrolação.",
+    title: "Sem compromisso",
+    desc: "Você entende se faz sentido avançar antes de qualquer decisão.",
   },
   {
-    title: "Próximos passos claros",
-    desc: "Você entende onde agir primeiro.",
+    title: "Visão estratégica",
+    desc: "Mostramos oportunidades reais para melhorar presença, oferta e conversão.",
   },
   {
-    title: "Contato direto",
-    desc: "Uma conversa prática com visão estratégica.",
+    title: "Direto ao ponto",
+    desc: "Uma conversa prática, objetiva e focada no que pode gerar resultado.",
   },
 ];
 
@@ -31,18 +31,20 @@ const CtaSection = () => {
           <div className="mx-auto max-w-3xl text-center animate-fade-up">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-2">
               <Sparkles className="h-4 w-4 text-primary" />
+
               <span className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">
-                Próximo passo
+                Hora de avançar
               </span>
             </div>
 
             <h2 className="text-4xl font-extrabold leading-tight tracking-[-0.04em] text-foreground md:text-6xl">
-              Vamos analisar o potencial do {" "}
-              <span className="text-gradient">seu negócio.</span>
+              Sua marca pode estar perdendo clientes{" "}
+              <span className="text-gradient">sem perceber.</span>
             </h2>
 
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">
-              Receba uma análise rápida e descubra os próximos passos para escalar.
+              Vamos olhar para o seu negócio com visão externa e identificar
+              onde sua comunicação, página ou funil podem performar melhor.
             </p>
           </div>
 
@@ -75,7 +77,7 @@ const CtaSection = () => {
               onClick={openDiagnosisModal}
               className="group h-auto rounded-full px-9 py-6 text-base font-bold shadow-[0_0_45px_rgba(139,92,246,0.35)] transition duration-300 hover:scale-[1.03]"
             >
-              Solicitar diagnóstico
+              Quero uma análise da Pubird
               <ArrowRight className="ml-2 h-4 w-4 transition group-hover:translate-x-1" />
             </Button>
 

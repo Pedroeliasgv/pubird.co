@@ -1,5 +1,4 @@
 import {
-  ArrowRight,
   Check,
   Cpu,
   LineChart,
@@ -9,49 +8,44 @@ import {
   Workflow,
   Zap,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const bullets = [
-  "Entendemos o cenário atual e os principais gargalos.",
-  "Definimos prioridades com base no que pode gerar retorno mais rápido.",
-  "Executamos, medimos e ajustamos continuamente.",
+  "Identificamos onde o negócio está perdendo atenção, leads e conversões.",
+  "Organizamos canais, oferta e comunicação em uma direção mais clara.",
+  "Acompanhamos dados para melhorar o que funciona e eliminar desperdícios.",
 ];
 
 const processCards = [
   {
     icon: Target,
-    title: "Diagnóstico",
-    desc: "Mapeamos dores, canais, oferta e oportunidades.",
+    title: "Leitura do cenário",
+    desc: "Analisamos presença digital, oferta, posicionamento e pontos de atrito.",
   },
   {
     icon: Workflow,
-    title: "Estratégia",
-    desc: "Criamos um plano claro para aquisição e conversão.",
+    title: "Plano de crescimento",
+    desc: "Definimos o caminho mais estratégico para atrair e converter clientes.",
   },
   {
     icon: Zap,
-    title: "Execução",
-    desc: "Colocamos campanhas, páginas e processos para rodar.",
+    title: "Implementação",
+    desc: "Criamos páginas, campanhas, conteúdos e processos alinhados ao objetivo.",
   },
   {
     icon: LineChart,
-    title: "Escala",
-    desc: "Otimizamos o que funciona e cortamos desperdícios.",
+    title: "Otimização",
+    desc: "Medimos resultados, ajustamos rotas e fortalecemos o que gera retorno.",
   },
 ];
 
 const techStack = [
   { icon: Cpu, label: "IA" },
-  { icon: MousePointerClick, label: "Tráfego" },
-  { icon: Workflow, label: "Funil" },
+  { icon: MousePointerClick, label: "Mídia" },
+  { icon: Workflow, label: "Funis" },
   { icon: LineChart, label: "Dados" },
 ];
 
 const ProcessSection = () => {
-  const openDiagnosisModal = () => {
-    window.dispatchEvent(new Event("open-diagnosis-modal"));
-  };
-
   return (
     <section
       id="processo"
@@ -65,17 +59,18 @@ const ProcessSection = () => {
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-2">
             <Sparkles className="h-4 w-4 text-primary" />
             <span className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">
-              Processo Pubird
+              Método Pubird
             </span>
           </div>
 
           <h2 className="max-w-xl text-4xl font-extrabold leading-tight tracking-[-0.04em] text-foreground md:text-6xl">
-            Um processo claro para escalar com {" "}
-            <span className="text-gradient">consistência.</span>
+            Crescimento não acontece por acaso.{" "}
+            <span className="text-gradient">Acontece com direção.</span>
           </h2>
 
           <p className="mt-6 max-w-lg text-base leading-8 text-muted-foreground md:text-lg">
-            Diagnóstico, estratégia, execução e otimização contínua. Sem ações soltas.
+            Unimos marketing, tecnologia e análise para transformar presença
+            digital em um sistema mais previsível de geração de oportunidades.
           </p>
 
           <div className="mt-9 space-y-5">
@@ -88,22 +83,13 @@ const ProcessSection = () => {
                 <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/15 text-primary">
                   <Check className="h-4 w-4" />
                 </div>
+
                 <p className="max-w-xl text-sm leading-6 text-muted-foreground md:text-base">
                   {item}
                 </p>
               </div>
             ))}
           </div>
-
-          <Button
-            variant="hero"
-            size="lg"
-            className="group mt-10 h-auto rounded-full px-8 py-6 text-base font-semibold shadow-[0_0_45px_hsl(var(--primary)/0.3)]"
-            onClick={openDiagnosisModal}
-          >
-            Solicitar diagnóstico
-            <ArrowRight className="ml-2 h-4 w-4 transition group-hover:translate-x-1" />
-          </Button>
         </div>
 
         <div className="relative">
@@ -118,7 +104,7 @@ const ProcessSection = () => {
                   Growth System
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground">
-                  Caminho simples do diagnóstico à escala
+                  Da análise inicial à melhoria contínua
                 </p>
               </div>
 
@@ -148,6 +134,7 @@ const ProcessSection = () => {
                         <p className="text-base font-extrabold text-foreground">
                           {String(index + 1).padStart(2, "0")} · {card.title}
                         </p>
+
                         <p className="mt-2 text-sm leading-6 text-muted-foreground">
                           {card.desc}
                         </p>
@@ -168,6 +155,7 @@ const ProcessSection = () => {
                     className="flex flex-col items-center justify-center rounded-2xl border border-border/40 bg-background/40 p-4 text-center"
                   >
                     <Icon className="mb-2 h-5 w-5 text-primary" />
+
                     <span className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
                       {item.label}
                     </span>
