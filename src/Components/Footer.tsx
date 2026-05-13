@@ -1,5 +1,4 @@
 import {
-  Heart,
   Instagram,
   Linkedin,
   Mail,
@@ -13,7 +12,6 @@ const Footer = () => {
     <footer className="border-t border-border/20 bg-card/40 py-14 backdrop-blur-xl">
       <div className="section-container">
         <div className="grid gap-12 md:grid-cols-[1.2fr_0.8fr_0.8fr_0.8fr]">
-          
           {/* BRAND */}
           <div>
             <div className="mb-5 flex items-center gap-3">
@@ -25,8 +23,8 @@ const Footer = () => {
             </div>
 
             <p className="max-w-sm text-sm leading-7 text-muted-foreground">
-              Estratégia, tecnologia e crescimento previsível para empresas
-              que querem escalar com clareza e posicionamento.
+              Estratégia, tecnologia e crescimento previsível para empresas que
+              querem escalar com clareza e posicionamento.
             </p>
           </div>
 
@@ -87,11 +85,11 @@ const Footer = () => {
 
               <li>
                 <a
-                  href="mailto:contato@pubird.com"
+                  href="mailto:contato.pubird@gmail.com"
                   className="flex items-center gap-2 transition-colors hover:text-primary"
                 >
                   <Mail className="h-4 w-4 text-primary" />
-                  contato@pubird.com
+                  contato.pubird@gmail.com
                 </a>
               </li>
             </ul>
@@ -105,7 +103,9 @@ const Footer = () => {
 
             <div className="flex gap-3">
               <a
-                href="https://www.linkedin.com/company/pubird/?viewAsMember=true" target="_blank" rel="noopener noreferrer"
+                href="https://www.linkedin.com/company/pubird/?viewAsMember=true"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="LinkedIn"
                 className="flex h-10 w-10 items-center justify-center rounded-xl border border-border/40 bg-background/40 text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary"
               >
@@ -113,11 +113,21 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://www.instagram.com/pubird.br/" target="_blank" rel="noopener noreferrer"
+                href="https://www.instagram.com/pubird.br/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
                 className="flex h-10 w-10 items-center justify-center rounded-xl border border-border/40 bg-background/40 text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary"
               >
                 <Instagram className="h-5 w-5" />
+              </a>
+
+              <a
+                href="mailto:contato.pubird@gmail.com"
+                aria-label="Email"
+                className="flex h-10 w-10 items-center justify-center rounded-xl border border-border/40 bg-background/40 text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary"
+              >
+                <Mail className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -128,7 +138,6 @@ const Footer = () => {
           <p className="text-xs text-muted-foreground">
             © {currentYear} Pubird. Todos os direitos reservados.
           </p>
-
         </div>
       </div>
     </footer>
