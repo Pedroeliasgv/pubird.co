@@ -12,7 +12,16 @@ const clients = [
   "Sr. Souza",
   "IEADPE",
   "Gama Laser",
+  "DSM Multimarcas",
   "Léo Diniz",
+];
+
+const featuredClients = [
+  "Profeta Evanio Vale",
+  "Vitor Becker",
+  "Kibon",
+  "Gama Laser",
+  "DSM Multimarcas",
 ];
 
 const SocialProofSection = () => {
@@ -27,7 +36,7 @@ const SocialProofSection = () => {
         </p>
 
         <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-foreground">
-          Projetos construídos para {" "}
+          Projetos construídos para{" "}
           <span className="text-gradient">crescimento real</span>
         </h2>
 
@@ -71,32 +80,25 @@ const SocialProofSection = () => {
         </p>
 
         <div className="flex flex-wrap justify-center gap-3 md:gap-4">
-        {clients.map((client) => {
-          const featuredClients = [
-            "Profeta Evanio Vale",
-            "Vitor Becker",
-            "Kibon",
-            "Gama Laser",
-          ];
+          {clients.map((client) => {
+            const isFeatured = featuredClients.includes(client);
 
-          const isFeatured = featuredClients.includes(client);
-
-          return (
-            <div
-              key={client}
-              className={`
-                rounded-full px-5 py-3 text-sm font-semibold transition-all duration-300
-                ${
-                  isFeatured
-                    ? "border border-primary/40 bg-primary/10 text-foreground shadow-[0_0_35px_rgba(139,92,246,0.18)]"
-                    : "border border-border/40 bg-card/50 text-muted-foreground hover:border-primary/40 hover:bg-primary/10 hover:text-foreground"
-                }
-              `}
-            >
-              {client}
-            </div>
-          );
-        })}
+            return (
+              <div
+                key={client}
+                className={`
+                  rounded-full px-5 py-3 text-sm font-semibold transition-all duration-300
+                  ${
+                    isFeatured
+                      ? "border border-primary/40 bg-primary/10 text-foreground shadow-[0_0_35px_rgba(139,92,246,0.18)]"
+                      : "border border-border/40 bg-card/50 text-muted-foreground hover:border-primary/40 hover:bg-primary/10 hover:text-foreground"
+                  }
+                `}
+              >
+                {client}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
