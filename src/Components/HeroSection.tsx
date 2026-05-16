@@ -25,7 +25,6 @@ const HeroSection = () => {
   const [email, setEmail] = useState("");
   const [faturamento, setFaturamento] = useState("");
   const [segmento, setSegmento] = useState("");
-  const [cnpj, setCnpj] = useState("");
   const [enviado, setEnviado] = useState(false);
   const [carregando, setCarregando] = useState(false);
 
@@ -57,7 +56,6 @@ const HeroSection = () => {
         email,
         faturamento,
         segmento,
-        cnpj,
       },
     ]);
 
@@ -71,8 +69,7 @@ const HeroSection = () => {
             email,
             faturamento,
             segmento,
-            cnpj,
-          },
+              },
         });
 
       console.log("EMAIL DATA:", emailData);
@@ -87,7 +84,6 @@ const HeroSection = () => {
       setEmail("");
       setFaturamento("");
       setSegmento("");
-      setCnpj("");
 
       setTimeout(() => {
         setIsFormOpen(false);
@@ -368,15 +364,6 @@ const HeroSection = () => {
                     <option value="Outro">Outro</option>
                   </select>
 
-                  {faturamento && segmento && (
-                    <input
-                      value={cnpj}
-                      onChange={(e) => setCnpj(e.target.value)}
-                      placeholder="Qual o CNPJ da sua empresa?"
-                      required
-                      className="h-13 w-full rounded-lg border border-border/50 bg-background/80 px-4 py-4 text-sm text-foreground placeholder:text-muted-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20 sm:h-14 sm:text-base"
-                    />
-                  )}
 
                   <button
                     type="submit"
