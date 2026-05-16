@@ -1,22 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, Clock, Sparkles } from "lucide-react";
-
-const benefits = [
-  {
-    title: "Sem compromisso",
-    desc: "Você entende se faz sentido avançar antes de qualquer decisão.",
-  },
-  {
-    title: "Visão estratégica",
-    desc: "Mostramos oportunidades reais para melhorar presença, oferta e conversão.",
-  },
-  {
-    title: "Direto ao ponto",
-    desc: "Uma conversa prática, objetiva e focada no que pode gerar resultado.",
-  },
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const CtaSection = () => {
+  const { t } = useLanguage();
+
   const openDiagnosisModal = () => {
     window.dispatchEvent(new Event("open-diagnosis-modal"));
   };
@@ -33,23 +21,22 @@ const CtaSection = () => {
               <Sparkles className="h-4 w-4 text-primary" />
 
               <span className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">
-                Hora de avançar
+                {t.cta.eyebrow}
               </span>
             </div>
 
             <h2 className="text-4xl font-extrabold leading-tight tracking-[-0.04em] text-foreground md:text-6xl">
-              Sua marca pode estar perdendo clientes{" "}
-              <span className="text-gradient">sem perceber.</span>
+              {t.cta.titleStart}{" "}
+              <span className="text-gradient">{t.cta.titleHighlight}</span>
             </h2>
 
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">
-              Vamos olhar para o seu negócio com visão externa e identificar
-              onde sua comunicação, página ou funil podem performar melhor.
+              {t.cta.subtitle}
             </p>
           </div>
 
           <div className="mt-12 grid gap-4 md:grid-cols-3">
-            {benefits.map((item, index) => (
+            {t.cta.benefits.map((item, index) => (
               <div
                 key={item.title}
                 className="group rounded-3xl border border-border/40 bg-background/45 p-6 text-left backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-primary/40 hover:bg-primary/10 hover:shadow-[0_0_45px_rgba(139,92,246,0.18)] animate-fade-up"
@@ -77,13 +64,13 @@ const CtaSection = () => {
               onClick={openDiagnosisModal}
               className="group h-auto rounded-full px-9 py-6 text-base font-bold shadow-[0_0_45px_rgba(139,92,246,0.35)] transition duration-300 hover:scale-[1.03]"
             >
-              Quero uma análise da Pubird
+              {t.cta.button}
               <ArrowRight className="ml-2 h-4 w-4 transition group-hover:translate-x-1" />
             </Button>
 
             <div className="flex items-center gap-2 text-xs text-muted-foreground">
               <Clock className="h-4 w-4 text-primary" />
-              Leva menos de 5 minutos para solicitar.
+              {t.cta.timeText}
             </div>
           </div>
         </div>

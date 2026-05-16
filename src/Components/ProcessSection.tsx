@@ -8,44 +8,14 @@ import {
   Workflow,
   Zap,
 } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
-const bullets = [
-  "Identificamos onde o negócio está perdendo atenção, leads e conversões.",
-  "Organizamos canais, oferta e comunicação em uma direção mais clara.",
-  "Acompanhamos dados para melhorar o que funciona e eliminar desperdícios.",
-];
-
-const processCards = [
-  {
-    icon: Target,
-    title: "Leitura do cenário",
-    desc: "Analisamos presença digital, oferta, posicionamento e pontos de atrito.",
-  },
-  {
-    icon: Workflow,
-    title: "Plano de crescimento",
-    desc: "Definimos o caminho mais estratégico para atrair e converter clientes.",
-  },
-  {
-    icon: Zap,
-    title: "Implementação",
-    desc: "Criamos páginas, campanhas, conteúdos e processos alinhados ao objetivo.",
-  },
-  {
-    icon: LineChart,
-    title: "Otimização",
-    desc: "Medimos resultados, ajustamos rotas e fortalecemos o que gera retorno.",
-  },
-];
-
-const techStack = [
-  { icon: Cpu, label: "IA" },
-  { icon: MousePointerClick, label: "Mídia" },
-  { icon: Workflow, label: "Funis" },
-  { icon: LineChart, label: "Dados" },
-];
+const processIcons = [Target, Workflow, Zap, LineChart];
+const techIcons = [Cpu, MousePointerClick, Workflow, LineChart];
 
 const ProcessSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section
       id="processo"
@@ -59,22 +29,21 @@ const ProcessSection = () => {
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-2">
             <Sparkles className="h-4 w-4 text-primary" />
             <span className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">
-              Método Pubird
+              {t.process.eyebrow}
             </span>
           </div>
 
           <h2 className="max-w-xl text-4xl font-extrabold leading-tight tracking-[-0.04em] text-foreground md:text-6xl">
-            Crescimento não acontece por acaso.{" "}
-            <span className="text-gradient">Acontece com direção.</span>
+            {t.process.titleStart}{" "}
+            <span className="text-gradient">{t.process.titleHighlight}</span>
           </h2>
 
           <p className="mt-6 max-w-lg text-base leading-8 text-muted-foreground md:text-lg">
-            Unimos marketing, tecnologia e análise para transformar presença
-            digital em um sistema mais previsível de geração de oportunidades.
+            {t.process.subtitle}
           </p>
 
           <div className="mt-9 space-y-5">
-            {bullets.map((item, index) => (
+            {t.process.bullets.map((item, index) => (
               <div
                 key={item}
                 className="flex gap-3 animate-fade-up"
@@ -101,10 +70,10 @@ const ProcessSection = () => {
             <div className="mb-7 flex items-center justify-between border-b border-border/30 pb-5">
               <div>
                 <p className="text-sm font-bold text-foreground">
-                  Growth System
+                  {t.process.dashboardTitle}
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground">
-                  Da análise inicial à melhoria contínua
+                  {t.process.dashboardSubtitle}
                 </p>
               </div>
 
@@ -116,8 +85,8 @@ const ProcessSection = () => {
             </div>
 
             <div className="grid gap-4">
-              {processCards.map((card, index) => {
-                const Icon = card.icon;
+              {t.process.cards.map((card, index) => {
+                const Icon = processIcons[index];
 
                 return (
                   <div
@@ -146,18 +115,18 @@ const ProcessSection = () => {
             </div>
 
             <div className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-4">
-              {techStack.map((item) => {
-                const Icon = item.icon;
+              {t.process.techStack.map((label, index) => {
+                const Icon = techIcons[index];
 
                 return (
                   <div
-                    key={item.label}
+                    key={label}
                     className="flex flex-col items-center justify-center rounded-2xl border border-border/40 bg-background/40 p-4 text-center"
                   >
                     <Icon className="mb-2 h-5 w-5 text-primary" />
 
                     <span className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                      {item.label}
+                      {label}
                     </span>
                   </div>
                 );

@@ -1,9 +1,4 @@
-const stats = [
-  { value: "4.2M+", label: "Contas alcançadas" },
-  { value: "72K+", label: "Receita gerada" },
-  { value: "10x", label: "ROI médio" },
-  { value: "150+", label: "Empresas atendidas" },
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const clients = [
   "Vitor Becker",
@@ -25,6 +20,8 @@ const featuredClients = [
 ];
 
 const SocialProofSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section
       id="resultados"
@@ -32,16 +29,16 @@ const SocialProofSection = () => {
     >
       <div className="section-container text-center mb-14 animate-fade-up">
         <p className="text-xs md:text-sm uppercase tracking-widest font-semibold text-primary mb-4">
-          Resultados comprovados
+          {t.socialProof.eyebrow}
         </p>
 
         <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-foreground">
-          Projetos construídos para{" "}
-          <span className="text-gradient">crescimento real</span>
+          {t.socialProof.titleStart}{" "}
+          <span className="text-gradient">{t.socialProof.titleHighlight}</span>
         </h2>
 
         <p className="mx-auto mt-5 max-w-2xl text-muted-foreground">
-          Campanhas, páginas e operações digitais aplicadas em negócios reais.
+          {t.socialProof.subtitle}
         </p>
       </div>
 
@@ -51,7 +48,7 @@ const SocialProofSection = () => {
 
         <div className="marquee-wrapper">
           <div className="marquee-group">
-            {stats.map((item) => (
+            {t.socialProof.stats.map((item) => (
               <div key={item.label} className="card-marquee">
                 <p className="text-5xl font-extrabold text-gradient">
                   {item.value}
@@ -62,7 +59,7 @@ const SocialProofSection = () => {
           </div>
 
           <div className="marquee-group" aria-hidden="true">
-            {stats.map((item) => (
+            {t.socialProof.stats.map((item) => (
               <div key={`${item.label}-copy`} className="card-marquee">
                 <p className="text-5xl font-extrabold text-gradient">
                   {item.value}
@@ -76,7 +73,7 @@ const SocialProofSection = () => {
 
       <div className="section-container text-center mt-20">
         <p className="text-xs md:text-sm uppercase tracking-widest font-semibold text-muted-foreground mb-8">
-          Empresas e projetos atendidos
+          {t.socialProof.clientsTitle}
         </p>
 
         <div className="flex flex-wrap justify-center gap-3 md:gap-4">

@@ -1,18 +1,14 @@
-import {
-  Instagram,
-  Linkedin,
-  Mail,
-  MessageCircle,
-} from "lucide-react";
+import { Instagram, Linkedin, Mail, MessageCircle } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="border-t border-border/20 bg-card/40 py-14 backdrop-blur-xl">
       <div className="section-container">
         <div className="grid gap-12 md:grid-cols-[1.2fr_0.8fr_0.8fr_0.8fr]">
-          {/* BRAND */}
           <div>
             <div className="mb-5 flex items-center gap-3">
               <img
@@ -23,15 +19,13 @@ const Footer = () => {
             </div>
 
             <p className="max-w-sm text-sm leading-7 text-muted-foreground">
-              Estratégia, tecnologia e crescimento previsível para empresas que
-              querem escalar com clareza e posicionamento.
+              {t.footer.description}
             </p>
           </div>
 
-          {/* LINKS */}
           <div>
             <h4 className="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-foreground">
-              Navegação
+              {t.footer.navigation}
             </h4>
 
             <ul className="space-y-3 text-sm text-muted-foreground">
@@ -40,7 +34,7 @@ const Footer = () => {
                   href="#servicos"
                   className="transition-colors hover:text-primary"
                 >
-                  Serviços
+                  {t.footer.services}
                 </a>
               </li>
 
@@ -49,7 +43,7 @@ const Footer = () => {
                   href="#processo"
                   className="transition-colors hover:text-primary"
                 >
-                  Processo
+                  {t.footer.process}
                 </a>
               </li>
 
@@ -58,16 +52,15 @@ const Footer = () => {
                   href="#resultados"
                   className="transition-colors hover:text-primary"
                 >
-                  Resultados
+                  {t.footer.results}
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* CONTATO */}
           <div>
             <h4 className="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-foreground">
-              Contato
+              {t.footer.contact}
             </h4>
 
             <ul className="space-y-3 text-sm text-muted-foreground">
@@ -95,10 +88,9 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* REDES */}
           <div>
             <h4 className="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-foreground">
-              Redes
+              {t.footer.social}
             </h4>
 
             <div className="flex gap-3">
@@ -133,10 +125,9 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* BOTTOM */}
         <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-border/20 pt-6 md:flex-row">
           <p className="text-xs text-muted-foreground">
-            © {currentYear} Pubird. Todos os direitos reservados.
+            © {currentYear} Pubird. {t.footer.rights}
           </p>
         </div>
       </div>

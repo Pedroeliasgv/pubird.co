@@ -1,48 +1,41 @@
-import { Megaphone, MousePointerClick, Sparkles, Workflow } from "lucide-react";
+import {
+  Megaphone,
+  MousePointerClick,
+  Sparkles,
+  Workflow,
+} from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
-const services = [
-  {
-    icon: Megaphone,
-    title: "Aquisição",
-    desc: "Campanhas e estratégias para gerar demanda qualificada.",
-  },
-  {
-    icon: MousePointerClick,
-    title: "Conversão",
-    desc: "Landing pages, funis e otimização focada em resultado.",
-  },
-  {
-    icon: Workflow,
-    title: "Automação",
-    desc: "Processos e integrações para escalar sem aumentar operação.",
-  },
-  {
-    icon: Sparkles,
-    title: "Posicionamento",
-    desc: "Construção de marca e percepção premium no digital.",
-  },
-];
+const serviceIcons = [Megaphone, MousePointerClick, Workflow, Sparkles];
 
 const ServicesSection = () => {
+  const { t } = useLanguage();
+
   return (
-    <section id="servicos" className="scroll-mt-24 py-24 border-t border-border/20">
+    <section
+      id="servicos"
+      className="scroll-mt-24 py-24 border-t border-border/20"
+    >
       <div className="section-container">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-up">
           <p className="text-xs md:text-sm uppercase tracking-widest font-semibold text-primary mb-4">
-            Serviços
+            {t.services.eyebrow}
           </p>
+
           <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-foreground">
-            O que fazemos para transformar {" "}
-            <span className="text-gradient">atenção em cliente</span>
+            {t.services.titleStart}{" "}
+            <span className="text-gradient">{t.services.titleHighlight}</span>
           </h2>
+
           <p className="mt-5 text-lg leading-8 text-muted-foreground">
-            Quatro frentes simples, conectadas e orientadas para crescimento real.
+            {t.services.subtitle}
           </p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, i) => {
-            const Icon = service.icon;
+          {t.services.items.map((service, i) => {
+            const Icon = serviceIcons[i];
+
             return (
               <div
                 key={service.title}
@@ -52,9 +45,11 @@ const ServicesSection = () => {
                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-primary/20 bg-primary/10 text-primary transition group-hover:scale-110 group-hover:bg-primary/20">
                   <Icon className="h-6 w-6" />
                 </div>
+
                 <h3 className="text-lg font-extrabold text-foreground">
                   {service.title}
                 </h3>
+
                 <p className="mt-3 text-sm leading-7 text-muted-foreground">
                   {service.desc}
                 </p>

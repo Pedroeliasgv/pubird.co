@@ -1,33 +1,17 @@
-import { AlertTriangle, BarChart3, Flame, TrendingDown, Workflow } from "lucide-react";
+import {
+  AlertTriangle,
+  BarChart3,
+  Flame,
+  TrendingDown,
+  Workflow,
+} from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
-const problems = [
-  {
-    icon: BarChart3,
-    label: "Sem visibilidade",
-    title: "Você investe, mas não sabe exatamente o que volta.",
-    text: "Campanhas, criativos e canais rodando sem clareza de ROI real.",
-  },
-  {
-    icon: TrendingDown,
-    label: "Sem previsibilidade",
-    title: "O crescimento depende de sorte, indicação ou campanha pontual.",
-    text: "Sem processo claro, cada mês vira uma tentativa diferente.",
-  },
-  {
-    icon: AlertTriangle,
-    label: "Margem apertada",
-    title: "O custo para vender sobe, mas o lucro não acompanha.",
-    text: "Aquisição cara, ticket médio pressionado e pouca inteligência comercial.",
-  },
-  {
-    icon: Workflow,
-    label: "Operação reativa",
-    title: "Sua equipe vive apagando incêndio.",
-    text: "Muito esforço manual, pouca automação e pouco tempo para escalar.",
-  },
-];
+const problemIcons = [BarChart3, TrendingDown, AlertTriangle, Workflow];
 
 const ProblemSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative overflow-hidden py-28 border-t border-border/20">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,hsl(var(--primary)/0.14),transparent_35%),radial-gradient(circle_at_90%_80%,rgba(168,85,247,0.10),transparent_35%)]" />
@@ -38,24 +22,23 @@ const ProblemSection = () => {
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-2 shadow-[0_0_35px_hsl(var(--primary)/0.16)]">
             <Flame className="h-4 w-4 text-primary" />
             <span className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">
-              O desafio
+              {t.problem.eyebrow}
             </span>
           </div>
 
           <h2 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-[-0.04em] text-foreground">
-            Onde sua empresa está {" "}
-            <span className="text-gradient">perdendo crescimento?</span>
+            {t.problem.titleStart}{" "}
+            <span className="text-gradient">{t.problem.titleHighlight}</span>
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Muitas empresas crescem no improviso. O problema aparece quando o
-            crescimento para de acompanhar o esforço.
+            {t.problem.subtitle}
           </p>
         </div>
 
         <div className="grid gap-5 md:grid-cols-2">
-          {problems.map((problem, i) => {
-            const Icon = problem.icon;
+          {t.problem.items.map((problem, i) => {
+            const Icon = problemIcons[i];
 
             return (
               <div

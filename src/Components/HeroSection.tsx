@@ -10,14 +10,11 @@ import {
   Zap,
 } from "lucide-react";
 import { supabase } from "@/lib/supabaseClient";
-
-const benefits = [
-  "Estratégia personalizada",
-  "Aquisição com foco em conversão",
-  "Diagnóstico rápido e objetivo",
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const HeroSection = () => {
+  const { t } = useLanguage();
+
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [nome, setNome] = useState("");
   const [nomeCompleto, setNomeCompleto] = useState("");
@@ -69,7 +66,7 @@ const HeroSection = () => {
             email,
             faturamento,
             segmento,
-              },
+          },
         });
 
       console.log("EMAIL DATA:", emailData);
@@ -95,7 +92,7 @@ const HeroSection = () => {
 
     setCarregando(false);
     console.error(error);
-    alert("Erro ao enviar. Tente novamente!");
+    alert(t.hero.form.error);
   };
 
   return (
@@ -119,7 +116,7 @@ const HeroSection = () => {
           <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-2 shadow-[0_0_35px_hsl(var(--primary)/0.18)] backdrop-blur-xl opacity-0 animate-fade-in sm:px-4">
             <Sparkles className="h-4 w-4 shrink-0 text-primary" />
             <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-primary sm:text-xs sm:tracking-[0.24em]">
-              Estratégia, tráfego e tecnologia
+              {t.hero.badge}
             </span>
           </div>
 
@@ -127,16 +124,15 @@ const HeroSection = () => {
             className="mx-auto max-w-5xl text-[2.55rem] font-extrabold leading-[1.04] tracking-[-0.045em] text-foreground opacity-0 animate-fade-up sm:text-5xl md:text-6xl lg:mx-0 lg:text-7xl"
             style={{ animationDelay: "0.12s" }}
           >
-            Marketing e aquisição para empresas que querem{" "}
-            <span className="text-gradient">crescer com clareza.</span>
+            {t.hero.titleStart}{" "}
+            <span className="text-gradient">{t.hero.titleHighlight}</span>
           </h1>
 
           <p
             className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-muted-foreground opacity-0 animate-fade-up sm:text-base md:mt-7 md:text-xl md:leading-8 lg:mx-0"
             style={{ animationDelay: "0.24s" }}
           >
-            Estruturamos aquisição, posicionamento e conversão para transformar
-            tráfego em clientes reais.
+            {t.hero.subtitle}
           </p>
 
           <div
@@ -149,7 +145,7 @@ const HeroSection = () => {
               className="group h-auto w-full rounded-xl px-7 py-5 text-sm font-semibold shadow-[0_0_45px_hsl(var(--primary)/0.3)] transition duration-300 hover:scale-[1.03] sm:w-auto sm:px-8 sm:py-6 sm:text-base"
               onClick={() => setIsFormOpen(true)}
             >
-              Solicitar diagnóstico
+              {t.hero.primaryCta}
               <ArrowRight className="ml-2 h-4 w-4 transition duration-300 group-hover:translate-x-1" />
             </Button>
 
@@ -159,7 +155,7 @@ const HeroSection = () => {
               className="h-auto w-full rounded-xl px-7 py-5 text-sm font-semibold backdrop-blur-xl transition duration-300 hover:scale-[1.03] sm:w-auto sm:px-8 sm:py-6 sm:text-base"
               asChild
             >
-              <a href="#servicos">Ver soluções</a>
+              <a href="#servicos">{t.hero.secondaryCta}</a>
             </Button>
           </div>
 
@@ -167,7 +163,7 @@ const HeroSection = () => {
             className="mt-7 grid gap-3 text-left opacity-0 animate-fade-up sm:grid-cols-3 md:mt-8"
             style={{ animationDelay: "0.48s" }}
           >
-            {benefits.map((benefit) => (
+            {t.hero.benefits.map((benefit) => (
               <div
                 key={benefit}
                 className="flex items-start gap-2 rounded-xl border border-border/40 bg-card/35 p-3 backdrop-blur-xl transition duration-300 hover:border-primary/40 hover:bg-primary/10"
@@ -191,16 +187,16 @@ const HeroSection = () => {
             <div className="mb-5 flex items-center justify-between border-b border-border/40 pb-5">
               <div>
                 <p className="text-sm font-semibold text-foreground">
-                  Growth Dashboard
+                  {t.hero.dashboard.title}
                 </p>
                 <p className="text-xs text-muted-foreground">
-                  Visão clara do funil
+                  {t.hero.dashboard.subtitle}
                 </p>
               </div>
 
               <div className="flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
                 <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-                Live
+                {t.hero.dashboard.status}
               </div>
             </div>
 
@@ -209,7 +205,7 @@ const HeroSection = () => {
                 <div className="mb-4 flex items-center justify-between gap-4">
                   <span className="flex items-center gap-2 text-xs text-muted-foreground sm:text-sm">
                     <TrendingUp className="h-4 w-4 shrink-0 text-primary" />
-                    Aquisição qualificada
+                    {t.hero.dashboard.acquisition}
                   </span>
 
                   <span className="text-sm font-bold text-primary">+38%</span>
@@ -224,41 +220,40 @@ const HeroSection = () => {
                 <div className="rounded-2xl border border-border/40 bg-background/45 p-4 text-center">
                   <Target className="mx-auto mb-2 h-5 w-5 text-primary" />
                   <p className="text-base font-extrabold text-foreground sm:text-lg">
-                    Funil
+                    {t.hero.dashboard.funnel}
                   </p>
                   <p className="mt-1 text-[11px] text-muted-foreground">
-                    mais claro
+                    {t.hero.dashboard.funnelLabel}
                   </p>
                 </div>
 
                 <div className="rounded-2xl border border-border/40 bg-background/45 p-4 text-center">
                   <Zap className="mx-auto mb-2 h-5 w-5 text-primary" />
                   <p className="text-base font-extrabold text-foreground sm:text-lg">
-                    Leads
+                    {t.hero.dashboard.leads}
                   </p>
                   <p className="mt-1 text-[11px] text-muted-foreground">
-                    qualificados
+                    {t.hero.dashboard.leadsLabel}
                   </p>
                 </div>
 
                 <div className="rounded-2xl border border-border/40 bg-background/45 p-4 text-center">
                   <Sparkles className="mx-auto mb-2 h-5 w-5 text-primary" />
                   <p className="text-base font-extrabold text-foreground sm:text-lg">
-                    Marca
+                    {t.hero.dashboard.brand}
                   </p>
                   <p className="mt-1 text-[11px] text-muted-foreground">
-                    posicionada
+                    {t.hero.dashboard.brandLabel}
                   </p>
                 </div>
               </div>
 
               <div className="rounded-2xl border border-primary/20 bg-primary/10 p-4 sm:p-5">
                 <p className="text-sm font-semibold text-foreground">
-                  Próxima ação recomendada
+                  {t.hero.dashboard.recommendedTitle}
                 </p>
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                  Entender gargalos, priorizar canais e criar uma estrutura de
-                  conversão com acompanhamento real.
+                  {t.hero.dashboard.recommendedText}
                 </p>
               </div>
             </div>
@@ -271,7 +266,7 @@ const HeroSection = () => {
           <div className="relative my-6 w-full max-w-md rounded-[24px] border border-primary/20 bg-card/95 p-5 shadow-[0_0_90px_rgba(139,92,246,0.3)] backdrop-blur-2xl sm:rounded-[28px] sm:p-7 md:p-8">
             <button
               type="button"
-              aria-label="Fechar formulário"
+              aria-label={t.hero.form.closeAria}
               className="absolute right-4 top-4 rounded-full p-2 text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
               onClick={() => setIsFormOpen(false)}
             >
@@ -281,18 +276,21 @@ const HeroSection = () => {
             {!enviado ? (
               <>
                 <p className="mb-3 pr-10 text-xs font-semibold uppercase tracking-[0.22em] text-primary">
-                  Diagnóstico gratuito
+                  {t.hero.form.badge}
                 </p>
 
                 <h2 className="mb-6 pr-8 text-xl font-extrabold text-foreground sm:mb-7 sm:text-2xl">
-                  Receba uma análise do seu negócio
+                  {t.hero.form.title}
                 </h2>
 
-                <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:gap-4">
+                <form
+                  onSubmit={handleSubmit}
+                  className="flex flex-col gap-3 sm:gap-4"
+                >
                   <input
                     value={nomeCompleto}
                     onChange={(e) => setNomeCompleto(e.target.value)}
-                    placeholder="Qual é o seu nome e sobrenome?"
+                    placeholder={t.hero.form.fullName}
                     required
                     className="h-13 w-full rounded-lg border border-border/50 bg-background/80 px-4 py-4 text-sm text-foreground placeholder:text-muted-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20 sm:h-14 sm:text-base"
                   />
@@ -301,7 +299,7 @@ const HeroSection = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     type="email"
-                    placeholder="Qual seu e-mail corporativo?"
+                    placeholder={t.hero.form.email}
                     required
                     className="h-13 w-full rounded-lg border border-border/50 bg-background/80 px-4 py-4 text-sm text-foreground placeholder:text-muted-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20 sm:h-14 sm:text-base"
                   />
@@ -309,7 +307,7 @@ const HeroSection = () => {
                   <input
                     value={nome}
                     onChange={(e) => setNome(e.target.value)}
-                    placeholder="Qual o nome da sua empresa?"
+                    placeholder={t.hero.form.company}
                     required
                     className="h-13 w-full rounded-lg border border-border/50 bg-background/80 px-4 py-4 text-sm text-foreground placeholder:text-muted-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20 sm:h-14 sm:text-base"
                   />
@@ -317,7 +315,7 @@ const HeroSection = () => {
                   <input
                     value={telefone}
                     onChange={(e) => setTelefone(e.target.value)}
-                    placeholder="🇧🇷 Qual seu telefone?"
+                    placeholder={t.hero.form.phone}
                     required
                     className="h-13 w-full rounded-lg border border-border/50 bg-background/80 px-4 py-4 text-sm text-foreground placeholder:text-muted-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20 sm:h-14 sm:text-base"
                   />
@@ -330,21 +328,21 @@ const HeroSection = () => {
                       faturamento ? "text-white" : "text-muted-foreground"
                     }`}
                   >
-                    <option value="">
-                      Qual o faturamento mensal da sua empresa?
+                    <option value="">{t.hero.form.revenue}</option>
+                    <option value="Até 10 mil">
+                      {t.hero.form.revenueOptions.upTo10k}
                     </option>
-                    <option value="Até 10 mil">Até R$10 mil</option>
                     <option value="De 10 mil a 50 mil">
-                      De R$10 mil a R$50 mil
+                      {t.hero.form.revenueOptions.from10kTo50k}
                     </option>
                     <option value="De 50 mil a 100 mil">
-                      De R$50 mil a R$100 mil
+                      {t.hero.form.revenueOptions.from50kTo100k}
                     </option>
                     <option value="De 100 mil a 300 mil">
-                      De R$100 mil a R$300 mil
+                      {t.hero.form.revenueOptions.from100kTo300k}
                     </option>
                     <option value="Acima de 300 mil">
-                      Acima de R$300 mil
+                      {t.hero.form.revenueOptions.above300k}
                     </option>
                   </select>
 
@@ -356,21 +354,30 @@ const HeroSection = () => {
                       segmento ? "text-white" : "text-muted-foreground"
                     }`}
                   >
-                    <option value="">Qual o seu segmento?</option>
-                    <option value="E-commerce">E-commerce</option>
-                    <option value="Serviços">Serviços</option>
-                    <option value="Infoproduto">Infoproduto</option>
-                    <option value="Negócio local">Negócio local</option>
-                    <option value="Outro">Outro</option>
+                    <option value="">{t.hero.form.segment}</option>
+                    <option value="E-commerce">
+                      {t.hero.form.segmentOptions.ecommerce}
+                    </option>
+                    <option value="Serviços">
+                      {t.hero.form.segmentOptions.services}
+                    </option>
+                    <option value="Infoproduto">
+                      {t.hero.form.segmentOptions.infoproduct}
+                    </option>
+                    <option value="Negócio local">
+                      {t.hero.form.segmentOptions.localBusiness}
+                    </option>
+                    <option value="Outro">
+                      {t.hero.form.segmentOptions.other}
+                    </option>
                   </select>
-
 
                   <button
                     type="submit"
                     disabled={carregando}
                     className="mt-2 h-13 w-full rounded-lg bg-primary px-5 py-4 text-sm font-bold text-white shadow-[0_0_35px_rgba(139,92,246,0.35)] transition hover:scale-[1.02] hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-60 sm:h-14 sm:text-base"
                   >
-                    {carregando ? "Enviando..." : "Receber análise"}
+                    {carregando ? t.hero.form.loading : t.hero.form.submit}
                   </button>
                 </form>
               </>
@@ -381,11 +388,11 @@ const HeroSection = () => {
                 </div>
 
                 <h3 className="mb-2 text-xl font-bold text-foreground">
-                  Enviado com sucesso!
+                  {t.hero.form.successTitle}
                 </h3>
 
                 <p className="text-sm leading-6 text-muted-foreground">
-                  Nosso time entrará em contato em breve.
+                  {t.hero.form.successText}
                 </p>
               </div>
             )}
