@@ -13,6 +13,30 @@ Deno.serve(async (req) => {
   try {
     const lead = await req.json();
 
+    const rawPhone = String(lead.telefone || "").replace(/\D/g, "");
+
+    const whatsappNumber = rawPhone.startsWith("55")
+      ? rawPhone
+      : `55${rawPhone}`;
+
+    const whatsappMessage = encodeURIComponent(
+      `Olá, ${lead.nomeCompleto || "tudo bem"}! Tudo bem?
+
+Aqui é o Pedro, da Pubird.
+
+Recebemos seu cadastro para o diagnóstico gratuito no nosso site.
+
+Vi que você representa a empresa ${
+        lead.nome || "sua empresa"
+      } e queria entender melhor o momento de vocês para ver como podemos ajudar com marketing, posicionamento e aquisição de clientes.
+
+Podemos conversar por aqui?`
+    );
+
+    const whatsappLink = rawPhone
+      ? `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${whatsappMessage}`
+      : "https://api.whatsapp.com/send";
+
     const html = `
       <div style="font-family:Arial,sans-serif;background:#0b0612;padding:24px;color:#fff;">
         <div style="max-width:620px;margin:auto;background:#15101f;border:1px solid #7c3aed55;border-radius:18px;padding:28px;">
@@ -26,10 +50,9 @@ Deno.serve(async (req) => {
             <p><strong>Telefone:</strong> ${lead.telefone || "-"}</p>
             <p><strong>Faturamento:</strong> ${lead.faturamento || "-"}</p>
             <p><strong>Segmento:</strong> ${lead.segmento || "-"}</p>
-            <p><strong>CNPJ:</strong> ${lead.cnpj || "-"}</p>
           </div>
 
-          <a href="https://wa.me/${String(lead.telefone || "").replace(/\D/g, "")}"
+          <a href="${whatsappLink}"
              style="display:inline-block;margin-top:24px;background:#9333ea;color:white;text-decoration:none;padding:14px 18px;border-radius:10px;font-weight:bold;">
             Chamar no WhatsApp
           </a>
@@ -71,4 +94,3 @@ Deno.serve(async (req) => {
     });
   }
 });
-
