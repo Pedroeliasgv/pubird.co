@@ -2,8 +2,16 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { ChevronDown } from "lucide-react";
+import type { Language } from "@/i18n/translations";
 
-const languages = {
+const languages: Record<
+  Language,
+  {
+    label: string;
+    flag: string;
+    alt: string;
+  }
+> = {
   pt: {
     label: "Português",
     flag: "/flags/br.svg",
@@ -14,9 +22,12 @@ const languages = {
     flag: "/flags/us.svg",
     alt: "United States flag",
   },
+  es: {
+    label: "Español",
+    flag: "/flags/es.svg",
+    alt: "Bandera de España",
+  },
 };
-
-type LanguageKey = keyof typeof languages;
 
 const Navbar = () => {
   const { language, setLanguage, t } = useLanguage();
@@ -26,9 +37,9 @@ const Navbar = () => {
     window.dispatchEvent(new Event("open-diagnosis-modal"));
   };
 
-  const currentLanguage = languages[language as LanguageKey];
+  const currentLanguage = languages[language];
 
-  const handleLanguageChange = (selectedLanguage: LanguageKey) => {
+  const handleLanguageChange = (selectedLanguage: Language) => {
     setLanguage(selectedLanguage);
     setIsLanguageOpen(false);
   };
@@ -76,7 +87,7 @@ const Navbar = () => {
             <button
               type="button"
               onClick={() => setIsLanguageOpen((prev) => !prev)}
-              aria-label="Selecionar idioma"
+              aria-label={t.navbar.languageAria}
               aria-expanded={isLanguageOpen}
               className="flex h-9 items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-2.5 text-sm font-medium text-white backdrop-blur-xl transition hover:border-primary/40 hover:bg-primary/10"
             >
@@ -86,9 +97,7 @@ const Navbar = () => {
                 className="h-4 w-6 rounded-sm object-cover"
               />
 
-              <span className="hidden sm:inline">
-                {currentLanguage.label}
-              </span>
+              <span className="hidden sm:inline">{currentLanguage.label}</span>
 
               <ChevronDown
                 className={`h-3.5 w-3.5 text-muted-foreground transition-transform ${
@@ -113,7 +122,6 @@ const Navbar = () => {
                     alt="Bandeira do Brasil"
                     className="h-4 w-6 rounded-sm object-cover"
                   />
-
                   <span>Português</span>
                 </button>
 
@@ -131,8 +139,24 @@ const Navbar = () => {
                     alt="United States flag"
                     className="h-4 w-6 rounded-sm object-cover"
                   />
-
                   <span>English</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => handleLanguageChange("es")}
+                  className={`flex w-full items-center gap-2 rounded-md px-2.5 py-2 text-left text-sm transition ${
+                    language === "es"
+                      ? "bg-primary/15 text-white"
+                      : "text-muted-foreground hover:bg-white/5 hover:text-white"
+                  }`}
+                >
+                  <img
+                    src="/flags/es.svg"
+                    alt="Bandera de España"
+                    className="h-4 w-6 rounded-sm object-cover"
+                  />
+                  <span>Español</span>
                 </button>
               </div>
             )}

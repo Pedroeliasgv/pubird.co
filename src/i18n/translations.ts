@@ -6,8 +6,10 @@ export const translations = {
       results: "Resultados",
       diagnosis: "Solicitar diagnóstico",
       homeAria: "Voltar ao início",
+      languageAria: "Selecionar idioma",
       portugueseAria: "Alterar idioma para português",
       englishAria: "Alterar idioma para inglês",
+      spanishAria: "Alterar idioma para espanhol",
     },
 
     hero: {
@@ -111,6 +113,31 @@ export const translations = {
           label: "Operação reativa",
           title: "Sua equipe vive apagando incêndio.",
           text: "Muito esforço manual, pouca automação e pouco tempo para escalar.",
+        },
+      ],
+    },
+
+    solution: {
+      eyebrow: "A Diferença",
+      titleStart: "Transforme marketing em",
+      titleHighlight: "receita previsível",
+      subtitle:
+        "A Pubird cria máquinas de crescimento. Não campanhas isoladas. Sistemas que escalam.",
+      items: [
+        {
+          title: "Dados em tempo real",
+          description:
+            "Dashboard centralizado com KPIs do seu negócio. Nada de planilhas ou achismos. Dados que realmente importam.",
+        },
+        {
+          title: "Estratégia personalizada",
+          description:
+            "Cada negócio é diferente. Criamos a máquina de crescimento específica para seu mercado, produto e estágio.",
+        },
+        {
+          title: "Execução com foco em ROI",
+          description:
+            "Cada real investido é rastreado e otimizado. Crescimento sem desperdício. Resultados previsíveis.",
         },
       ],
     },
@@ -219,8 +246,10 @@ export const translations = {
       results: "Results",
       diagnosis: "Request diagnosis",
       homeAria: "Back to home",
+      languageAria: "Select language",
       portugueseAria: "Change language to Portuguese",
       englishAria: "Change language to English",
+      spanishAria: "Change language to Spanish",
     },
 
     hero: {
@@ -328,6 +357,31 @@ export const translations = {
       ],
     },
 
+    solution: {
+      eyebrow: "The Difference",
+      titleStart: "Turn marketing into",
+      titleHighlight: "predictable revenue",
+      subtitle:
+        "Pubird builds growth engines. Not isolated campaigns. Systems that scale.",
+      items: [
+        {
+          title: "Real-time data",
+          description:
+            "A centralized dashboard with your business KPIs. No spreadsheets or guesswork. Data that truly matters.",
+        },
+        {
+          title: "Personalized strategy",
+          description:
+            "Every business is different. We build the specific growth engine for your market, product and stage.",
+        },
+        {
+          title: "ROI-focused execution",
+          description:
+            "Every amount invested is tracked and optimized. Growth without waste. Predictable results.",
+        },
+      ],
+    },
+
     services: {
       eyebrow: "Services",
       titleStart: "What we do to turn",
@@ -421,6 +475,247 @@ export const translations = {
       process: "Process",
       results: "Results",
       rights: "All rights reserved.",
+    },
+  },
+
+  es: {
+    navbar: {
+      services: "Servicios",
+      process: "Proceso",
+      results: "Resultados",
+      diagnosis: "Solicitar diagnóstico",
+      homeAria: "Volver al inicio",
+      languageAria: "Seleccionar idioma",
+      portugueseAria: "Cambiar idioma a portugués",
+      englishAria: "Cambiar idioma a inglés",
+      spanishAria: "Cambiar idioma a español",
+    },
+
+    hero: {
+      badge: "Estrategia, tráfico y tecnología",
+      titleStart: "Marketing y adquisición para empresas que quieren",
+      titleHighlight: "crecer con claridad.",
+      subtitle:
+        "Estructuramos adquisición, posicionamiento y conversión para transformar tráfico en clientes reales.",
+      primaryCta: "Solicitar diagnóstico",
+      secondaryCta: "Ver soluciones",
+      benefits: [
+        "Estrategia personalizada",
+        "Adquisición enfocada en conversión",
+        "Diagnóstico rápido y objetivo",
+      ],
+      dashboard: {
+        title: "Growth Dashboard",
+        subtitle: "Visión clara del embudo",
+        status: "Live",
+        acquisition: "Adquisición calificada",
+        funnel: "Embudo",
+        funnelLabel: "más claro",
+        leads: "Leads",
+        leadsLabel: "calificados",
+        brand: "Marca",
+        brandLabel: "posicionada",
+        recommendedTitle: "Próxima acción recomendada",
+        recommendedText:
+          "Entender los cuellos de botella, priorizar canales y crear una estructura de conversión con seguimiento real.",
+      },
+      form: {
+        closeAria: "Cerrar formulario",
+        badge: "Diagnóstico gratuito",
+        title: "Recibe un análisis de tu negocio",
+        fullName: "¿Cuál es tu nombre y apellido?",
+        email: "¿Cuál es tu correo corporativo?",
+        company: "¿Cuál es el nombre de tu empresa?",
+        phone: "🇪🇸 ¿Cuál es tu teléfono?",
+        revenue: "¿Cuál es la facturación mensual de tu empresa?",
+        segment: "¿Cuál es tu segmento?",
+        loading: "Enviando...",
+        submit: "Recibir análisis",
+        successTitle: "¡Enviado con éxito!",
+        successText: "Nuestro equipo se pondrá en contacto pronto.",
+        error: "Error al enviar. Inténtalo nuevamente.",
+        revenueOptions: {
+          upTo10k: "Hasta R$10 mil",
+          from10kTo50k: "De R$10 mil a R$50 mil",
+          from50kTo100k: "De R$50 mil a R$100 mil",
+          from100kTo300k: "De R$100 mil a R$300 mil",
+          above300k: "Más de R$300 mil",
+        },
+        segmentOptions: {
+          ecommerce: "E-commerce",
+          services: "Servicios",
+          infoproduct: "Infoproducto",
+          localBusiness: "Negocio local",
+          other: "Otro",
+        },
+      },
+    },
+
+    socialProof: {
+      eyebrow: "Resultados comprobados",
+      titleStart: "Proyectos construidos para",
+      titleHighlight: "crecimiento real",
+      subtitle:
+        "Campañas, páginas y operaciones digitales aplicadas en negocios reales.",
+      clientsTitle: "Empresas y proyectos atendidos",
+      stats: [
+        { value: "4.2M+", label: "Cuentas alcanzadas" },
+        { value: "72K+", label: "Ingresos generados" },
+        { value: "10x", label: "ROI promedio" },
+        { value: "150+", label: "Empresas atendidas" },
+      ],
+    },
+
+    problem: {
+      eyebrow: "El desafío",
+      titleStart: "¿Dónde tu empresa está",
+      titleHighlight: "perdiendo crecimiento?",
+      subtitle:
+        "Muchas empresas crecen improvisando. El problema aparece cuando el crecimiento deja de acompañar el esfuerzo.",
+      items: [
+        {
+          label: "Sin visibilidad",
+          title: "Inviertes, pero no sabes exactamente qué retorna.",
+          text: "Campañas, creativos y canales activos sin claridad sobre el ROI real.",
+        },
+        {
+          label: "Sin previsibilidad",
+          title:
+            "El crecimiento depende de suerte, recomendaciones o campañas puntuales.",
+          text: "Sin un proceso claro, cada mes se convierte en un intento diferente.",
+        },
+        {
+          label: "Margen ajustado",
+          title: "El costo de vender sube, pero la ganancia no acompaña.",
+          text: "Adquisición cara, ticket promedio presionado y poca inteligencia comercial.",
+        },
+        {
+          label: "Operación reactiva",
+          title: "Tu equipo vive apagando incendios.",
+          text: "Mucho esfuerzo manual, poca automatización y poco tiempo para escalar.",
+        },
+      ],
+    },
+
+    solution: {
+      eyebrow: "La Diferencia",
+      titleStart: "Transforma el marketing en",
+      titleHighlight: "ingresos previsibles",
+      subtitle:
+        "Pubird crea máquinas de crecimiento. No campañas aisladas. Sistemas que escalan.",
+      items: [
+        {
+          title: "Datos en tiempo real",
+          description:
+            "Dashboard centralizado con KPIs de tu negocio. Nada de planillas ni suposiciones. Datos que realmente importan.",
+        },
+        {
+          title: "Estrategia personalizada",
+          description:
+            "Cada negocio es diferente. Creamos la máquina de crecimiento específica para tu mercado, producto y etapa.",
+        },
+        {
+          title: "Ejecución enfocada en ROI",
+          description:
+            "Cada inversión es rastreada y optimizada. Crecimiento sin desperdicio. Resultados previsibles.",
+        },
+      ],
+    },
+
+    services: {
+      eyebrow: "Servicios",
+      titleStart: "Lo que hacemos para transformar",
+      titleHighlight: "atención en clientes",
+      subtitle:
+        "Cuatro frentes simples, conectados y orientados al crecimiento real.",
+      items: [
+        {
+          title: "Adquisición",
+          desc: "Campañas y estrategias para generar demanda calificada.",
+        },
+        {
+          title: "Conversión",
+          desc: "Landing pages, embudos y optimización enfocada en resultados.",
+        },
+        {
+          title: "Automatización",
+          desc: "Procesos e integraciones para escalar sin aumentar la operación.",
+        },
+        {
+          title: "Posicionamiento",
+          desc: "Construcción de marca y percepción premium en el digital.",
+        },
+      ],
+    },
+
+    process: {
+      eyebrow: "Método Pubird",
+      titleStart: "El crecimiento no sucede por casualidad.",
+      titleHighlight: "Sucede con dirección.",
+      subtitle:
+        "Unimos marketing, tecnología y análisis para transformar presencia digital en un sistema más previsible de generación de oportunidades.",
+      bullets: [
+        "Identificamos dónde el negocio está perdiendo atención, leads y conversiones.",
+        "Organizamos canales, oferta y comunicación en una dirección más clara.",
+        "Acompañamos datos para mejorar lo que funciona y eliminar desperdicios.",
+      ],
+      dashboardTitle: "Growth System",
+      dashboardSubtitle: "Del análisis inicial a la mejora continua",
+      cards: [
+        {
+          title: "Lectura del escenario",
+          desc: "Analizamos presencia digital, oferta, posicionamiento y puntos de fricción.",
+        },
+        {
+          title: "Plan de crecimiento",
+          desc: "Definimos el camino más estratégico para atraer y convertir clientes.",
+        },
+        {
+          title: "Implementación",
+          desc: "Creamos páginas, campañas, contenidos y procesos alineados al objetivo.",
+        },
+        {
+          title: "Optimización",
+          desc: "Medimos resultados, ajustamos rutas y fortalecemos lo que genera retorno.",
+        },
+      ],
+      techStack: ["IA", "Medios", "Embudos", "Datos"],
+    },
+
+    cta: {
+      eyebrow: "Hora de avanzar",
+      titleStart: "Tu marca puede estar perdiendo clientes",
+      titleHighlight: "sin darse cuenta.",
+      subtitle:
+        "Vamos a mirar tu negocio con una visión externa e identificar dónde tu comunicación, página o embudo pueden rendir mejor.",
+      button: "Quiero un análisis de Pubird",
+      timeText: "Toma menos de 5 minutos solicitarlo.",
+      benefits: [
+        {
+          title: "Sin compromiso",
+          desc: "Entiendes si tiene sentido avanzar antes de tomar cualquier decisión.",
+        },
+        {
+          title: "Visión estratégica",
+          desc: "Mostramos oportunidades reales para mejorar presencia, oferta y conversión.",
+        },
+        {
+          title: "Directo al punto",
+          desc: "Una conversación práctica, objetiva y enfocada en lo que puede generar resultados.",
+        },
+      ],
+    },
+
+    footer: {
+      description:
+        "Estrategia, tecnología y crecimiento previsible para empresas que quieren escalar con claridad y posicionamiento.",
+      navigation: "Navegación",
+      contact: "Contacto",
+      social: "Redes",
+      services: "Servicios",
+      process: "Proceso",
+      results: "Resultados",
+      rights: "Todos los derechos reservados.",
     },
   },
 };
