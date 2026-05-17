@@ -317,6 +317,9 @@ const HeroSection = () => {
                     onChange={(e) => setTelefone(e.target.value)}
                     placeholder={t.hero.form.phone}
                     required
+                    type="tel"
+                    inputMode="tel"
+                    autoComplete="tel"
                     className="h-13 w-full rounded-lg border border-border/50 bg-background/80 px-4 py-4 text-sm text-foreground placeholder:text-muted-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20 sm:h-14 sm:text-base"
                   />
 
