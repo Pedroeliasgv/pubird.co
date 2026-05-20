@@ -4,6 +4,7 @@ const clients = [
   "Vitor Becker",
   "Kibon",
   "Profeta Evanio Vale",
+  "Pr. Alexandre Meneghini",
   "Sr. Souza",
   "IEADPE",
   "Gama Laser",
@@ -13,6 +14,7 @@ const clients = [
 
 const featuredClients = [
   "Profeta Evanio Vale",
+  "Pr. Alexandre Meneghini",
   "Vitor Becker",
   "Kibon",
   "Gama Laser",
