@@ -113,12 +113,9 @@ const HeroSection = () => {
             />
           </div>
 
-          <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-2 shadow-[0_0_35px_hsl(var(--primary)/0.18)] backdrop-blur-xl opacity-0 animate-fade-in sm:px-4">
-            <Sparkles className="h-4 w-4 shrink-0 text-primary" />
-            <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-primary sm:text-xs sm:tracking-[0.24em]">
-              {t.hero.badge}
-            </span>
-          </div>
+          <p className="mb-6 text-[10px] font-bold uppercase tracking-[0.18em] text-primary opacity-0 animate-fade-in sm:text-xs sm:tracking-[0.24em]">
+            {t.hero.badge}
+          </p>
 
           <h1
             className="mx-auto max-w-5xl text-[2.55rem] font-extrabold leading-[1.04] tracking-[-0.045em] text-foreground opacity-0 animate-fade-up sm:text-5xl md:text-6xl lg:mx-0 lg:text-7xl"

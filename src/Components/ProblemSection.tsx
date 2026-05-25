@@ -1,7 +1,6 @@
 import {
   AlertTriangle,
   BarChart3,
-  Flame,
   TrendingDown,
   Workflow,
 } from "lucide-react";
@@ -19,12 +18,9 @@ const ProblemSection = () => {
 
       <div className="section-container relative z-10">
         <div className="mx-auto mb-16 max-w-3xl text-center animate-fade-up">
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-2 shadow-[0_0_35px_hsl(var(--primary)/0.16)]">
-            <Flame className="h-4 w-4 text-primary" />
-            <span className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">
-              {t.problem.eyebrow}
-            </span>
-          </div>
+          <p className="mb-4 text-center text-xs font-bold uppercase tracking-[0.24em] text-primary">
+            {t.problem.eyebrow}
+          </p>
 
           <h2 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-[-0.04em] text-foreground">
             {t.problem.titleStart}{" "}

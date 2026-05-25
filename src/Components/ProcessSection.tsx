@@ -3,7 +3,6 @@ import {
   Cpu,
   LineChart,
   MousePointerClick,
-  Sparkles,
   Target,
   Workflow,
   Zap,
@@ -26,12 +25,9 @@ const ProcessSection = () => {
 
       <div className="section-container relative z-10 grid items-center gap-16 lg:grid-cols-[0.95fr_1.05fr]">
         <div className="animate-fade-up">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-2">
-            <Sparkles className="h-4 w-4 text-primary" />
-            <span className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">
-              {t.process.eyebrow}
-            </span>
-          </div>
+          <p className="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-primary">
+            {t.process.eyebrow}
+          </p>
 
           <h2 className="max-w-xl text-4xl font-extrabold leading-tight tracking-[-0.04em] text-foreground md:text-6xl">
             {t.process.titleStart}{" "}

@@ -73,7 +73,7 @@ export const translations = {
     },
 
     socialProof: {
-      eyebrow: "Resultados comprovados",
+      eyebrow: "Resultados",
       titleStart: "Projetos construídos para",
       titleHighlight: "crescimento real",
       subtitle:
@@ -118,7 +118,7 @@ export const translations = {
     },
 
     solution: {
-      eyebrow: "A Diferença",
+      eyebrow: "A diferença",
       titleStart: "Transforme marketing em",
       titleHighlight: "receita previsível",
       subtitle:
@@ -169,7 +169,7 @@ export const translations = {
     },
 
     process: {
-      eyebrow: "Método Pubird",
+      eyebrow: "Processo",
       titleStart: "Crescimento não acontece por acaso.",
       titleHighlight: "Acontece com direção.",
       subtitle:
@@ -203,25 +203,25 @@ export const translations = {
     },
 
     cta: {
-      eyebrow: "Hora de avançar",
-      titleStart: "Sua marca pode estar perdendo clientes",
-      titleHighlight: "sem perceber.",
+      eyebrow: "Próximo passo",
+      titleStart: "Talvez sua marca esteja perdendo clientes",
+      titleHighlight: "por detalhes simples.",
       subtitle:
-        "Vamos olhar para o seu negócio com visão externa e identificar onde sua comunicação, página ou funil podem performar melhor.",
-      button: "Quero uma análise da Pubird",
-      timeText: "Leva menos de 5 minutos para solicitar.",
+        "A gente analisa seu site, sua comunicação e seu funil para entender onde dá para melhorar e deixar tudo mais claro para quem chega até você.",
+      button: "Solicitar análise estratégica",
+      timeText: "Você responde rapidinho. Depois a gente te chama.",
       benefits: [
         {
-          title: "Sem compromisso",
-          desc: "Você entende se faz sentido avançar antes de qualquer decisão.",
+          title: "Sem pressão",
+          desc: "A ideia é entender o cenário primeiro, sem compromisso de fechar nada.",
         },
         {
-          title: "Visão estratégica",
-          desc: "Mostramos oportunidades reais para melhorar presença, oferta e conversão.",
+          title: "Olhar mais claro",
+          desc: "Mostramos pontos que podem estar atrapalhando sua presença e suas conversões.",
         },
         {
-          title: "Direto ao ponto",
-          desc: "Uma conversa prática, objetiva e focada no que pode gerar resultado.",
+          title: "Próximos passos",
+          desc: "Você sai com uma noção melhor do que pode ser ajustado no digital.",
         },
       ],
     },
@@ -313,7 +313,7 @@ export const translations = {
     },
 
     socialProof: {
-      eyebrow: "Proven results",
+      eyebrow: "Results",
       titleStart: "Projects built for",
       titleHighlight: "real growth",
       subtitle:
@@ -358,7 +358,7 @@ export const translations = {
     },
 
     solution: {
-      eyebrow: "The Difference",
+      eyebrow: "The difference",
       titleStart: "Turn marketing into",
       titleHighlight: "predictable revenue",
       subtitle:
@@ -408,7 +408,7 @@ export const translations = {
     },
 
     process: {
-      eyebrow: "Pubird Method",
+      eyebrow: "Process",
       titleStart: "Growth does not happen by chance.",
       titleHighlight: "It happens with direction.",
       subtitle:
@@ -442,25 +442,25 @@ export const translations = {
     },
 
     cta: {
-      eyebrow: "Time to move forward",
+      eyebrow: "Next step",
       titleStart: "Your brand may be losing customers",
-      titleHighlight: "without noticing.",
+      titleHighlight: "because of simple details.",
       subtitle:
-        "We will look at your business with an external strategic view and identify where your communication, page or funnel can perform better.",
-      button: "I want a Pubird analysis",
-      timeText: "It takes less than 5 minutes to request.",
+        "We take a look at your website, communication and funnel to understand what can be improved and make things clearer for people who reach your business.",
+      button: "Request strategic analysis",
+      timeText: "It only takes a moment to request. Then we’ll get in touch.",
       benefits: [
         {
-          title: "No commitment",
-          desc: "You understand whether it makes sense to move forward before making any decision.",
+          title: "No pressure",
+          desc: "The idea is to understand the scenario first, with no commitment to close anything.",
         },
         {
-          title: "Strategic view",
-          desc: "We show real opportunities to improve presence, offer and conversion.",
+          title: "Clearer view",
+          desc: "We point out what may be affecting your presence and conversions.",
         },
         {
-          title: "Straight to the point",
-          desc: "A practical, objective conversation focused on what can generate results.",
+          title: "Next steps",
+          desc: "You leave with a clearer idea of what can be improved online.",
         },
       ],
     },
@@ -552,7 +552,7 @@ export const translations = {
     },
 
     socialProof: {
-      eyebrow: "Resultados comprobados",
+      eyebrow: "Resultados",
       titleStart: "Proyectos construidos para",
       titleHighlight: "crecimiento real",
       subtitle:
@@ -598,7 +598,7 @@ export const translations = {
     },
 
     solution: {
-      eyebrow: "La Diferencia",
+      eyebrow: "La diferencia",
       titleStart: "Transforma el marketing en",
       titleHighlight: "ingresos previsibles",
       subtitle:
@@ -649,7 +649,7 @@ export const translations = {
     },
 
     process: {
-      eyebrow: "Método Pubird",
+      eyebrow: "Proceso",
       titleStart: "El crecimiento no sucede por casualidad.",
       titleHighlight: "Sucede con dirección.",
       subtitle:
@@ -683,25 +683,25 @@ export const translations = {
     },
 
     cta: {
-      eyebrow: "Hora de avanzar",
+      eyebrow: "Próximo paso",
       titleStart: "Tu marca puede estar perdiendo clientes",
-      titleHighlight: "sin darse cuenta.",
+      titleHighlight: "por detalles simples.",
       subtitle:
-        "Vamos a mirar tu negocio con una visión externa e identificar dónde tu comunicación, página o embudo pueden rendir mejor.",
-      button: "Quiero un análisis de Pubird",
-      timeText: "Toma menos de 5 minutos solicitarlo.",
+        "Analizamos tu sitio, tu comunicación y tu embudo para entender qué se puede mejorar y hacerlo más claro para las personas que llegan a tu negocio.",
+      button: "Solicitar análisis estratégico",
+      timeText: "Solo toma un momento solicitarlo. Luego nos ponemos en contacto.",
       benefits: [
         {
-          title: "Sin compromiso",
-          desc: "Entiendes si tiene sentido avanzar antes de tomar cualquier decisión.",
+          title: "Sin presión",
+          desc: "La idea es entender el escenario primero, sin compromiso de cerrar nada.",
         },
         {
-          title: "Visión estratégica",
-          desc: "Mostramos oportunidades reales para mejorar presencia, oferta y conversión.",
+          title: "Mirada más clara",
+          desc: "Señalamos puntos que pueden estar afectando tu presencia y tus conversiones.",
         },
         {
-          title: "Directo al punto",
-          desc: "Una conversación práctica, objetiva y enfocada en lo que puede generar resultados.",
+          title: "Próximos pasos",
+          desc: "Sales con una idea más clara de lo que se puede mejorar en el digital.",
         },
       ],
     },
