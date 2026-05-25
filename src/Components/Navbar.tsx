@@ -37,6 +37,24 @@ const Navbar = () => {
     window.dispatchEvent(new Event("open-diagnosis-modal"));
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+
+    if (!section) return;
+
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   const currentLanguage = languages[language];
 
   const handleLanguageChange = (selectedLanguage: Language) => {
@@ -47,8 +65,9 @@ const Navbar = () => {
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur-xl">
       <div className="section-container flex h-16 items-center justify-between">
-        <a
-          href="#"
+        <button
+          type="button"
+          onClick={scrollToTop}
           className="flex items-center gap-3"
           aria-label={t.navbar.homeAria}
         >
@@ -57,29 +76,32 @@ const Navbar = () => {
             alt="Pubird"
             className="h-10 w-auto drop-shadow-[0_0_20px_rgba(139,92,246,0.5)]"
           />
-        </a>
+        </button>
 
         <div className="hidden items-center gap-8 md:flex">
-          <a
-            href="#servicos"
+          <button
+            type="button"
+            onClick={() => scrollToSection("servicos")}
             className="text-sm font-medium text-muted-foreground transition hover:text-white"
           >
             {t.navbar.services}
-          </a>
+          </button>
 
-          <a
-            href="#processo"
+          <button
+            type="button"
+            onClick={() => scrollToSection("processo")}
             className="text-sm font-medium text-muted-foreground transition hover:text-white"
           >
             {t.navbar.process}
-          </a>
+          </button>
 
-          <a
-            href="#resultados"
+          <button
+            type="button"
+            onClick={() => scrollToSection("resultados")}
             className="text-sm font-medium text-muted-foreground transition hover:text-white"
           >
             {t.navbar.results}
-          </a>
+          </button>
         </div>
 
         <div className="flex items-center gap-3">
