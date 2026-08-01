@@ -7,8 +7,9 @@ import { Analytics } from "@vercel/analytics/react";
 
 import { LanguageProvider } from "@/i18n/LanguageContext";
 
-import Index from "./pages/index.tsx";
-import NotFound from "./pages/NotFound.tsx";
+import Index from "./pages/index";
+import WorkPage from "./pages/WorkPage";
+import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
@@ -20,11 +21,26 @@ const App = () => (
         <Sonner />
 
         <BrowserRouter>
+
           <Routes>
-            <Route path="/" element={<Index />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
+
+            <Route
+              path="/"
+              element={<Index />}
+            />
+
+            <Route
+              path="/work/:slug"
+              element={<WorkPage />}
+            />
+
+            <Route
+              path="*"
+              element={<NotFound />}
+            />
+
           </Routes>
+
         </BrowserRouter>
 
         <Analytics />

@@ -4,6 +4,50 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ===========================================
+   Sequel Sans
+=========================================== */
+
+@font-face {
+  font-family: "Sequel Sans";
+  src: url("/fonts/SequelSans-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sequel Sans";
+  src: url("/fonts/SequelSans-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sequel Sans";
+  src: url("/fonts/SequelSans-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sequel Sans";
+  src: url("/fonts/SequelSans-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sequel Sans";
+  src: url("/fonts/SequelSans-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     --background: 260 20% 6%;

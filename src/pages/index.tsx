@@ -1,25 +1,30 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import SocialProofSection from "@/components/SocialProofSection";
-import ProblemSection from "@/components/ProblemSection";
-import SolutionSection from "@/components/SolutionSection";
-import ServicesSection from "@/components/ServicesSection";
-import ProcessSection from "@/components/ProcessSection";
-import CtaSection from "@/components/CtaSection";
+import SelectedWorksSection from "@/components/SelectedWorksSection";
+import AboutSection from "@/components/AboutSection";
+import WhatWeDoSection from "@/components/WhatWeDoSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[#050505] text-white">
+
       <Navbar />
-      <HeroSection />
-      <SocialProofSection />
-      <ProblemSection />
-      <SolutionSection />
-      <ServicesSection />
-      <ProcessSection />
-      <CtaSection />
+
+      <main>
+
+        <HeroSection />
+
+        <SelectedWorksSection />
+
+        <AboutSection />
+
+        <WhatWeDoSection />
+
+      </main>
+
       <Footer />
+
     </div>
   );
 };
