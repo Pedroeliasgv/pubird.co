@@ -9,7 +9,7 @@ const ProjectVideo = ({ src }: ProjectVideoProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const [playing, setPlaying] = useState(true);
-  const [muted, setMuted] = useState(false);
+  const [muted, setMuted] = useState(true);
 
   const togglePlay = () => {
     if (!videoRef.current) return;
@@ -40,10 +40,16 @@ const ProjectVideo = ({ src }: ProjectVideoProps) => {
       <video
         ref={videoRef}
         autoPlay
+        muted
+        loop
         playsInline
+        preload="metadata"
+        onPlay={() => setPlaying(true)}
+        onPause={() => setPlaying(false)}
         className="aspect-video w-full object-cover"
       >
         <source src={src} type="video/mp4" />
+        Seu navegador não suporta vídeos HTML5.
       </video>
 
       {/* Overlay */}
@@ -56,25 +62,46 @@ const ProjectVideo = ({ src }: ProjectVideoProps) => {
 
         <div className="flex gap-4">
 
-          <button onClick={togglePlay}>
+          <button
+            type="button"
+            onClick={togglePlay}
+          >
             {playing ? (
-              <Pause size={22} className="text-white" />
+              <Pause
+                size={22}
+                className="text-white"
+              />
             ) : (
-              <Play size={22} className="text-white" />
+              <Play
+                size={22}
+                className="text-white"
+              />
             )}
           </button>
 
-          <button onClick={toggleMute}>
+          <button
+            type="button"
+            onClick={toggleMute}
+          >
             {muted ? (
-              <VolumeX size={22} className="text-white" />
+              <VolumeX
+                size={22}
+                className="text-white"
+              />
             ) : (
-              <Volume2 size={22} className="text-white" />
+              <Volume2
+                size={22}
+                className="text-white"
+              />
             )}
           </button>
 
         </div>
 
-        <button onClick={fullscreen}>
+        <button
+          type="button"
+          onClick={fullscreen}
+        >
           <Maximize2
             size={22}
             className="text-white"

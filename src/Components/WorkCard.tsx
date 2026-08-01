@@ -25,7 +25,7 @@ const WorkCard = ({ project }: WorkCardProps) => {
     if (!videoRef.current) return;
 
     videoRef.current.currentTime = 0;
-    videoRef.current.play();
+    videoRef.current.play().catch(() => {});
   };
 
   const handleMouseLeave = () => {
@@ -42,11 +42,12 @@ const WorkCard = ({ project }: WorkCardProps) => {
       onMouseLeave={handleMouseLeave}
       className="group relative block aspect-[16/10] overflow-hidden bg-black"
     >
-            {/* Thumbnail */}
+      {/* Thumbnail */}
 
       <img
         src={project.thumbnail}
-        alt={project.title}
+        alt={`Thumbnail do projeto ${project.title}`}
+        loading="lazy"
         className="
           absolute
           inset-0
@@ -66,8 +67,12 @@ const WorkCard = ({ project }: WorkCardProps) => {
       <video
         ref={videoRef}
         muted
+        loop
         playsInline
         preload="metadata"
+        onError={() =>
+          console.warn(`Erro ao carregar o vídeo: ${project.video}`)
+        }
         className="
           absolute
           inset-0

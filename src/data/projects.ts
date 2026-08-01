@@ -82,7 +82,8 @@ export const projects = [
       ],
     },
   },
-    {
+
+  {
     slug: "bmw",
 
     title: "BMW",
