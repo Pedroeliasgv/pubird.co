@@ -6,8 +6,11 @@ import { useLanguage } from "@/i18n/LanguageContext";
 type Project = {
   slug: string;
   title: string;
-  category: string;
-  thumbnail: string;
+  category: {
+    en: string;
+    pt: string;
+  };
+    thumbnail: string;
 };
 
 type NextProjectProps = {
@@ -15,7 +18,7 @@ type NextProjectProps = {
 };
 
 const NextProject = ({ project }: NextProjectProps) => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
 
   return (
     <section className="relative overflow-hidden border-t border-white/10 bg-black">
@@ -51,8 +54,7 @@ const NextProject = ({ project }: NextProjectProps) => {
           <div className="relative z-10 flex h-full items-end">
 
             <div className="mx-auto flex w-full max-w-[1800px] items-end justify-between px-8 pb-24 md:px-12 lg:px-20">
-
-              <div>
+                              <div>
 
                 <p className="mb-6 text-[11px] uppercase tracking-[0.5em] text-white/45">
                   {t.portfolio.nextProject}
@@ -61,7 +63,7 @@ const NextProject = ({ project }: NextProjectProps) => {
                 <motion.h2
                   whileHover={{ x: 6 }}
                   transition={{
-                    duration: .35,
+                    duration: 0.35,
                   }}
                   className="font-sequel text-[56px] font-light leading-none tracking-[-0.06em] text-white md:text-[84px] lg:text-[120px]"
                 >
@@ -69,12 +71,21 @@ const NextProject = ({ project }: NextProjectProps) => {
                 </motion.h2>
 
                 <p className="mt-6 text-lg text-white/65">
-                  {project.category}
+                  {project.category[language]}
                 </p>
+
+                <div className="mt-10 inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.4em] text-white/80 transition duration-300 group-hover:gap-5">
+                  <span>{t.portfolio.viewProject}</span>
+
+                  <ArrowUpRight
+                    size={18}
+                    className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                  />
+                </div>
 
               </div>
 
-              {/* Button */}
+              {/* Circle */}
 
               <motion.div
                 whileHover={{
@@ -82,7 +93,7 @@ const NextProject = ({ project }: NextProjectProps) => {
                   y: -8,
                 }}
                 transition={{
-                  duration: .35,
+                  duration: 0.35,
                 }}
                 className="hidden md:flex"
               >

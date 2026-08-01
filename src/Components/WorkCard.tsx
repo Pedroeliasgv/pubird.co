@@ -1,18 +1,24 @@
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 import { Play } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 type WorkCardProps = {
   project: {
     slug: string;
     title: string;
-    category: string;
+    category: {
+      en: string;
+      pt: string;
+    };
     video: string;
     thumbnail: string;
   };
 };
 
 const WorkCard = ({ project }: WorkCardProps) => {
+  const { language } = useLanguage();
+
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleMouseEnter = () => {
@@ -36,7 +42,7 @@ const WorkCard = ({ project }: WorkCardProps) => {
       onMouseLeave={handleMouseLeave}
       className="group relative block aspect-[16/10] overflow-hidden bg-black"
     >
-      {/* Thumbnail */}
+            {/* Thumbnail */}
 
       <img
         src={project.thumbnail}
@@ -50,7 +56,7 @@ const WorkCard = ({ project }: WorkCardProps) => {
           transition-all
           duration-700
           ease-out
-          group-hover:scale-[1.04]
+          group-hover:scale-105
           group-hover:opacity-0
         "
       />
@@ -69,7 +75,7 @@ const WorkCard = ({ project }: WorkCardProps) => {
           w-full
           object-cover
           opacity-0
-          scale-[1.04]
+          scale-105
           transition-all
           duration-700
           ease-out
@@ -85,84 +91,42 @@ const WorkCard = ({ project }: WorkCardProps) => {
 
       {/* Overlay */}
 
-      <div className="absolute inset-0 bg-black/20 transition duration-700 group-hover:bg-black/40" />
+      <div className="absolute inset-0 bg-black/25 transition duration-500 group-hover:bg-black/5" />
 
-      {/* Play */}
+      {/* Gradient */}
 
-      <div
-        className="
-          absolute
-          inset-0
-          flex
-          items-center
-          justify-center
-          opacity-0
-          transition-all
-          duration-500
-          group-hover:opacity-100
-        "
-      >
-        <div
-          className="
-            flex
-            h-16
-            w-16
-            items-center
-            justify-center
-            rounded-full
-            border
-            border-white/30
-            backdrop-blur-xl
-          "
-        >
-          <Play
-            size={22}
-            fill="white"
-            className="ml-1 text-white"
-          />
-        </div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+
+      {/* Play Icon */}
+
+      <div className="absolute right-8 top-8 flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-black/20 opacity-0 backdrop-blur-xl transition-all duration-500 group-hover:opacity-100">
+
+        <Play
+          size={18}
+          fill="white"
+          className="text-white"
+        />
+
       </div>
 
-      {/* Content */}
+      {/* Text */}
 
-      <div
-        className="
-          absolute
-          bottom-8
-          left-8
-          right-8
-          translate-y-6
-          opacity-0
-          transition-all
-          duration-700
-          group-hover:translate-y-0
-          group-hover:opacity-100
-        "
-      >
-        <h3 className="font-sequel text-[34px] font-light text-white">
+      <div className="absolute bottom-8 left-8">
+
+        <h3 className="font-sequel text-[30px] font-light text-white">
           {project.title}
         </h3>
 
-        <p className="mt-3 text-[11px] uppercase tracking-[0.45em] text-white/65">
-          {project.category}
+        <p className="mt-2 text-[11px] uppercase tracking-[0.45em] text-white/60">
+          {project.category[language]}
         </p>
+
       </div>
 
-      {/* Bottom line */}
+      {/* Bottom Line */}
 
-      <div
-        className="
-          absolute
-          bottom-0
-          left-0
-          h-px
-          w-0
-          bg-white
-          transition-all
-          duration-700
-          group-hover:w-full
-        "
-      />
+      <div className="absolute bottom-0 left-0 h-px w-0 bg-white transition-all duration-700 group-hover:w-full" />
+
     </Link>
   );
 };

@@ -1,21 +1,24 @@
 import { useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const HeroSection = () => {
+  const { t } = useLanguage();
+
   const videoRef = useRef<HTMLVideoElement>(null);
 
-const videos = [
-  "/videos/CarHaus.MP4",
-  "/videos/Motocross.MP4",
-  "/videos/BMW.MP4",
-];
+  const videos = [
+    "/videos/CarHaus.MP4",
+    "/videos/Motocross.MP4",
+    "/videos/BMW.MP4",
+  ];
 
-const [currentVideo, setCurrentVideo] = useState(0);
+  const [currentVideo, setCurrentVideo] = useState(0);
 
-const handleVideoEnd = () => {
-  setCurrentVideo((prev) => (prev + 1) % videos.length);
-};
+  const handleVideoEnd = () => {
+    setCurrentVideo((prev) => (prev + 1) % videos.length);
+  };
 
   const scrollToProjects = () => {
     document.getElementById("projects")?.scrollIntoView({
@@ -28,18 +31,21 @@ const handleVideoEnd = () => {
 
       {/* Background Video */}
 
-     <video
-      ref={videoRef}
-      key={currentVideo}
-      autoPlay
-      muted
-      playsInline
-      preload="auto"
-      onEnded={handleVideoEnd}
-      className="absolute inset-0 h-full w-full object-cover scale-[1.08] brightness-[0.55] contrast-125 saturate-[0.9]"
-    >
-      <source src={videos[currentVideo]} type="video/mp4" />
-    </video>
+      <video
+        ref={videoRef}
+        key={currentVideo}
+        autoPlay
+        muted
+        playsInline
+        preload="auto"
+        onEnded={handleVideoEnd}
+        className="absolute inset-0 h-full w-full object-cover scale-[1.08] brightness-[0.55] contrast-125 saturate-[0.9]"
+      >
+        <source
+          src={videos[currentVideo]}
+          type="video/mp4"
+        />
+      </video>
 
       {/* Overlay */}
 
@@ -70,72 +76,75 @@ const handleVideoEnd = () => {
       {/* Content */}
 
       <div className="relative z-20 flex h-full items-center justify-center px-8">
+
         <div className="max-w-6xl text-center">
+                    {/* Logo */}
 
-          {/* Logo */}
+          <img
+            src="/logo-pubird.png"
+            alt="Pubird"
+            className="mx-auto mb-10 h-5 opacity-80"
+          />
 
-<img
-  src="/logo-pubird.png"
-  alt="Pubird"
-  className="mx-auto mb-10 h-5 opacity-80"
-/>
+          <p className="mb-6 text-[11px] uppercase tracking-[0.55em] text-white/40">
+            {t.hero.badge}
+          </p>
 
-<h1 className="font-sequel text-center font-light leading-[1.05] tracking-[-0.02em] text-white">
+          <h1 className="font-sequel text-center font-light leading-[1.05] tracking-[-0.02em] text-white">
 
-  <span className="block text-[24px] md:text-[32px] lg:text-[40px]">
-    A new cinematic
-  </span>
+            <span className="block text-[24px] md:text-[32px] lg:text-[40px]">
+              {t.hero.title}
+            </span>
 
-  <span className="block text-[24px] md:text-[32px] lg:text-[40px]">
-    experience for brands.
-  </span>
+          </h1>
 
-</h1>
-<div className="mt-20 flex justify-center">
+          <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-white/60">
+            {t.hero.subtitle}
+          </p>
 
-  <div className="h-14 w-px bg-white/20 animate-pulse" />
+          <div className="mt-20 flex justify-center">
+            <div className="h-14 w-px animate-pulse bg-white/20" />
+          </div>
 
-</div>
-{/* CTA */}
+          {/* CTA */}
 
-<div className="mt-16 flex justify-center">
+          <div className="mt-16 flex justify-center">
 
-  <Button
-    onClick={scrollToProjects}
-    className="group h-14 rounded-full border border-white/15 bg-white px-8 text-black transition-all duration-500 hover:scale-[1.03] hover:bg-white"
-  >
+            <Button
+              onClick={scrollToProjects}
+              className="group h-14 rounded-full border border-white/15 bg-white px-8 text-black transition-all duration-500 hover:scale-[1.03] hover:bg-white"
+            >
+              {t.hero.cta}
 
-    Ver Projetos
+              <ArrowRight className="ml-3 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
 
-    <ArrowRight className="ml-3 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </Button>
 
-  </Button>
+          </div>
 
-</div>
+          {/* Scroll */}
 
-{/* Scroll */}
+          <div className="mt-24 flex flex-col items-center">
 
-<div className="mt-24 flex flex-col items-center">
+            <span className="mb-4 text-[10px] uppercase tracking-[0.45em] text-white/35">
+              Scroll
+            </span>
 
-  <span className="mb-4 text-[10px] uppercase tracking-[0.45em] text-white/35">
+            <div className="relative h-16 w-px overflow-hidden bg-white/15">
 
-    Scroll
+              <div className="absolute left-0 top-0 h-8 w-full animate-bounce bg-gradient-to-b from-white to-transparent" />
 
-  </span>
+            </div>
 
-  <div className="relative h-16 w-px overflow-hidden bg-white/15">
+          </div>
 
-    <div className="absolute left-0 top-0 h-8 w-full animate-bounce bg-gradient-to-b from-white to-transparent" />
-
-  </div>
-
-</div>
         </div>
-      </div>
 
-      {/* Fade para a próxima seção */}
+      </div>
+            {/* Fade para a próxima seção */}
 
       <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#050505] to-transparent" />
+
     </section>
   );
 };

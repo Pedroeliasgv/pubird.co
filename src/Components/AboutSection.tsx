@@ -1,4 +1,8 @@
+import { useLanguage } from "@/i18n/LanguageContext";
+
 const AboutSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section
       id="about"
@@ -23,26 +27,15 @@ const AboutSection = () => {
         <div>
 
           <p className="text-[11px] uppercase tracking-[0.55em] text-white/30">
-
-            WHO WE ARE
-
+            {t.about.eyebrow}
           </p>
 
           <h2 className="mt-8 font-sequel text-[42px] font-light leading-[0.92] tracking-[-0.05em] text-white md:text-[64px] lg:text-[86px]">
-
-            We don't just
-            <br />
-            make videos.
-
+            {t.about.title}
           </h2>
 
           <p className="mt-10 max-w-xl text-lg leading-9 text-white/55">
-
-            Pubird is an independent creative studio focused on cinematic storytelling.
-            Every frame is designed with intention, emotion and visual precision.
-            We create films that strengthen brands, tell authentic stories and leave
-            a lasting impression.
-
+            {t.about.description}
           </p>
 
           <div className="mt-16 h-px w-24 bg-white/10" />
