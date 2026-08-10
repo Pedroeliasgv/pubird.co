@@ -1,0 +1,34 @@
+[33ma342629[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: reset: moving to origin/main
+[33m172360d[m HEAD@{1}: commit: feat: optimize portfolio videos and improve performance
+[33m00c2c0b[m HEAD@{2}: commit: feat: optimize portfolio videos and improve project experience
+[33mdbbdccc[m HEAD@{3}: commit: feat: redesign portfolio with bilingual support and cinematic experience
+[33m875b1f2[m HEAD@{4}: commit: feat: redesign portfolio experience with project pages, i18n and premium UI
+[33ma342629[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{5}: commit: chore: update SEO metadata and favicon
+[33m2eb78e6[m HEAD@{6}: commit: chore: update SEO meta tags and social preview
+[33md379c86[m HEAD@{7}: commit: chore: update favicon
+[33m7ed7e41[m HEAD@{8}: commit: chore: update site favicon
+[33m884e4d6[m HEAD@{9}: commit: chore: update site favicon
+[33m718f40d[m HEAD@{10}: commit: chore: add sitemap and robots for SEO
+[33m0a29055[m HEAD@{11}: commit: chore: add sitemap and SEO indexing setup
+[33m59cee1a[m HEAD@{12}: commit: style: refine CTA section layout and button
+[33mb240e80[m HEAD@{13}: commit: fix: replace navbar anchor links with smooth scroll buttons
+[33mf05761a[m HEAD@{14}: commit: feat: adicionar Alexandre Meneghini aos clientes em destaque
+[33md4fb1fb[m HEAD@{15}: commit: feat: add vercel analytics
+[33m8e2edbc[m HEAD@{16}: commit: feat: add multilingual support with responsive language selector
+[33m604fc74[m HEAD@{17}: commit: feat: add image flags to language dropdown
+[33m81ce46f[m HEAD@{18}: commit: feat: add Portuguese and English translations
+[33m1b95fd9[m HEAD@{19}: commit: fix WhatsApp link in lead email
+[33m28f4756[m HEAD@{20}: commit: remove CNPJ field from lead form
+[33me13741d[m HEAD@{21}: commit: refactor: melhora responsividade da hero section
+[33m9d1cc96[m HEAD@{22}: commit: feat: adiciona DSM Multimarcas aos projetos atendidos
+[33ma4413d4[m HEAD@{23}: commit: refactor: remove CTA duplicado da seção de processo
+[33m7cfab50[m HEAD@{24}: commit: refactor: remove CTA duplicado da seção de processo
+[33m694eac1[m HEAD@{25}: commit: feat: adiciona email de contato no footer
+[33mc930f99[m HEAD@{26}: commit: style: highlight featured clients in social proof section
+[33m043282b[m HEAD@{27}: commit: chore: update social proof clients list
+[33m73c4b0b[m HEAD@{28}: commit: feat: redesign process section with premium growth system layout
+[33mf908ddb[m HEAD@{29}: commit: style: redesign footer with clean premium layout
+[33mfaa7bea[m HEAD@{30}: commit: feat: redesign CTA section with premium layout and animated cards
+[33mad7cffe[m HEAD@{31}: commit: feat: redesign problem section with premium UI and animated cards
+[33meb3fc74[m HEAD@{32}: commit: style: redesign automated lead email template
+[33mec3bb8d[m HEAD@{33}: commit: style: apply animation classes across hero and process sections

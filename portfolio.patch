@@ -1,0 +1,3743 @@
+diff --git a/index.html b/index.html
+index 98b5d36..81e3595 100644
+--- a/index.html
++++ b/index.html
+@@ -1,65 +1,185 @@
+ <!DOCTYPE html>
+-<html lang="pt-BR">
++<html lang="en">
+   <head>
+     <meta charset="UTF-8" />
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
+-    <title>Pubird | Marketing, Tecnologia e Growth</title>
++    <meta
++      name="viewport"
++      content="width=device-width, initial-scale=1.0"
++    />
++
++    <title>Pubird</title>
+ 
+     <meta
+       name="description"
+-      content="Marketing, tecnologia e growth para empresas que querem crescer com estratégia, presença digital e performance."
++      content="Pubird is a creative production studio crafting cinematic films, commercials and branded content for companies, luxury brands and creators."
++    />
++
++    <meta
++      name="keywords"
++      content="video production, creative studio, film production, commercial films, cinematography, branded content, advertising films, production company"
++    />
++
++    <meta
++      name="author"
++      content="Pubird"
++    />
++
++    <meta
++      name="robots"
++      content="index, follow"
++    />
++
++    <link
++      rel="canonical"
++      href="https://pubird.com.br/"
++    />
++
++    <!-- Favicon -->
++
++    <!-- Favicon -->
++
++    <link
++      rel="icon"
++      type="image/png"
++      sizes="32x32"
++      href="/logo-pubird-icon.png"
+     />
+ 
+-    <meta name="robots" content="index, follow" />
+-    <link rel="canonical" href="https://pubird.com.br/" />
++    <link
++      rel="icon"
++      type="image/png"
++      sizes="192x192"
++      href="/logo-pubird-icon.png"
++    />
++
++    <link
++      rel="apple-touch-icon"
++      href="/logo-pubird-icon.png"
++    />
++
++    <link
++      rel="shortcut icon"
++      href="/logo-pubird-icon.png"
++    />
++
++    <!-- Open Graph -->
++
++    <meta
++      property="og:type"
++      content="website"
++    />
+ 
+-    <!-- Favicon / ícones do site -->
+-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+-    <link rel="icon" type="image/png" sizes="192x192" href="/logo-pubird-icon.png" />
+-    <link rel="apple-touch-icon" href="/logo-pubird-icon.png" />
++    <meta
++      property="og:site_name"
++      content="Pubird"
++    />
++
++    <meta
++      property="og:url"
++      content="https://pubird.com.br/"
++    />
++
++    <meta
++      property="og:title"
++      content="Pubird — Cinematic Films & Creative Production"
++    />
+ 
+-    <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
+-    <meta property="og:type" content="website" />
+-    <meta property="og:url" content="https://pubird.com.br/" />
+-    <meta property="og:site_name" content="Pubird" />
+-    <meta property="og:locale" content="pt_BR" />
+-    <meta property="og:title" content="Pubird | Marketing, Tecnologia e Growth" />
+     <meta
+       property="og:description"
+-      content="A Pubird une marketing, tecnologia e estratégia para construir marcas fortes e gerar crescimento no digital."
++      content="Premium cinematic productions, commercials and branded content crafted with storytelling, emotion and visual excellence."
++    />
++
++    <meta
++      property="og:image"
++      content="https://pubird.com.br/og-image.jpg"
++    />
++
++    <meta
++      property="og:image:width"
++      content="1200"
++    />
++
++    <meta
++      property="og:image:height"
++      content="630"
++    />
++
++    <!-- Twitter -->
++
++    <meta
++      name="twitter:card"
++      content="summary_large_image"
++    />
++
++    <meta
++      name="twitter:title"
++      content="Pubird — Cinematic Films & Creative Production"
+     />
+-    <meta property="og:image" content="https://pubird.com.br/og-image.png" />
+-    <meta property="og:image:alt" content="Pubird - Marketing, Tecnologia e Growth" />
+-    <meta property="og:image:width" content="1200" />
+-    <meta property="og:image:height" content="630" />
+ 
+-    <!-- Twitter / X -->
+-    <meta name="twitter:card" content="summary_large_image" />
+-    <meta name="twitter:url" content="https://pubird.com.br/" />
+-    <meta name="twitter:title" content="Pubird | Marketing, Tecnologia e Growth" />
+     <meta
+       name="twitter:description"
+-      content="A Pubird une marketing, tecnologia e estratégia para construir marcas fortes e gerar crescimento no digital."
++      content="Premium cinematic productions, commercials and branded content crafted with storytelling, emotion and visual excellence."
++    />
++
++    <meta
++      name="twitter:image"
++      content="https://pubird.com.br/og-image.jpg"
+     />
+-    <meta name="twitter:image" content="https://pubird.com.br/og-image.png" />
+ 
+-    <!-- Dados estruturados para o Google -->
++    <!-- Theme -->
++
++    <meta
++      name="theme-color"
++      content="#050505"
++    />
++
++    <meta
++      name="color-scheme"
++      content="dark"
++    />
++
++    <!-- Preconnect -->
++
++    <link
++      rel="preconnect"
++      href="https://fonts.googleapis.com"
++    />
++
++    <link
++      rel="preconnect"
++      href="https://fonts.gstatic.com"
++      crossorigin
++    />
++
++    <!-- Structured Data -->
++
+     <script type="application/ld+json">
+       {
+         "@context": "https://schema.org",
+         "@type": "Organization",
+         "name": "Pubird",
+-        "description": "Agência de marketing e tecnologia que une estratégia digital, tráfego pago, landing pages, branding e growth.",
+         "url": "https://pubird.com.br/",
+         "logo": "https://pubird.com.br/logo-pubird-icon.png",
+-        "sameAs": ["https://www.instagram.com/pubird.br"]
++        "description": "Creative production studio specializing in cinematic films, commercials and branded content.",
++        "sameAs": [
++          "https://www.instagram.com/pubird.br/",
++          "https://www.linkedin.com/company/pubird/",
++          "https://www.youtube.com/channel/UCDvFPUspf01GBDcE8TMPUEg"
++        ]
+       }
+     </script>
++
+   </head>
+ 
+   <body>
++
+     <div id="root"></div>
+-    <script type="module" src="/src/main.tsx"></script>
++
++    <script
++      type="module"
++      src="/src/main.tsx"
++    ></script>
++
+   </body>
+ </html>
+\ No newline at end of file
+diff --git a/package-lock.json b/package-lock.json
+index c6d1d73..9e7b7f3 100644
+--- a/package-lock.json
++++ b/package-lock.json
+@@ -44,6 +44,7 @@
+         "cmdk": "^1.1.1",
+         "date-fns": "^3.6.0",
+         "embla-carousel-react": "^8.6.0",
++        "framer-motion": "^12.43.0",
+         "input-otp": "^1.4.2",
+         "lucide-react": "^0.462.0",
+         "next-themes": "^0.3.0",
+@@ -5614,6 +5615,33 @@
+         "url": "https://github.com/sponsors/rawify"
+       }
+     },
++    "node_modules/framer-motion": {
++      "version": "12.43.0",
++      "resolved": "https://registry.npmjs.org/framer-motion/-/framer-motion-12.43.0.tgz",
++      "integrity": "sha512-1eaL3RvR/kAlbG7UYcpMptEyzPoENO0c6w7ZnB3/hh2vSAz/6uGAFn6fdoqTBguNstf3MsFhJHsD/0DHiclG+g==",
++      "license": "MIT",
++      "dependencies": {
++        "motion-dom": "^12.43.0",
++        "motion-utils": "^12.39.0",
++        "tslib": "^2.4.0"
++      },
++      "peerDependencies": {
++        "@emotion/is-prop-valid": "*",
++        "react": "^18.0.0 || ^19.0.0",
++        "react-dom": "^18.0.0 || ^19.0.0"
++      },
++      "peerDependenciesMeta": {
++        "@emotion/is-prop-valid": {
++          "optional": true
++        },
++        "react": {
++          "optional": true
++        },
++        "react-dom": {
++          "optional": true
++        }
++      }
++    },
+     "node_modules/fsevents": {
+       "version": "2.3.3",
+       "resolved": "https://registry.npmjs.org/fsevents/-/fsevents-2.3.3.tgz",
+@@ -6591,6 +6619,21 @@
+         "node": ">= 18"
+       }
+     },
++    "node_modules/motion-dom": {
++      "version": "12.43.0",
++      "resolved": "https://registry.npmjs.org/motion-dom/-/motion-dom-12.43.0.tgz",
++      "integrity": "sha512-azKON4d9S65PEoFUiQTMTgPheEmzf2QngdRc50AKfJp9Q9mmcBVw22c8eMq9k8kxOFHdL7+WZY7N/5F/lwiDag==",
++      "license": "MIT",
++      "dependencies": {
++        "motion-utils": "^12.39.0"
++      }
++    },
++    "node_modules/motion-utils": {
++      "version": "12.39.0",
++      "resolved": "https://registry.npmjs.org/motion-utils/-/motion-utils-12.39.0.tgz",
++      "integrity": "sha512-8nadJAJjTtqRkmRF36FoJTrywK9nnFmnPwnSMyxaOCU7GDjN9RTMJIxx9De8ErM+vpPhMccr/6fo5WciyQLnMQ==",
++      "license": "MIT"
++    },
+     "node_modules/ms": {
+       "version": "2.1.3",
+       "resolved": "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz",
+diff --git a/package.json b/package.json
+index dfca86a..3e9c3d9 100644
+--- a/package.json
++++ b/package.json
+@@ -49,6 +49,7 @@
+     "cmdk": "^1.1.1",
+     "date-fns": "^3.6.0",
+     "embla-carousel-react": "^8.6.0",
++    "framer-motion": "^12.43.0",
+     "input-otp": "^1.4.2",
+     "lucide-react": "^0.462.0",
+     "next-themes": "^0.3.0",
+diff --git a/public/founders.jpg b/public/founders.jpg
+new file mode 100644
+index 0000000..efd1fa7
+Binary files /dev/null and b/public/founders.jpg differ
+diff --git a/public/images/bmw-cover.jpeg b/public/images/bmw-cover.jpeg
+new file mode 100644
+index 0000000..194096e
+Binary files /dev/null and b/public/images/bmw-cover.jpeg differ
+diff --git a/public/images/carhaus-cover.png b/public/images/carhaus-cover.png
+new file mode 100644
+index 0000000..54af05f
+Binary files /dev/null and b/public/images/carhaus-cover.png differ
+diff --git a/public/images/motocross-cover.png b/public/images/motocross-cover.png
+new file mode 100644
+index 0000000..f5e25a2
+Binary files /dev/null and b/public/images/motocross-cover.png differ
+diff --git a/public/logo-pubird-icon.png b/public/logo-pubird-icon.png
+index 4e6dc89..b58c2be 100644
+Binary files a/public/logo-pubird-icon.png and b/public/logo-pubird-icon.png differ
+diff --git a/public/logo-pubird.png b/public/logo-pubird.png
+index 80fc1db..2f4567d 100644
+Binary files a/public/logo-pubird.png and b/public/logo-pubird.png differ
+diff --git a/public/videos/BMW.MP4 b/public/videos/BMW.MP4
+new file mode 100644
+index 0000000..3df0d64
+Binary files /dev/null and b/public/videos/BMW.MP4 differ
+diff --git a/public/videos/CarHaus.MP4 b/public/videos/CarHaus.MP4
+new file mode 100644
+index 0000000..d080438
+Binary files /dev/null and b/public/videos/CarHaus.MP4 differ
+diff --git a/public/videos/Motocross.MP4 b/public/videos/Motocross.MP4
+new file mode 100644
+index 0000000..495b11e
+Binary files /dev/null and b/public/videos/Motocross.MP4 differ
+diff --git a/src/App.tsx b/src/App.tsx
+index b591fa7..aeda6b2 100644
+--- a/src/App.tsx
++++ b/src/App.tsx
+@@ -7,8 +7,9 @@ import { Analytics } from "@vercel/analytics/react";
+ 
+ import { LanguageProvider } from "@/i18n/LanguageContext";
+ 
+-import Index from "./pages/index.tsx";
+-import NotFound from "./pages/NotFound.tsx";
++import Index from "./pages/index";
++import WorkPage from "./pages/WorkPage";
++import NotFound from "./pages/NotFound";
+ 
+ const queryClient = new QueryClient();
+ 
+@@ -20,11 +21,26 @@ const App = () => (
+         <Sonner />
+ 
+         <BrowserRouter>
++
+           <Routes>
+-            <Route path="/" element={<Index />} />
+-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+-            <Route path="*" element={<NotFound />} />
++
++            <Route
++              path="/"
++              element={<Index />}
++            />
++
++            <Route
++              path="/work/:slug"
++              element={<WorkPage />}
++            />
++
++            <Route
++              path="*"
++              element={<NotFound />}
++            />
++
+           </Routes>
++
+         </BrowserRouter>
+ 
+         <Analytics />
+diff --git a/src/Components/AboutSection.tsx b/src/Components/AboutSection.tsx
+new file mode 100644
+index 0000000..224f423
+--- /dev/null
++++ b/src/Components/AboutSection.tsx
+@@ -0,0 +1,70 @@
++import { useLanguage } from "@/i18n/LanguageContext";
++
++const AboutSection = () => {
++  const { t } = useLanguage();
++
++  return (
++    <section
++      id="about"
++      className="bg-[#050505] py-52"
++    >
++      <div className="mx-auto grid max-w-[1800px] grid-cols-1 items-center gap-24 px-8 md:px-12 lg:grid-cols-2 lg:px-20">
++
++        {/* Image */}
++
++        <div className="group overflow-hidden">
++
++          <img
++            src="/founders.jpg"
++            alt="Pubird Founders"
++            className="aspect-[4/5] w-full object-cover grayscale transition-all duration-[1800ms] group-hover:scale-[1.03] group-hover:grayscale-0"
++          />
++
++        </div>
++
++        {/* Content */}
++
++        <div>
++
++          <p className="text-[11px] uppercase tracking-[0.55em] text-white/30">
++            {t.about.eyebrow}
++          </p>
++
++          <h2 className="mt-8 font-sequel text-[42px] font-light leading-[0.92] tracking-[-0.05em] text-white md:text-[64px] lg:text-[86px]">
++            {t.about.title}
++          </h2>
++
++          <p className="mt-10 max-w-xl text-lg leading-9 text-white/55">
++            {t.about.description}
++          </p>
++
++          <div className="mt-16 h-px w-24 bg-white/10" />
++
++          <div className="mt-12 flex flex-wrap gap-10">
++
++            <span className="text-[11px] uppercase tracking-[0.45em] text-white/35">
++              Brand Films
++            </span>
++
++            <span className="text-[11px] uppercase tracking-[0.45em] text-white/35">
++              Commercials
++            </span>
++
++            <span className="text-[11px] uppercase tracking-[0.45em] text-white/35">
++              Documentary
++            </span>
++
++            <span className="text-[11px] uppercase tracking-[0.45em] text-white/35">
++              Automotive
++            </span>
++
++          </div>
++
++        </div>
++
++      </div>
++    </section>
++  );
++};
++
++export default AboutSection;
+\ No newline at end of file
+diff --git a/src/Components/BackButton.tsx b/src/Components/BackButton.tsx
+new file mode 100644
+index 0000000..e69de29
+diff --git a/src/Components/Footer.tsx b/src/Components/Footer.tsx
+index 2b289e9..26589c9 100644
+--- a/src/Components/Footer.tsx
++++ b/src/Components/Footer.tsx
+@@ -1,136 +1,147 @@
+-import { Instagram, Linkedin, Mail, MessageCircle } from "lucide-react";
++import {
++  ArrowUp,
++  ArrowUpRight,
++  Instagram,
++  Linkedin,
++  Mail,
++  Youtube,
++} from "lucide-react";
++
+ import { useLanguage } from "@/i18n/LanguageContext";
+ 
+ const Footer = () => {
++  const year = new Date().getFullYear();
+   const { t } = useLanguage();
+-  const currentYear = new Date().getFullYear();
++
++  const scrollToTop = () => {
++    window.scrollTo({
++      top: 0,
++      behavior: "smooth",
++    });
++  };
+ 
+   return (
+-    <footer className="border-t border-border/20 bg-card/40 py-14 backdrop-blur-xl">
+-      <div className="section-container">
+-        <div className="grid gap-12 md:grid-cols-[1.2fr_0.8fr_0.8fr_0.8fr]">
+-          <div>
+-            <div className="mb-5 flex items-center gap-3">
+-              <img
+-                src="/logo-pubird.png"
+-                alt="Pubird"
+-                className="h-10 w-auto"
++    <footer
++      id="contact"
++      className="border-t border-white/10 bg-[#050505]"
++    >
++      <div className="mx-auto max-w-[1800px] px-8 py-32 md:px-12 lg:px-20">
++
++        {/* Contact */}
++
++        <div className="max-w-5xl">
++
++          <p className="mb-6 text-[11px] uppercase tracking-[0.55em] text-white/25">
++            {t.footer.title}
++          </p>
++
++          <a
++            href="mailto:contato.pubird@gmail.com"
++            className="group inline-flex items-center gap-5 font-sequel text-[42px] font-light tracking-[-0.05em] text-white transition hover:opacity-80 md:text-[64px]"
++          >
++            contato.pubird@gmail.com
++
++            <ArrowUpRight
++              size={26}
++              className="transition duration-500 group-hover:translate-x-1 group-hover:-translate-y-1"
++            />
++          </a>
++
++        </div>
++
++        {/* Social */}
++
++        <div className="mt-20 flex items-center gap-8">
++
++          <a
++            href="https://www.instagram.com/pubird.br/"
++            target="_blank"
++            rel="noopener noreferrer"
++            className="text-white/35 transition hover:text-white"
++          >
++            <Instagram size={20} />
++          </a>
++
++          <a
++            href="https://www.linkedin.com/company/pubird/"
++            target="_blank"
++            rel="noopener noreferrer"
++            className="text-white/35 transition hover:text-white"
++          >
++            <Linkedin size={20} />
++          </a>
++
++          <a
++            href="https://www.youtube.com/channel/UCDvFPUspf01GBDcE8TMPUEg"
++            target="_blank"
++            rel="noopener noreferrer"
++            className="text-white/35 transition hover:text-white"
++          >
++            <Youtube size={20} />
++          </a>
++
++          <a
++            href="mailto:contato.pubird@gmail.com"
++            className="text-white/35 transition hover:text-white"
++          >
++            <Mail size={20} />
++          </a>
++
++        </div>
++                {/* Bottom */}
++
++        <div className="mt-28 border-t border-white/10 pt-10">
++
++          <div className="flex flex-col items-center gap-10">
++
++            <button
++              onClick={scrollToTop}
++              className="group flex items-center gap-3 text-[11px] uppercase tracking-[0.45em] text-white/55 transition hover:text-white"
++            >
++              <ArrowUp
++                size={16}
++                className="transition-transform duration-500 group-hover:-translate-y-1"
+               />
+-            </div>
+ 
+-            <p className="max-w-sm text-sm leading-7 text-muted-foreground">
+-              {t.footer.description}
+-            </p>
+-          </div>
++              <span className="relative">
+ 
+-          <div>
+-            <h4 className="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-foreground">
+-              {t.footer.navigation}
+-            </h4>
+-
+-            <ul className="space-y-3 text-sm text-muted-foreground">
+-              <li>
+-                <a
+-                  href="#servicos"
+-                  className="transition-colors hover:text-primary"
+-                >
+-                  {t.footer.services}
+-                </a>
+-              </li>
+-
+-              <li>
+-                <a
+-                  href="#processo"
+-                  className="transition-colors hover:text-primary"
+-                >
+-                  {t.footer.process}
+-                </a>
+-              </li>
+-
+-              <li>
+-                <a
+-                  href="#resultados"
+-                  className="transition-colors hover:text-primary"
+-                >
+-                  {t.footer.results}
+-                </a>
+-              </li>
+-            </ul>
+-          </div>
++                {t.footer.backToTop}
+ 
+-          <div>
+-            <h4 className="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-foreground">
+-              {t.footer.contact}
+-            </h4>
+-
+-            <ul className="space-y-3 text-sm text-muted-foreground">
+-              <li>
+-                <a
+-                  href="https://wa.me/5587988289498"
+-                  target="_blank"
+-                  rel="noopener noreferrer"
+-                  className="flex items-center gap-2 transition-colors hover:text-primary"
+-                >
+-                  <MessageCircle className="h-4 w-4 text-primary" />
+-                  WhatsApp
+-                </a>
+-              </li>
+-
+-              <li>
+-                <a
+-                  href="mailto:contato.pubird@gmail.com"
+-                  className="flex items-center gap-2 transition-colors hover:text-primary"
+-                >
+-                  <Mail className="h-4 w-4 text-primary" />
+-                  contato.pubird@gmail.com
+-                </a>
+-              </li>
+-            </ul>
+-          </div>
++                <span
++                  className="
++                    absolute
++                    -bottom-2
++                    left-0
++                    h-px
++                    w-0
++                    bg-white
++                    transition-all
++                    duration-500
++                    group-hover:w-full
++                  "
++                />
++
++              </span>
++
++            </button>
++
++            <img
++              src="/logo-pubird-icon.png"
++              alt="Pubird"
++              draggable={false}
++              className="h-8 w-auto opacity-40 transition duration-300 hover:opacity-70"
++            />
++
++            <span className="text-[10px] uppercase tracking-[0.45em] text-white/20">
++              © {year} PUBIRD STUDIO · {t.footer.copyright}
++            </span>
+ 
+-          <div>
+-            <h4 className="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-foreground">
+-              {t.footer.social}
+-            </h4>
+-
+-            <div className="flex gap-3">
+-              <a
+-                href="https://www.linkedin.com/company/pubird/?viewAsMember=true"
+-                target="_blank"
+-                rel="noopener noreferrer"
+-                aria-label="LinkedIn"
+-                className="flex h-10 w-10 items-center justify-center rounded-xl border border-border/40 bg-background/40 text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary"
+-              >
+-                <Linkedin className="h-5 w-5" />
+-              </a>
+-
+-              <a
+-                href="https://www.instagram.com/pubird.br/"
+-                target="_blank"
+-                rel="noopener noreferrer"
+-                aria-label="Instagram"
+-                className="flex h-10 w-10 items-center justify-center rounded-xl border border-border/40 bg-background/40 text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary"
+-              >
+-                <Instagram className="h-5 w-5" />
+-              </a>
+-
+-              <a
+-                href="mailto:contato.pubird@gmail.com"
+-                aria-label="Email"
+-                className="flex h-10 w-10 items-center justify-center rounded-xl border border-border/40 bg-background/40 text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary"
+-              >
+-                <Mail className="h-5 w-5" />
+-              </a>
+-            </div>
+           </div>
+-        </div>
+ 
+-        <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-border/20 pt-6 md:flex-row">
+-          <p className="text-xs text-muted-foreground">
+-            © {currentYear} Pubird. {t.footer.rights}
+-          </p>
+         </div>
++
+       </div>
++
+     </footer>
+   );
+ };
+diff --git a/src/Components/HeroSection.tsx b/src/Components/HeroSection.tsx
+index eb3d76c..9bc24c2 100644
+--- a/src/Components/HeroSection.tsx
++++ b/src/Components/HeroSection.tsx
+@@ -1,404 +1,141 @@
+-import { useEffect, useState } from "react";
++import { useRef, useState } from "react";
++import { ArrowRight } from "lucide-react";
+ import { Button } from "@/components/ui/button";
+-import {
+-  ArrowRight,
+-  CheckCircle2,
+-  Sparkles,
+-  X,
+-  TrendingUp,
+-  Target,
+-  Zap,
+-} from "lucide-react";
+-import { supabase } from "@/lib/supabaseClient";
+ import { useLanguage } from "@/i18n/LanguageContext";
+ 
++const HERO_VIDEOS = [
++  "/videos/CarHaus.MP4",
++  "/videos/Motocross.MP4",
++  "/videos/BMW.MP4",
++];
++
+ const HeroSection = () => {
+   const { t } = useLanguage();
+ 
+-  const [isFormOpen, setIsFormOpen] = useState(false);
+-  const [nome, setNome] = useState("");
+-  const [nomeCompleto, setNomeCompleto] = useState("");
+-  const [telefone, setTelefone] = useState("");
+-  const [email, setEmail] = useState("");
+-  const [faturamento, setFaturamento] = useState("");
+-  const [segmento, setSegmento] = useState("");
+-  const [enviado, setEnviado] = useState(false);
+-  const [carregando, setCarregando] = useState(false);
+-
+-  useEffect(() => {
+-    const handleOpen = () => {
+-      window.scrollTo({ top: 0, behavior: "smooth" });
+-
+-      setTimeout(() => {
+-        setIsFormOpen(true);
+-      }, 500);
+-    };
+-
+-    window.addEventListener("open-diagnosis-modal", handleOpen);
+-
+-    return () => {
+-      window.removeEventListener("open-diagnosis-modal", handleOpen);
+-    };
+-  }, []);
+-
+-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+-    e.preventDefault();
+-    setCarregando(true);
+-
+-    const { error } = await supabase.from("leads").insert([
+-      {
+-        empresa: nome,
+-        nome_completo: nomeCompleto,
+-        telefone,
+-        email,
+-        faturamento,
+-        segmento,
+-      },
+-    ]);
+-
+-    if (!error) {
+-      const { data: emailData, error: emailError } =
+-        await supabase.functions.invoke("send-lead-email", {
+-          body: {
+-            nome,
+-            nomeCompleto,
+-            telefone,
+-            email,
+-            faturamento,
+-            segmento,
+-          },
+-        });
+-
+-      console.log("EMAIL DATA:", emailData);
+-      console.log("EMAIL ERROR:", emailError);
+-
+-      setCarregando(false);
+-      setEnviado(true);
+-
+-      setNome("");
+-      setNomeCompleto("");
+-      setTelefone("");
+-      setEmail("");
+-      setFaturamento("");
+-      setSegmento("");
+-
+-      setTimeout(() => {
+-        setIsFormOpen(false);
+-        setEnviado(false);
+-      }, 2200);
+-
+-      return;
+-    }
+-
+-    setCarregando(false);
+-    console.error(error);
+-    alert(t.hero.form.error);
++  const videoRef = useRef<HTMLVideoElement>(null);
++
++  const [currentVideo, setCurrentVideo] = useState(0);
++
++  const handleVideoEnd = () => {
++    setCurrentVideo((prev) => (prev + 1) % HERO_VIDEOS.length);
++  };
++
++  const scrollToProjects = () => {
++    document.getElementById("projects")?.scrollIntoView({
++      behavior: "smooth",
++    });
+   };
+ 
+   return (
+-    <section className="relative overflow-hidden bg-background pt-20 sm:pt-24 md:pt-28">
+-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,hsl(var(--primary)/0.22),transparent_35%),radial-gradient(circle_at_80%_10%,rgba(168,85,247,0.18),transparent_32%),linear-gradient(180deg,rgba(0,0,0,0.1),hsl(var(--background)))]" />
+-      <div className="absolute left-1/2 top-1/3 h-[360px] w-[360px] -translate-x-1/2 rounded-full bg-primary/10 blur-[110px] animate-pulse sm:h-[520px] sm:w-[520px] md:h-[620px] md:w-[620px] md:blur-[150px]" />
+-      <div className="absolute -right-40 top-28 h-[280px] w-[280px] rounded-full bg-purple-500/10 blur-[100px] md:h-[420px] md:w-[420px] md:blur-[120px]" />
+-      <div className="absolute -left-40 bottom-10 h-[260px] w-[260px] rounded-full bg-primary/10 blur-[100px] md:h-[360px] md:w-[360px] md:blur-[120px]" />
+-      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:64px_64px] opacity-20 md:bg-[size:80px_80px]" />
+-
+-      <div className="section-container relative z-10 grid items-center gap-12 py-14 sm:py-16 md:py-20 lg:min-h-[calc(100vh-7rem)] lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
+-        <div className="text-center lg:text-left">
+-          <div className="mb-8 flex justify-center opacity-0 animate-fade-in lg:mb-10 lg:justify-start">
+-            <img
+-              src="/logo-pubird.png"
+-              alt="Pubird"
+-              className="w-[210px] max-w-[78vw] opacity-95 drop-shadow-[0_0_45px_rgba(139,92,246,0.48)] transition duration-500 hover:scale-105 sm:w-[250px] md:w-[330px] animate-float-soft"
+-            />
+-          </div>
++    <section className="relative h-screen overflow-hidden bg-[#050505]">
++      {/* Background Video */}
++
++      <video
++        ref={videoRef}
++        key={currentVideo}
++        autoPlay
++        muted
++        loop
++        playsInline
++        preload="metadata"
++        poster="/images/hero-poster.jpg"
++        onEnded={handleVideoEnd}
++        onError={() => console.warn("Erro ao carregar o vídeo do Hero")}
++        className="absolute inset-0 h-full w-full scale-[1.08] object-cover brightness-[0.55] contrast-125 saturate-[0.9]"
++      >
++        <source
++          src={HERO_VIDEOS[currentVideo]}
++          type="video/mp4"
++        />
++        Seu navegador não suporta vídeos HTML5.
++      </video>
++
++      {/* Overlay */}
++
++      <div className="absolute inset-0 bg-black/45" />
++
++      {/* Top Gradient */}
++
++      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-transparent" />
++
++      {/* Bottom Gradient */}
++
++      <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent" />
++
++      {/* Cinematic Vignette */}
++
++      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_25%,rgba(0,0,0,.82)_100%)]" />
++
++      {/* Film Grain */}
++
++      <div
++        className="absolute inset-0 opacity-[0.025] mix-blend-soft-light"
++        style={{
++          backgroundImage: "url('/textures/noise.png')",
++          backgroundRepeat: "repeat",
++        }}
++      />
+ 
+-          <p className="mb-6 text-[10px] font-bold uppercase tracking-[0.18em] text-primary opacity-0 animate-fade-in sm:text-xs sm:tracking-[0.24em]">
++      {/* Content */}
++
++      <div className="relative z-20 flex h-full items-center justify-center px-8">
++        <div className="max-w-6xl text-center">
++          {/* Logo */}
++
++          <img
++            src="/logo-pubird.png"
++            alt="Pubird"
++            className="mx-auto mb-10 h-5 opacity-80"
++          />
++
++          <p className="mb-6 text-[11px] uppercase tracking-[0.55em] text-white/40">
+             {t.hero.badge}
+           </p>
+ 
+-          <h1
+-            className="mx-auto max-w-5xl text-[2.55rem] font-extrabold leading-[1.04] tracking-[-0.045em] text-foreground opacity-0 animate-fade-up sm:text-5xl md:text-6xl lg:mx-0 lg:text-7xl"
+-            style={{ animationDelay: "0.12s" }}
+-          >
+-            {t.hero.titleStart}{" "}
+-            <span className="text-gradient">{t.hero.titleHighlight}</span>
++          <h1 className="font-sequel text-center font-light leading-[1.05] tracking-[-0.02em] text-white">
++            <span className="block text-[24px] md:text-[32px] lg:text-[40px]">
++              {t.hero.title}
++            </span>
+           </h1>
+ 
+-          <p
+-            className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-muted-foreground opacity-0 animate-fade-up sm:text-base md:mt-7 md:text-xl md:leading-8 lg:mx-0"
+-            style={{ animationDelay: "0.24s" }}
+-          >
++          <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-white/60">
+             {t.hero.subtitle}
+           </p>
+ 
+-          <div
+-            className="mt-8 flex flex-col justify-center gap-3 opacity-0 animate-fade-up sm:flex-row sm:gap-4 lg:justify-start"
+-            style={{ animationDelay: "0.36s" }}
+-          >
+-            <Button
+-              variant="hero"
+-              size="lg"
+-              className="group h-auto w-full rounded-xl px-7 py-5 text-sm font-semibold shadow-[0_0_45px_hsl(var(--primary)/0.3)] transition duration-300 hover:scale-[1.03] sm:w-auto sm:px-8 sm:py-6 sm:text-base"
+-              onClick={() => setIsFormOpen(true)}
+-            >
+-              {t.hero.primaryCta}
+-              <ArrowRight className="ml-2 h-4 w-4 transition duration-300 group-hover:translate-x-1" />
+-            </Button>
++          <div className="mt-20 flex justify-center">
++            <div className="h-14 w-px animate-pulse bg-white/20" />
++          </div>
++
++          {/* CTA */}
+ 
++          <div className="mt-16 flex justify-center">
+             <Button
+-              variant="hero-outline"
+-              size="lg"
+-              className="h-auto w-full rounded-xl px-7 py-5 text-sm font-semibold backdrop-blur-xl transition duration-300 hover:scale-[1.03] sm:w-auto sm:px-8 sm:py-6 sm:text-base"
+-              asChild
++              onClick={scrollToProjects}
++              className="group h-14 rounded-full border border-white/15 bg-white px-8 text-black transition-all duration-500 hover:scale-[1.03] hover:bg-white"
+             >
+-              <a href="#servicos">{t.hero.secondaryCta}</a>
++              {t.hero.cta}
++
++              <ArrowRight className="ml-3 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+             </Button>
+           </div>
+ 
+-          <div
+-            className="mt-7 grid gap-3 text-left opacity-0 animate-fade-up sm:grid-cols-3 md:mt-8"
+-            style={{ animationDelay: "0.48s" }}
+-          >
+-            {t.hero.benefits.map((benefit) => (
+-              <div
+-                key={benefit}
+-                className="flex items-start gap-2 rounded-xl border border-border/40 bg-card/35 p-3 backdrop-blur-xl transition duration-300 hover:border-primary/40 hover:bg-primary/10"
+-              >
+-                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+-                <span className="text-sm text-muted-foreground">
+-                  {benefit}
+-                </span>
+-              </div>
+-            ))}
+-          </div>
+-        </div>
++          {/* Scroll */}
+ 
+-        <div
+-          className="relative mx-auto w-full max-w-xl overflow-hidden rounded-[1.5rem] border border-primary/20 bg-card/70 p-4 shadow-2xl backdrop-blur-2xl animate-glow sm:rounded-[2rem] sm:p-6 lg:max-w-none"
+-          style={{ animationDelay: "0.42s" }}
+-        >
+-          <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-primary/25 blur-3xl" />
+-
+-          <div className="relative overflow-hidden rounded-[1.35rem] border border-primary/20 bg-card/70 p-4 backdrop-blur-2xl sm:rounded-[2rem] sm:p-6">
+-            <div className="mb-5 flex items-center justify-between border-b border-border/40 pb-5">
+-              <div>
+-                <p className="text-sm font-semibold text-foreground">
+-                  {t.hero.dashboard.title}
+-                </p>
+-                <p className="text-xs text-muted-foreground">
+-                  {t.hero.dashboard.subtitle}
+-                </p>
+-              </div>
+-
+-              <div className="flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+-                <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
+-                {t.hero.dashboard.status}
+-              </div>
+-            </div>
++          <div className="mt-24 flex flex-col items-center">
++            <span className="mb-4 text-[10px] uppercase tracking-[0.45em] text-white/35">
++              Scroll
++            </span>
+ 
+-            <div className="space-y-4">
+-              <div className="rounded-2xl border border-border/40 bg-background/55 p-4 transition duration-300 hover:border-primary/40 sm:p-5">
+-                <div className="mb-4 flex items-center justify-between gap-4">
+-                  <span className="flex items-center gap-2 text-xs text-muted-foreground sm:text-sm">
+-                    <TrendingUp className="h-4 w-4 shrink-0 text-primary" />
+-                    {t.hero.dashboard.acquisition}
+-                  </span>
+-
+-                  <span className="text-sm font-bold text-primary">+38%</span>
+-                </div>
+-
+-                <div className="h-2 overflow-hidden rounded-full bg-secondary">
+-                  <div className="h-full w-[72%] rounded-full bg-gradient-to-r from-primary to-purple-300 shadow-[0_0_24px_hsl(var(--primary)/0.5)]" />
+-                </div>
+-              </div>
+-
+-              <div className="grid grid-cols-1 gap-3 xs:grid-cols-3 sm:grid-cols-3">
+-                <div className="rounded-2xl border border-border/40 bg-background/45 p-4 text-center">
+-                  <Target className="mx-auto mb-2 h-5 w-5 text-primary" />
+-                  <p className="text-base font-extrabold text-foreground sm:text-lg">
+-                    {t.hero.dashboard.funnel}
+-                  </p>
+-                  <p className="mt-1 text-[11px] text-muted-foreground">
+-                    {t.hero.dashboard.funnelLabel}
+-                  </p>
+-                </div>
+-
+-                <div className="rounded-2xl border border-border/40 bg-background/45 p-4 text-center">
+-                  <Zap className="mx-auto mb-2 h-5 w-5 text-primary" />
+-                  <p className="text-base font-extrabold text-foreground sm:text-lg">
+-                    {t.hero.dashboard.leads}
+-                  </p>
+-                  <p className="mt-1 text-[11px] text-muted-foreground">
+-                    {t.hero.dashboard.leadsLabel}
+-                  </p>
+-                </div>
+-
+-                <div className="rounded-2xl border border-border/40 bg-background/45 p-4 text-center">
+-                  <Sparkles className="mx-auto mb-2 h-5 w-5 text-primary" />
+-                  <p className="text-base font-extrabold text-foreground sm:text-lg">
+-                    {t.hero.dashboard.brand}
+-                  </p>
+-                  <p className="mt-1 text-[11px] text-muted-foreground">
+-                    {t.hero.dashboard.brandLabel}
+-                  </p>
+-                </div>
+-              </div>
+-
+-              <div className="rounded-2xl border border-primary/20 bg-primary/10 p-4 sm:p-5">
+-                <p className="text-sm font-semibold text-foreground">
+-                  {t.hero.dashboard.recommendedTitle}
+-                </p>
+-                <p className="mt-2 text-sm leading-6 text-muted-foreground">
+-                  {t.hero.dashboard.recommendedText}
+-                </p>
+-              </div>
++            <div className="relative h-16 w-px overflow-hidden bg-white/15">
++              <div className="absolute left-0 top-0 h-8 w-full animate-bounce bg-gradient-to-b from-white to-transparent" />
+             </div>
+           </div>
+         </div>
+       </div>
+ 
+-      {isFormOpen && (
+-        <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-black/75 p-4 backdrop-blur-sm animate-fade-in">
+-          <div className="relative my-6 w-full max-w-md rounded-[24px] border border-primary/20 bg-card/95 p-5 shadow-[0_0_90px_rgba(139,92,246,0.3)] backdrop-blur-2xl sm:rounded-[28px] sm:p-7 md:p-8">
+-            <button
+-              type="button"
+-              aria-label={t.hero.form.closeAria}
+-              className="absolute right-4 top-4 rounded-full p-2 text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+-              onClick={() => setIsFormOpen(false)}
+-            >
+-              <X className="h-5 w-5" />
+-            </button>
+-
+-            {!enviado ? (
+-              <>
+-                <p className="mb-3 pr-10 text-xs font-semibold uppercase tracking-[0.22em] text-primary">
+-                  {t.hero.form.badge}
+-                </p>
+-
+-                <h2 className="mb-6 pr-8 text-xl font-extrabold text-foreground sm:mb-7 sm:text-2xl">
+-                  {t.hero.form.title}
+-                </h2>
+-
+-                <form
+-                  onSubmit={handleSubmit}
+-                  className="flex flex-col gap-3 sm:gap-4"
+-                >
+-                  <input
+-                    value={nomeCompleto}
+-                    onChange={(e) => setNomeCompleto(e.target.value)}
+-                    placeholder={t.hero.form.fullName}
+-                    required
+-                    className="h-13 w-full rounded-lg border border-border/50 bg-background/80 px-4 py-4 text-sm text-foreground placeholder:text-muted-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20 sm:h-14 sm:text-base"
+-                  />
+-
+-                  <input
+-                    value={email}
+-                    onChange={(e) => setEmail(e.target.value)}
+-                    type="email"
+-                    placeholder={t.hero.form.email}
+-                    required
+-                    className="h-13 w-full rounded-lg border border-border/50 bg-background/80 px-4 py-4 text-sm text-foreground placeholder:text-muted-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20 sm:h-14 sm:text-base"
+-                  />
+-
+-                  <input
+-                    value={nome}
+-                    onChange={(e) => setNome(e.target.value)}
+-                    placeholder={t.hero.form.company}
+-                    required
+-                    className="h-13 w-full rounded-lg border border-border/50 bg-background/80 px-4 py-4 text-sm text-foreground placeholder:text-muted-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20 sm:h-14 sm:text-base"
+-                  />
+-
+-                  <input
+-                    value={telefone}
+-                    onChange={(e) => setTelefone(e.target.value)}
+-                    placeholder={t.hero.form.phone}
+-                    required
+-                    type="tel"
+-                    inputMode="tel"
+-                    autoComplete="tel"
+-                    className="h-13 w-full rounded-lg border border-border/50 bg-background/80 px-4 py-4 text-sm text-foreground placeholder:text-muted-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20 sm:h-14 sm:text-base"
+-                  />
+-
+-                  <select
+-                    value={faturamento}
+-                    onChange={(e) => setFaturamento(e.target.value)}
+-                    required
+-                    className={`h-13 w-full cursor-pointer rounded-lg border border-border/50 bg-background/80 px-4 py-4 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20 sm:h-14 sm:text-base ${
+-                      faturamento ? "text-white" : "text-muted-foreground"
+-                    }`}
+-                  >
+-                    <option value="">{t.hero.form.revenue}</option>
+-                    <option value="Até 10 mil">
+-                      {t.hero.form.revenueOptions.upTo10k}
+-                    </option>
+-                    <option value="De 10 mil a 50 mil">
+-                      {t.hero.form.revenueOptions.from10kTo50k}
+-                    </option>
+-                    <option value="De 50 mil a 100 mil">
+-                      {t.hero.form.revenueOptions.from50kTo100k}
+-                    </option>
+-                    <option value="De 100 mil a 300 mil">
+-                      {t.hero.form.revenueOptions.from100kTo300k}
+-                    </option>
+-                    <option value="Acima de 300 mil">
+-                      {t.hero.form.revenueOptions.above300k}
+-                    </option>
+-                  </select>
+-
+-                  <select
+-                    value={segmento}
+-                    onChange={(e) => setSegmento(e.target.value)}
+-                    required
+-                    className={`h-13 w-full cursor-pointer rounded-lg border border-border/50 bg-background/80 px-4 py-4 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20 sm:h-14 sm:text-base ${
+-                      segmento ? "text-white" : "text-muted-foreground"
+-                    }`}
+-                  >
+-                    <option value="">{t.hero.form.segment}</option>
+-                    <option value="E-commerce">
+-                      {t.hero.form.segmentOptions.ecommerce}
+-                    </option>
+-                    <option value="Serviços">
+-                      {t.hero.form.segmentOptions.services}
+-                    </option>
+-                    <option value="Infoproduto">
+-                      {t.hero.form.segmentOptions.infoproduct}
+-                    </option>
+-                    <option value="Negócio local">
+-                      {t.hero.form.segmentOptions.localBusiness}
+-                    </option>
+-                    <option value="Outro">
+-                      {t.hero.form.segmentOptions.other}
+-                    </option>
+-                  </select>
+-
+-                  <button
+-                    type="submit"
+-                    disabled={carregando}
+-                    className="mt-2 h-13 w-full rounded-lg bg-primary px-5 py-4 text-sm font-bold text-white shadow-[0_0_35px_rgba(139,92,246,0.35)] transition hover:scale-[1.02] hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-60 sm:h-14 sm:text-base"
+-                  >
+-                    {carregando ? t.hero.form.loading : t.hero.form.submit}
+-                  </button>
+-                </form>
+-              </>
+-            ) : (
+-              <div className="py-8 text-center">
+-                <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-2xl text-primary">
+-                  ✓
+-                </div>
+-
+-                <h3 className="mb-2 text-xl font-bold text-foreground">
+-                  {t.hero.form.successTitle}
+-                </h3>
+-
+-                <p className="text-sm leading-6 text-muted-foreground">
+-                  {t.hero.form.successText}
+-                </p>
+-              </div>
+-            )}
+-          </div>
+-        </div>
+-      )}
++      {/* Fade para a próxima seção */}
++
++      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#050505] to-transparent" />
+     </section>
+   );
+ };
+diff --git a/src/Components/Navbar.tsx b/src/Components/Navbar.tsx
+index b7b606e..d5e01ad 100644
+--- a/src/Components/Navbar.tsx
++++ b/src/Components/Navbar.tsx
+@@ -1,7 +1,6 @@
+-import { useState } from "react";
+-import { Button } from "@/components/ui/button";
++import { useEffect, useState } from "react";
++import { Menu, X, ChevronDown } from "lucide-react";
+ import { useLanguage } from "@/i18n/LanguageContext";
+-import { ChevronDown } from "lucide-react";
+ import type { Language } from "@/i18n/translations";
+ 
+ const languages: Record<
+@@ -12,190 +11,290 @@ const languages: Record<
+     alt: string;
+   }
+ > = {
+-  pt: {
+-    label: "Português",
+-    flag: "/flags/br.svg",
+-    alt: "Bandeira do Brasil",
+-  },
+   en: {
+-    label: "English",
++    label: "EN",
+     flag: "/flags/us.svg",
+-    alt: "United States flag",
++    alt: "English",
+   },
+-  es: {
+-    label: "Español",
+-    flag: "/flags/es.svg",
+-    alt: "Bandera de España",
++
++  pt: {
++    label: "PT",
++    flag: "/flags/br.svg",
++    alt: "Português",
+   },
+ };
+ 
+ const Navbar = () => {
+   const { language, setLanguage, t } = useLanguage();
++
++  const [isScrolled, setIsScrolled] = useState(false);
++  const [isMenuOpen, setIsMenuOpen] = useState(false);
+   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+ 
+-  const openDiagnosisModal = () => {
+-    window.dispatchEvent(new Event("open-diagnosis-modal"));
+-  };
++  useEffect(() => {
++    const handleScroll = () => {
++      setIsScrolled(window.scrollY > 24);
++    };
++
++    window.addEventListener("scroll", handleScroll);
++
++    return () => window.removeEventListener("scroll", handleScroll);
++  }, []);
++
++  useEffect(() => {
++    document.body.style.overflow = isMenuOpen ? "hidden" : "";
++
++    return () => {
++      document.body.style.overflow = "";
++    };
++  }, [isMenuOpen]);
+ 
+-  const scrollToSection = (sectionId: string) => {
+-    const section = document.getElementById(sectionId);
++  const scrollToSection = (id: string) => {
++    setIsMenuOpen(false);
++
++    const section = document.getElementById(id);
+ 
+     if (!section) return;
+ 
+-    section.scrollIntoView({
++    window.scrollTo({
++      top: section.offsetTop - 90,
+       behavior: "smooth",
+-      block: "start",
+     });
+   };
+ 
+   const scrollToTop = () => {
++    setIsMenuOpen(false);
++
+     window.scrollTo({
+       top: 0,
+       behavior: "smooth",
+     });
+   };
+ 
+-  const currentLanguage = languages[language];
+-
+-  const handleLanguageChange = (selectedLanguage: Language) => {
+-    setLanguage(selectedLanguage);
++  const handleLanguageChange = (lang: Language) => {
++    setLanguage(lang);
+     setIsLanguageOpen(false);
+   };
+ 
++  const currentLanguage = languages[language];
++
+   return (
+-    <nav className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur-xl">
+-      <div className="section-container flex h-16 items-center justify-between">
+-        <button
+-          type="button"
+-          onClick={scrollToTop}
+-          className="flex items-center gap-3"
+-          aria-label={t.navbar.homeAria}
+-        >
+-          <img
+-            src="/logo-pubird-icon.png"
+-            alt="Pubird"
+-            className="h-10 w-auto drop-shadow-[0_0_20px_rgba(139,92,246,0.5)]"
+-          />
+-        </button>
++    <>
++      <nav
++        className={`fixed inset-x-0 top-0 z-50 transition-all duration-700 ${
++          isScrolled
++            ? "border-b border-white/5 bg-black/60 backdrop-blur-2xl"
++            : "bg-transparent"
++        }`}
++      >
++        <div className="mx-auto flex h-20 max-w-[1800px] items-center justify-between px-8 md:px-12 lg:px-20">
+ 
+-        <div className="hidden items-center gap-8 md:flex">
+-          <button
+-            type="button"
+-            onClick={() => scrollToSection("servicos")}
+-            className="text-sm font-medium text-muted-foreground transition hover:text-white"
+-          >
+-            {t.navbar.services}
+-          </button>
++          {/* Logo */}
+ 
+           <button
+-            type="button"
+-            onClick={() => scrollToSection("processo")}
+-            className="text-sm font-medium text-muted-foreground transition hover:text-white"
++            onClick={scrollToTop}
++            className="transition duration-300 hover:opacity-70"
+           >
+-            {t.navbar.process}
++            <img
++              src="/logo-pubird-icon.png"
++              alt="Pubird"
++              draggable={false}
++              className="h-7 w-auto select-none"
++            />
+           </button>
+ 
+-          <button
+-            type="button"
+-            onClick={() => scrollToSection("resultados")}
+-            className="text-sm font-medium text-muted-foreground transition hover:text-white"
+-          >
+-            {t.navbar.results}
+-          </button>
+-        </div>
++          {/* Desktop */}
++
++          <div className="hidden items-center gap-14 lg:flex">
++
++            <button
++              onClick={() => scrollToSection("projects")}
++              className="text-[11px] uppercase tracking-[0.35em] text-white/55 transition hover:text-white"
++            >
++              {t.navbar.portfolio}
++            </button>
+ 
+-        <div className="flex items-center gap-3">
+-          <div className="relative">
+             <button
+-              type="button"
+-              onClick={() => setIsLanguageOpen((prev) => !prev)}
+-              aria-label={t.navbar.languageAria}
+-              aria-expanded={isLanguageOpen}
+-              className="flex h-9 items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-2.5 text-sm font-medium text-white backdrop-blur-xl transition hover:border-primary/40 hover:bg-primary/10"
++              onClick={() => scrollToSection("about")}
++              className="text-[11px] uppercase tracking-[0.35em] text-white/55 transition hover:text-white"
+             >
+-              <img
+-                src={currentLanguage.flag}
+-                alt={currentLanguage.alt}
+-                className="h-4 w-6 rounded-sm object-cover"
+-              />
+-
+-              <span className="hidden sm:inline">{currentLanguage.label}</span>
+-
+-              <ChevronDown
+-                className={`h-3.5 w-3.5 text-muted-foreground transition-transform ${
+-                  isLanguageOpen ? "rotate-180" : ""
+-                }`}
+-              />
++              {t.navbar.about}
++            </button>
++
++            <button
++              onClick={() => scrollToSection("services")}
++              className="text-[11px] uppercase tracking-[0.35em] text-white/55 transition hover:text-white"
++            >
++              {t.navbar.services}
++            </button>
++
++            <button
++              onClick={() => scrollToSection("contact")}
++              className="text-[11px] uppercase tracking-[0.35em] text-white/55 transition hover:text-white"
++            >
++              {t.navbar.contact}
+             </button>
+ 
+-            {isLanguageOpen && (
+-              <div className="absolute right-0 top-11 z-50 w-40 overflow-hidden rounded-lg border border-white/10 bg-background/95 p-1 shadow-[0_18px_45px_rgba(0,0,0,0.35)] backdrop-blur-xl">
+-                <button
+-                  type="button"
+-                  onClick={() => handleLanguageChange("pt")}
+-                  className={`flex w-full items-center gap-2 rounded-md px-2.5 py-2 text-left text-sm transition ${
+-                    language === "pt"
+-                      ? "bg-primary/15 text-white"
+-                      : "text-muted-foreground hover:bg-white/5 hover:text-white"
+-                  }`}
+-                >
+-                  <img
+-                    src="/flags/br.svg"
+-                    alt="Bandeira do Brasil"
+-                    className="h-4 w-6 rounded-sm object-cover"
+-                  />
+-                  <span>Português</span>
+-                </button>
+-
+-                <button
+-                  type="button"
+-                  onClick={() => handleLanguageChange("en")}
+-                  className={`flex w-full items-center gap-2 rounded-md px-2.5 py-2 text-left text-sm transition ${
+-                    language === "en"
+-                      ? "bg-primary/15 text-white"
+-                      : "text-muted-foreground hover:bg-white/5 hover:text-white"
+-                  }`}
+-                >
+-                  <img
+-                    src="/flags/us.svg"
+-                    alt="United States flag"
+-                    className="h-4 w-6 rounded-sm object-cover"
+-                  />
+-                  <span>English</span>
+-                </button>
+-
+-                <button
+-                  type="button"
+-                  onClick={() => handleLanguageChange("es")}
+-                  className={`flex w-full items-center gap-2 rounded-md px-2.5 py-2 text-left text-sm transition ${
+-                    language === "es"
+-                      ? "bg-primary/15 text-white"
+-                      : "text-muted-foreground hover:bg-white/5 hover:text-white"
+-                  }`}
+-                >
+-                  <img
+-                    src="/flags/es.svg"
+-                    alt="Bandera de España"
+-                    className="h-4 w-6 rounded-sm object-cover"
+-                  />
+-                  <span>Español</span>
+-                </button>
+-              </div>
+-            )}
+           </div>
+ 
+-          <Button
+-            variant="hero"
+-            size="sm"
+-            className="hidden h-auto px-5 py-2 text-sm font-semibold shadow-[0_0_25px_rgba(139,92,246,0.4)] sm:inline-flex"
+-            onClick={openDiagnosisModal}
+-          >
+-            {t.navbar.diagnosis}
+-          </Button>
+-        </div>
+-      </div>
+-    </nav>
+-  );
++          {/* Right */}
++
++          <div className="flex items-center gap-8">
++            {/* Language */}
++
++<div className="relative hidden lg:block">
++
++  <button
++    onClick={() => setIsLanguageOpen(!isLanguageOpen)}
++    className="flex items-center gap-2 text-[11px] uppercase tracking-[0.35em] text-white/55 transition hover:text-white"
++  >
++    {currentLanguage.label}
++
++    <ChevronDown
++      size={14}
++      className={`transition duration-300 ${
++        isLanguageOpen ? "rotate-180" : ""
++      }`}
++    />
++  </button>
++
++  {isLanguageOpen && (
++
++    <div className="absolute right-0 top-9 w-28 overflow-hidden rounded-xl border border-white/10 bg-black/95 backdrop-blur-xl">
++
++      {(["en", "pt"] as Language[]).map((lang) => (
++
++        <button
++          key={lang}
++          onClick={() => handleLanguageChange(lang)}
++          className={`flex w-full items-center justify-between px-4 py-3 text-[11px] uppercase tracking-[0.25em] transition ${
++            language === lang
++              ? "bg-white/5 text-white"
++              : "text-white/45 hover:bg-white/5 hover:text-white"
++          }`}
++        >
++          <span>{languages[lang].label}</span>
++
++          <img
++            src={languages[lang].flag}
++            alt={languages[lang].alt}
++            className="h-3.5 w-5 object-cover"
++          />
++
++        </button>
++
++      ))}
++
++    </div>
++
++  )}
++
++</div>
++
++{/* Mobile Button */}
++
++<button
++  onClick={() => setIsMenuOpen(true)}
++  className="text-white transition hover:opacity-70 lg:hidden"
++>
++  <Menu size={24} />
++</button>
++
++</div>
++
++</div>
++
++</nav>
++
++{/* ================= MOBILE MENU ================= */}
++
++<div
++  className={`fixed inset-0 z-[60] bg-[#050505] transition-all duration-700 ${
++    isMenuOpen
++      ? "pointer-events-auto opacity-100"
++      : "pointer-events-none opacity-0"
++  }`}
++>
++
++  {/* Header */}
++
++  <div className="mx-auto flex h-20 max-w-[1800px] items-center justify-between px-8 md:px-12 lg:px-20">
++
++    <img
++      src="/logo-pubird-icon.png"
++      alt="Pubird"
++      className="h-7 w-auto"
++    />
++
++    <button
++      onClick={() => setIsMenuOpen(false)}
++      className="text-white/70 transition hover:text-white"
++    >
++      <X size={24} />
++    </button>
++
++  </div>
++
++  {/* Navigation */}
++
++  <div className="flex h-[calc(100%-80px)] flex-col justify-center px-8 md:px-12">
++
++    <button
++      onClick={() => scrollToSection("projects")}
++      className="border-b border-white/10 py-8 text-left font-sequel text-[42px] font-light tracking-[-0.05em] text-white transition duration-500 hover:translate-x-4"
++    >
++      {t.navbar.portfolio}
++    </button>
++
++    <button
++      onClick={() => scrollToSection("about")}
++      className="border-b border-white/10 py-8 text-left font-sequel text-[42px] font-light tracking-[-0.05em] text-white transition duration-500 hover:translate-x-4"
++    >
++      {t.navbar.about}
++    </button>
++
++    <button
++      onClick={() => scrollToSection("services")}
++      className="border-b border-white/10 py-8 text-left font-sequel text-[42px] font-light tracking-[-0.05em] text-white transition duration-500 hover:translate-x-4"
++    >
++      {t.navbar.services}
++    </button>
++
++    <button
++      onClick={() => scrollToSection("contact")}
++      className="border-b border-white/10 py-8 text-left font-sequel text-[42px] font-light tracking-[-0.05em] text-white transition duration-500 hover:translate-x-4"
++    >
++      {t.navbar.contact}
++    </button>
++
++    {/* Mobile Language */}
++
++    <div className="mt-16 flex items-center gap-8">
++
++      {(["en", "pt"] as Language[]).map((lang) => (
++
++        <button
++          key={lang}
++          onClick={() => handleLanguageChange(lang)}
++          className={`text-sm uppercase tracking-[0.3em] transition ${
++            language === lang
++              ? "text-white"
++              : "text-white/40 hover:text-white"
++          }`}
++        >
++          {languages[lang].label}
++        </button>
++
++      ))}
++
++    </div>
++
++  </div>
++
++</div>
++
++</>
++);
+ };
+ 
+ export default Navbar;
+\ No newline at end of file
+diff --git a/src/Components/NextProject.tsx b/src/Components/NextProject.tsx
+new file mode 100644
+index 0000000..f4e866f
+--- /dev/null
++++ b/src/Components/NextProject.tsx
+@@ -0,0 +1,123 @@
++import { Link } from "react-router-dom";
++import { ArrowUpRight } from "lucide-react";
++import { motion } from "framer-motion";
++import { useLanguage } from "@/i18n/LanguageContext";
++
++type Project = {
++  slug: string;
++  title: string;
++  category: {
++    en: string;
++    pt: string;
++  };
++    thumbnail: string;
++};
++
++type NextProjectProps = {
++  project: Project;
++};
++
++const NextProject = ({ project }: NextProjectProps) => {
++  const { language, t } = useLanguage();
++
++  return (
++    <section className="relative overflow-hidden border-t border-white/10 bg-black">
++
++      <Link
++        to={`/work/${project.slug}`}
++        className="group block"
++      >
++        <div className="relative h-[80vh] min-h-[650px] w-full overflow-hidden">
++
++          {/* Background */}
++
++          <motion.img
++            src={project.thumbnail}
++            alt={project.title}
++            initial={{ scale: 1 }}
++            whileHover={{ scale: 1.06 }}
++            transition={{
++              duration: 1.2,
++              ease: [0.22, 1, 0.36, 1],
++            }}
++            className="absolute inset-0 h-full w-full object-cover"
++          />
++
++          {/* Overlay */}
++
++          <div className="absolute inset-0 bg-black/60 transition duration-700 group-hover:bg-black/45" />
++
++          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-black/10" />
++
++          {/* Content */}
++
++          <div className="relative z-10 flex h-full items-end">
++
++            <div className="mx-auto flex w-full max-w-[1800px] items-end justify-between px-8 pb-24 md:px-12 lg:px-20">
++                              <div>
++
++                <p className="mb-6 text-[11px] uppercase tracking-[0.5em] text-white/45">
++                  {t.portfolio.nextProject}
++                </p>
++
++                <motion.h2
++                  whileHover={{ x: 6 }}
++                  transition={{
++                    duration: 0.35,
++                  }}
++                  className="font-sequel text-[56px] font-light leading-none tracking-[-0.06em] text-white md:text-[84px] lg:text-[120px]"
++                >
++                  {project.title}
++                </motion.h2>
++
++                <p className="mt-6 text-lg text-white/65">
++                  {project.category[language]}
++                </p>
++
++                <div className="mt-10 inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.4em] text-white/80 transition duration-300 group-hover:gap-5">
++                  <span>{t.portfolio.viewProject}</span>
++
++                  <ArrowUpRight
++                    size={18}
++                    className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
++                  />
++                </div>
++
++              </div>
++
++              {/* Circle */}
++
++              <motion.div
++                whileHover={{
++                  x: 8,
++                  y: -8,
++                }}
++                transition={{
++                  duration: 0.35,
++                }}
++                className="hidden md:flex"
++              >
++                <div className="flex h-24 w-24 items-center justify-center rounded-full border border-white/20 bg-white/5 backdrop-blur-xl">
++
++                  <ArrowUpRight
++                    size={34}
++                    className="text-white"
++                  />
++
++                </div>
++
++              </motion.div>
++
++            </div>
++
++          </div>
++
++        </div>
++
++      </Link>
++
++    </section>
++  );
++};
++
++export default NextProject;
+\ No newline at end of file
+diff --git a/src/Components/ProjectHero.tsx b/src/Components/ProjectHero.tsx
+new file mode 100644
+index 0000000..e69de29
+diff --git a/src/Components/ProjectInfo.tsx b/src/Components/ProjectInfo.tsx
+new file mode 100644
+index 0000000..e69de29
+diff --git a/src/Components/ProjectVideo.tsx b/src/Components/ProjectVideo.tsx
+new file mode 100644
+index 0000000..7aee3d8
+--- /dev/null
++++ b/src/Components/ProjectVideo.tsx
+@@ -0,0 +1,117 @@
++import { useRef, useState } from "react";
++import { Play, Pause, Volume2, VolumeX, Maximize2 } from "lucide-react";
++
++interface ProjectVideoProps {
++  src: string;
++}
++
++const ProjectVideo = ({ src }: ProjectVideoProps) => {
++  const videoRef = useRef<HTMLVideoElement>(null);
++
++  const [playing, setPlaying] = useState(true);
++  const [muted, setMuted] = useState(true);
++
++  const togglePlay = () => {
++    if (!videoRef.current) return;
++
++    if (videoRef.current.paused) {
++      videoRef.current.play();
++      setPlaying(true);
++    } else {
++      videoRef.current.pause();
++      setPlaying(false);
++    }
++  };
++
++  const toggleMute = () => {
++    if (!videoRef.current) return;
++
++    videoRef.current.muted = !videoRef.current.muted;
++    setMuted(videoRef.current.muted);
++  };
++
++  const fullscreen = () => {
++    videoRef.current?.requestFullscreen();
++  };
++
++  return (
++    <div className="group relative overflow-hidden bg-black">
++
++      <video
++        ref={videoRef}
++        autoPlay
++        muted
++        loop
++        playsInline
++        preload="metadata"
++        onPlay={() => setPlaying(true)}
++        onPause={() => setPlaying(false)}
++        className="aspect-video w-full object-cover"
++      >
++        <source src={src} type="video/mp4" />
++        Seu navegador não suporta vídeos HTML5.
++      </video>
++
++      {/* Overlay */}
++
++      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
++
++      {/* Controls */}
++
++      <div className="absolute bottom-8 left-8 right-8 flex items-center justify-between opacity-0 transition duration-500 group-hover:opacity-100">
++
++        <div className="flex gap-4">
++
++          <button
++            type="button"
++            onClick={togglePlay}
++          >
++            {playing ? (
++              <Pause
++                size={22}
++                className="text-white"
++              />
++            ) : (
++              <Play
++                size={22}
++                className="text-white"
++              />
++            )}
++          </button>
++
++          <button
++            type="button"
++            onClick={toggleMute}
++          >
++            {muted ? (
++              <VolumeX
++                size={22}
++                className="text-white"
++              />
++            ) : (
++              <Volume2
++                size={22}
++                className="text-white"
++              />
++            )}
++          </button>
++
++        </div>
++
++        <button
++          type="button"
++          onClick={fullscreen}
++        >
++          <Maximize2
++            size={22}
++            className="text-white"
++          />
++        </button>
++
++      </div>
++
++    </div>
++  );
++};
++
++export default ProjectVideo;
+\ No newline at end of file
+diff --git a/src/Components/SelectedWorksSection.tsx b/src/Components/SelectedWorksSection.tsx
+new file mode 100644
+index 0000000..7500601
+--- /dev/null
++++ b/src/Components/SelectedWorksSection.tsx
+@@ -0,0 +1,51 @@
++import WorkCard from "./WorkCard";
++import { projects } from "@/data/projects";
++import { useLanguage } from "@/i18n/LanguageContext";
++
++const SelectedWorksSection = () => {
++  const { t } = useLanguage();
++
++  return (
++    <section
++      id="projects"
++      className="bg-black py-40"
++    >
++      <div className="mx-auto max-w-[1800px]">
++
++        {/* Header */}
++
++        <div className="mb-24 px-8 md:px-12 lg:px-20">
++
++          <p className="text-[10px] uppercase tracking-[0.55em] text-white/35">
++            {t.portfolio.eyebrow}
++          </p>
++
++          <h2 className="mt-6 font-sequel text-[34px] font-light leading-none tracking-[-0.04em] text-white md:text-[46px] lg:text-[58px]">
++            {t.portfolio.title}
++          </h2>
++
++          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/45">
++            {t.portfolio.subtitle}
++          </p>
++
++        </div>
++
++        {/* Projects */}
++
++        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
++
++          {projects.map((project) => (
++            <WorkCard
++              key={project.slug}
++              project={project}
++            />
++          ))}
++
++        </div>
++
++      </div>
++    </section>
++  );
++};
++
++export default SelectedWorksSection;
+\ No newline at end of file
+diff --git a/src/Components/WhatWeDoSection.tsx b/src/Components/WhatWeDoSection.tsx
+new file mode 100644
+index 0000000..b57ec90
+--- /dev/null
++++ b/src/Components/WhatWeDoSection.tsx
+@@ -0,0 +1,65 @@
++import { useLanguage } from "@/i18n/LanguageContext";
++
++const WhatWeDoSection = () => {
++  const { t } = useLanguage();
++
++  return (
++    <section
++      id="services"
++      className="bg-[#050505] py-52"
++    >
++      <div className="mx-auto max-w-[1800px] px-8 md:px-12 lg:px-20">
++
++        {/* Header */}
++
++        <div className="mb-28">
++
++          <p className="text-[11px] uppercase tracking-[0.55em] text-white/30">
++            {t.services.eyebrow}
++          </p>
++
++          <h2 className="mt-8 font-sequel text-[48px] font-light leading-[0.92] tracking-[-0.05em] text-white md:text-[72px] lg:text-[100px]">
++            {t.services.title}
++          </h2>
++
++          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/45">
++            {t.services.subtitle}
++          </p>
++
++        </div>
++
++        {/* Services */}
++
++        <div className="border-t border-white/10">
++
++          {t.services.items.map((service) => (
++
++            <div
++              key={service.number}
++              className="grid grid-cols-1 gap-8 border-b border-white/10 py-12 transition duration-500 hover:bg-white/[0.02] md:grid-cols-[120px_1fr_420px]"
++            >
++
++              <span className="text-sm tracking-[0.35em] text-white/30">
++                {service.number}
++              </span>
++
++              <h3 className="font-sequel text-[34px] font-light text-white md:text-[44px]">
++                {service.title}
++              </h3>
++
++              <p className="leading-8 text-white/50">
++                {service.description}
++              </p>
++
++            </div>
++
++          ))}
++
++        </div>
++
++      </div>
++    </section>
++  );
++};
++
++export default WhatWeDoSection;
+\ No newline at end of file
+diff --git a/src/Components/WorkCard.tsx b/src/Components/WorkCard.tsx
+new file mode 100644
+index 0000000..bc0d29c
+--- /dev/null
++++ b/src/Components/WorkCard.tsx
+@@ -0,0 +1,139 @@
++import { Link } from "react-router-dom";
++import { useRef } from "react";
++import { Play } from "lucide-react";
++import { useLanguage } from "@/i18n/LanguageContext";
++
++type WorkCardProps = {
++  project: {
++    slug: string;
++    title: string;
++    category: {
++      en: string;
++      pt: string;
++    };
++    video: string;
++    thumbnail: string;
++  };
++};
++
++const WorkCard = ({ project }: WorkCardProps) => {
++  const { language } = useLanguage();
++
++  const videoRef = useRef<HTMLVideoElement>(null);
++
++  const handleMouseEnter = () => {
++    if (!videoRef.current) return;
++
++    videoRef.current.currentTime = 0;
++    videoRef.current.play().catch(() => {});
++  };
++
++  const handleMouseLeave = () => {
++    if (!videoRef.current) return;
++
++    videoRef.current.pause();
++    videoRef.current.currentTime = 0;
++  };
++
++  return (
++    <Link
++      to={`/work/${project.slug}`}
++      onMouseEnter={handleMouseEnter}
++      onMouseLeave={handleMouseLeave}
++      className="group relative block aspect-[16/10] overflow-hidden bg-black"
++    >
++      {/* Thumbnail */}
++
++      <img
++        src={project.thumbnail}
++        alt={`Thumbnail do projeto ${project.title}`}
++        loading="lazy"
++        className="
++          absolute
++          inset-0
++          h-full
++          w-full
++          object-cover
++          transition-all
++          duration-700
++          ease-out
++          group-hover:scale-105
++          group-hover:opacity-0
++        "
++      />
++
++      {/* Video */}
++
++      <video
++        ref={videoRef}
++        muted
++        loop
++        playsInline
++        preload="metadata"
++        onError={() =>
++          console.warn(`Erro ao carregar o vídeo: ${project.video}`)
++        }
++        className="
++          absolute
++          inset-0
++          h-full
++          w-full
++          object-cover
++          opacity-0
++          scale-105
++          transition-all
++          duration-700
++          ease-out
++          group-hover:opacity-100
++          group-hover:scale-100
++        "
++      >
++        <source
++          src={project.video}
++          type="video/mp4"
++        />
++      </video>
++
++      {/* Overlay */}
++
++      <div className="absolute inset-0 bg-black/25 transition duration-500 group-hover:bg-black/5" />
++
++      {/* Gradient */}
++
++      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
++
++      {/* Play Icon */}
++
++      <div className="absolute right-8 top-8 flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-black/20 opacity-0 backdrop-blur-xl transition-all duration-500 group-hover:opacity-100">
++
++        <Play
++          size={18}
++          fill="white"
++          className="text-white"
++        />
++
++      </div>
++
++      {/* Text */}
++
++      <div className="absolute bottom-8 left-8">
++
++        <h3 className="font-sequel text-[30px] font-light text-white">
++          {project.title}
++        </h3>
++
++        <p className="mt-2 text-[11px] uppercase tracking-[0.45em] text-white/60">
++          {project.category[language]}
++        </p>
++
++      </div>
++
++      {/* Bottom Line */}
++
++      <div className="absolute bottom-0 left-0 h-px w-0 bg-white transition-all duration-700 group-hover:w-full" />
++
++    </Link>
++  );
++};
++
++export default WorkCard;
+\ No newline at end of file
+diff --git a/src/data/projects.ts b/src/data/projects.ts
+new file mode 100644
+index 0000000..ab10b94
+--- /dev/null
++++ b/src/data/projects.ts
+@@ -0,0 +1,126 @@
++export const projects = [
++  {
++    slug: "carhaus",
++
++    title: "CarHaus",
++
++    client: "CarHaus",
++
++    year: 2026,
++
++    category: {
++      en: "Automotive Film",
++      pt: "Filme Automotivo",
++    },
++
++    video: "/videos/CarHaus.MP4",
++
++    thumbnail: "/images/carhaus-cover.png",
++
++    description: {
++      en: "A cinematic brand film created to showcase luxury, performance and the emotion behind every detail.",
++
++      pt: "Um filme cinematográfico criado para destacar luxo, performance e a emoção presente em cada detalhe.",
++    },
++
++    services: {
++      en: [
++        "Creative Direction",
++        "Production",
++        "Cinematography",
++        "Editing",
++        "Color Grading",
++      ],
++
++      pt: [
++        "Direção Criativa",
++        "Produção",
++        "Direção de Fotografia",
++        "Edição",
++        "Color Grading",
++      ],
++    },
++  },
++
++  {
++    slug: "motocross",
++
++    title: "Motocross",
++
++    client: "Private Client",
++
++    year: 2026,
++
++    category: {
++      en: "Sports Film",
++      pt: "Filme Esportivo",
++    },
++
++    video: "/videos/Motocross.MP4",
++
++    thumbnail: "/images/motocross-cover.png",
++
++    description: {
++      en: "A high-energy production capturing speed, movement and adrenaline through a cinematic perspective.",
++
++      pt: "Uma produção de alta intensidade que captura velocidade, movimento e adrenalina através de uma perspectiva cinematográfica.",
++    },
++
++    services: {
++      en: [
++        "Creative Direction",
++        "Production",
++        "Drone",
++        "Editing",
++      ],
++
++      pt: [
++        "Direção Criativa",
++        "Produção",
++        "Drone",
++        "Edição",
++      ],
++    },
++  },
++
++  {
++    slug: "bmw",
++
++    title: "BMW",
++
++    client: "BMW",
++
++    year: 2026,
++
++    category: {
++      en: "Automotive Film",
++      pt: "Filme Automotivo",
++    },
++
++    video: "/videos/BMW.MP4",
++
++    thumbnail: "/images/bmw-cover.jpeg",
++
++    description: {
++      en: "A premium commercial focused on elegance, performance and the visual identity of the BMW brand.",
++
++      pt: "Um filme publicitário premium focado na elegância, performance e identidade visual da marca BMW.",
++    },
++
++    services: {
++      en: [
++        "Creative Direction",
++        "Production",
++        "Editing",
++        "Color Grading",
++      ],
++
++      pt: [
++        "Direção Criativa",
++        "Produção",
++        "Edição",
++        "Color Grading",
++      ],
++    },
++  },
++];
+\ No newline at end of file
+diff --git a/src/i18n/LanguageContext.tsx b/src/i18n/LanguageContext.tsx
+index b386a46..ddb7ba6 100644
+--- a/src/i18n/LanguageContext.tsx
++++ b/src/i18n/LanguageContext.tsx
+@@ -19,37 +19,50 @@ const LanguageContext = createContext<LanguageContextValue | undefined>(
+   undefined
+ );
+ 
+-const isValidLanguage = (language: string | null): language is Language => {
+-  return language === "pt" || language === "en" || language === "es";
++const isValidLanguage = (
++  language: string | null
++): language is Language => {
++  return language === "en" || language === "pt";
+ };
+ 
+ const getHtmlLang = (language: Language) => {
+-  if (language === "pt") return "pt-BR";
+-  if (language === "en") return "en-US";
+-  return "es-ES";
++  return language === "pt" ? "pt-BR" : "en-US";
+ };
+ 
+-export const LanguageProvider = ({ children }: { children: ReactNode }) => {
+-  const [language, setLanguageState] = useState<Language>("pt");
++export const LanguageProvider = ({
++  children,
++}: {
++  children: ReactNode;
++}) => {
++  // Inglês como idioma padrão
++  const [language, setLanguageState] =
++    useState<Language>("en");
+ 
+   useEffect(() => {
+-    const savedLanguage = localStorage.getItem("pubird-language");
++    const savedLanguage = localStorage.getItem(
++      "pubird-language"
++    );
+ 
+     if (isValidLanguage(savedLanguage)) {
+       setLanguageState(savedLanguage);
+-      document.documentElement.lang = getHtmlLang(savedLanguage);
++      document.documentElement.lang =
++        getHtmlLang(savedLanguage);
++    } else {
++      document.documentElement.lang = "en-US";
+     }
+   }, []);
+ 
+   const setLanguage = (newLanguage: Language) => {
+     setLanguageState(newLanguage);
+-    localStorage.setItem("pubird-language", newLanguage);
+-    document.documentElement.lang = getHtmlLang(newLanguage);
+-  };
+ 
+-  useEffect(() => {
+-    document.documentElement.lang = getHtmlLang(language);
+-  }, [language]);
++    localStorage.setItem(
++      "pubird-language",
++      newLanguage
++    );
++
++    document.documentElement.lang =
++      getHtmlLang(newLanguage);
++  };
+ 
+   const value = useMemo(
+     () => ({
+@@ -71,7 +84,9 @@ export const useLanguage = () => {
+   const context = useContext(LanguageContext);
+ 
+   if (!context) {
+-    throw new Error("useLanguage precisa ser usado dentro de LanguageProvider");
++    throw new Error(
++      "useLanguage must be used inside LanguageProvider."
++    );
+   }
+ 
+   return context;
+diff --git a/src/i18n/translations.ts b/src/i18n/translations.ts
+index f28faa0..721e5c7 100644
+--- a/src/i18n/translations.ts
++++ b/src/i18n/translations.ts
+@@ -1,723 +1,177 @@
+ export const translations = {
+-  pt: {
+-    navbar: {
+-      services: "Serviços",
+-      process: "Processo",
+-      results: "Resultados",
+-      diagnosis: "Solicitar diagnóstico",
+-      homeAria: "Voltar ao início",
+-      languageAria: "Selecionar idioma",
+-      portugueseAria: "Alterar idioma para português",
+-      englishAria: "Alterar idioma para inglês",
+-      spanishAria: "Alterar idioma para espanhol",
+-    },
+-
+-    hero: {
+-      badge: "Estratégia, tráfego e tecnologia",
+-      titleStart: "Marketing e aquisição para empresas que querem",
+-      titleHighlight: "crescer com clareza.",
+-      subtitle:
+-        "Estruturamos aquisição, posicionamento e conversão para transformar tráfego em clientes reais.",
+-      primaryCta: "Solicitar diagnóstico",
+-      secondaryCta: "Ver soluções",
+-      benefits: [
+-        "Estratégia personalizada",
+-        "Aquisição com foco em conversão",
+-        "Diagnóstico rápido e objetivo",
+-      ],
+-      dashboard: {
+-        title: "Growth Dashboard",
+-        subtitle: "Visão clara do funil",
+-        status: "Live",
+-        acquisition: "Aquisição qualificada",
+-        funnel: "Funil",
+-        funnelLabel: "mais claro",
+-        leads: "Leads",
+-        leadsLabel: "qualificados",
+-        brand: "Marca",
+-        brandLabel: "posicionada",
+-        recommendedTitle: "Próxima ação recomendada",
+-        recommendedText:
+-          "Entender gargalos, priorizar canais e criar uma estrutura de conversão com acompanhamento real.",
+-      },
+-      form: {
+-        closeAria: "Fechar formulário",
+-        badge: "Diagnóstico gratuito",
+-        title: "Receba uma análise do seu negócio",
+-        fullName: "Qual é o seu nome e sobrenome?",
+-        email: "Qual seu e-mail corporativo?",
+-        company: "Qual o nome da sua empresa?",
+-        phone: "🇧🇷 Qual seu telefone?",
+-        revenue: "Qual o faturamento mensal da sua empresa?",
+-        segment: "Qual o seu segmento?",
+-        loading: "Enviando...",
+-        submit: "Receber análise",
+-        successTitle: "Enviado com sucesso!",
+-        successText: "Nosso time entrará em contato em breve.",
+-        error: "Erro ao enviar. Tente novamente!",
+-        revenueOptions: {
+-          upTo10k: "Até R$10 mil",
+-          from10kTo50k: "De R$10 mil a R$50 mil",
+-          from50kTo100k: "De R$50 mil a R$100 mil",
+-          from100kTo300k: "De R$100 mil a R$300 mil",
+-          above300k: "Acima de R$300 mil",
+-        },
+-        segmentOptions: {
+-          ecommerce: "E-commerce",
+-          services: "Serviços",
+-          infoproduct: "Infoproduto",
+-          localBusiness: "Negócio local",
+-          other: "Outro",
+-        },
+-      },
+-    },
+-
+-    socialProof: {
+-      eyebrow: "Resultados",
+-      titleStart: "Projetos construídos para",
+-      titleHighlight: "crescimento real",
+-      subtitle:
+-        "Campanhas, páginas e operações digitais aplicadas em negócios reais.",
+-      clientsTitle: "Empresas e projetos atendidos",
+-      stats: [
+-        { value: "4.2M+", label: "Contas alcançadas" },
+-        { value: "72K+", label: "Receita gerada" },
+-        { value: "10x", label: "ROI médio" },
+-        { value: "150+", label: "Empresas atendidas" },
+-      ],
+-    },
+-
+-    problem: {
+-      eyebrow: "O desafio",
+-      titleStart: "Onde sua empresa está",
+-      titleHighlight: "perdendo crescimento?",
+-      subtitle:
+-        "Muitas empresas crescem no improviso. O problema aparece quando o crescimento para de acompanhar o esforço.",
+-      items: [
+-        {
+-          label: "Sem visibilidade",
+-          title: "Você investe, mas não sabe exatamente o que volta.",
+-          text: "Campanhas, criativos e canais rodando sem clareza de ROI real.",
+-        },
+-        {
+-          label: "Sem previsibilidade",
+-          title: "O crescimento depende de sorte, indicação ou campanha pontual.",
+-          text: "Sem processo claro, cada mês vira uma tentativa diferente.",
+-        },
+-        {
+-          label: "Margem apertada",
+-          title: "O custo para vender sobe, mas o lucro não acompanha.",
+-          text: "Aquisição cara, ticket médio pressionado e pouca inteligência comercial.",
+-        },
+-        {
+-          label: "Operação reativa",
+-          title: "Sua equipe vive apagando incêndio.",
+-          text: "Muito esforço manual, pouca automação e pouco tempo para escalar.",
+-        },
+-      ],
+-    },
+-
+-    solution: {
+-      eyebrow: "A diferença",
+-      titleStart: "Transforme marketing em",
+-      titleHighlight: "receita previsível",
+-      subtitle:
+-        "A Pubird cria máquinas de crescimento. Não campanhas isoladas. Sistemas que escalam.",
+-      items: [
+-        {
+-          title: "Dados em tempo real",
+-          description:
+-            "Dashboard centralizado com KPIs do seu negócio. Nada de planilhas ou achismos. Dados que realmente importam.",
+-        },
+-        {
+-          title: "Estratégia personalizada",
+-          description:
+-            "Cada negócio é diferente. Criamos a máquina de crescimento específica para seu mercado, produto e estágio.",
+-        },
+-        {
+-          title: "Execução com foco em ROI",
+-          description:
+-            "Cada real investido é rastreado e otimizado. Crescimento sem desperdício. Resultados previsíveis.",
+-        },
+-      ],
+-    },
+-
+-    services: {
+-      eyebrow: "Serviços",
+-      titleStart: "O que fazemos para transformar",
+-      titleHighlight: "atenção em cliente",
+-      subtitle:
+-        "Quatro frentes simples, conectadas e orientadas para crescimento real.",
+-      items: [
+-        {
+-          title: "Aquisição",
+-          desc: "Campanhas e estratégias para gerar demanda qualificada.",
+-        },
+-        {
+-          title: "Conversão",
+-          desc: "Landing pages, funis e otimização focada em resultado.",
+-        },
+-        {
+-          title: "Automação",
+-          desc: "Processos e integrações para escalar sem aumentar operação.",
+-        },
+-        {
+-          title: "Posicionamento",
+-          desc: "Construção de marca e percepção premium no digital.",
+-        },
+-      ],
+-    },
+-
+-    process: {
+-      eyebrow: "Processo",
+-      titleStart: "Crescimento não acontece por acaso.",
+-      titleHighlight: "Acontece com direção.",
+-      subtitle:
+-        "Unimos marketing, tecnologia e análise para transformar presença digital em um sistema mais previsível de geração de oportunidades.",
+-      bullets: [
+-        "Identificamos onde o negócio está perdendo atenção, leads e conversões.",
+-        "Organizamos canais, oferta e comunicação em uma direção mais clara.",
+-        "Acompanhamos dados para melhorar o que funciona e eliminar desperdícios.",
+-      ],
+-      dashboardTitle: "Growth System",
+-      dashboardSubtitle: "Da análise inicial à melhoria contínua",
+-      cards: [
+-        {
+-          title: "Leitura do cenário",
+-          desc: "Analisamos presença digital, oferta, posicionamento e pontos de atrito.",
+-        },
+-        {
+-          title: "Plano de crescimento",
+-          desc: "Definimos o caminho mais estratégico para atrair e converter clientes.",
+-        },
+-        {
+-          title: "Implementação",
+-          desc: "Criamos páginas, campanhas, conteúdos e processos alinhados ao objetivo.",
+-        },
+-        {
+-          title: "Otimização",
+-          desc: "Medimos resultados, ajustamos rotas e fortalecemos o que gera retorno.",
+-        },
+-      ],
+-      techStack: ["IA", "Mídia", "Funis", "Dados"],
+-    },
+-
+-    cta: {
+-      eyebrow: "Próximo passo",
+-      titleStart: "Talvez sua marca esteja perdendo clientes",
+-      titleHighlight: "por detalhes simples.",
+-      subtitle:
+-        "A gente analisa seu site, sua comunicação e seu funil para entender onde dá para melhorar e deixar tudo mais claro para quem chega até você.",
+-      button: "Solicitar análise estratégica",
+-      timeText: "Você responde rapidinho. Depois a gente te chama.",
+-      benefits: [
+-        {
+-          title: "Sem pressão",
+-          desc: "A ideia é entender o cenário primeiro, sem compromisso de fechar nada.",
+-        },
+-        {
+-          title: "Olhar mais claro",
+-          desc: "Mostramos pontos que podem estar atrapalhando sua presença e suas conversões.",
+-        },
+-        {
+-          title: "Próximos passos",
+-          desc: "Você sai com uma noção melhor do que pode ser ajustado no digital.",
+-        },
+-      ],
+-    },
+-
+-    footer: {
+-      description:
+-        "Estratégia, tecnologia e crescimento previsível para empresas que querem escalar com clareza e posicionamento.",
+-      navigation: "Navegação",
+-      contact: "Contato",
+-      social: "Redes",
+-      services: "Serviços",
+-      process: "Processo",
+-      results: "Resultados",
+-      rights: "Todos os direitos reservados.",
+-    },
+-  },
+-
+   en: {
+     navbar: {
++      portfolio: "Portfolio",
++      about: "About",
+       services: "Services",
+-      process: "Process",
+-      results: "Results",
+-      diagnosis: "Request diagnosis",
+-      homeAria: "Back to home",
+-      languageAria: "Select language",
+-      portugueseAria: "Change language to Portuguese",
+-      englishAria: "Change language to English",
+-      spanishAria: "Change language to Spanish",
++      contact: "Contact",
++      language: "Language",
+     },
+ 
+     hero: {
+-      badge: "Strategy, traffic and technology",
+-      titleStart: "Marketing and acquisition for companies that want to",
+-      titleHighlight: "grow with clarity.",
+-      subtitle:
+-        "We structure acquisition, positioning and conversion to turn traffic into real customers.",
+-      primaryCta: "Request diagnosis",
+-      secondaryCta: "View solutions",
+-      benefits: [
+-        "Personalized strategy",
+-        "Acquisition focused on conversion",
+-        "Fast and objective diagnosis",
+-      ],
+-      dashboard: {
+-        title: "Growth Dashboard",
+-        subtitle: "Clear funnel overview",
+-        status: "Live",
+-        acquisition: "Qualified acquisition",
+-        funnel: "Funnel",
+-        funnelLabel: "clearer",
+-        leads: "Leads",
+-        leadsLabel: "qualified",
+-        brand: "Brand",
+-        brandLabel: "positioned",
+-        recommendedTitle: "Recommended next action",
+-        recommendedText:
+-          "Understand bottlenecks, prioritize channels and build a conversion structure with real performance tracking.",
+-      },
+-      form: {
+-        closeAria: "Close form",
+-        badge: "Free diagnosis",
+-        title: "Get an analysis of your business",
+-        fullName: "What is your full name?",
+-        email: "What is your business email?",
+-        company: "What is your company name?",
+-        phone: "🇺🇸 What is your phone number?",
+-        revenue: "What is your company's monthly revenue?",
+-        segment: "What is your business segment?",
+-        loading: "Sending...",
+-        submit: "Receive analysis",
+-        successTitle: "Successfully sent!",
+-        successText: "Our team will contact you soon.",
+-        error: "Error sending. Please try again.",
+-        revenueOptions: {
+-          upTo10k: "Up to R$10k",
+-          from10kTo50k: "From R$10k to R$50k",
+-          from50kTo100k: "From R$50k to R$100k",
+-          from100kTo300k: "From R$100k to R$300k",
+-          above300k: "Above R$300k",
+-        },
+-        segmentOptions: {
+-          ecommerce: "E-commerce",
+-          services: "Services",
+-          infoproduct: "Digital product",
+-          localBusiness: "Local business",
+-          other: "Other",
+-        },
+-      },
+-    },
+-
+-    socialProof: {
+-      eyebrow: "Results",
+-      titleStart: "Projects built for",
+-      titleHighlight: "real growth",
+-      subtitle:
+-        "Campaigns, landing pages and digital operations applied to real businesses.",
+-      clientsTitle: "Companies and projects served",
+-      stats: [
+-        { value: "4.2M+", label: "Accounts reached" },
+-        { value: "72K+", label: "Revenue generated" },
+-        { value: "10x", label: "Average ROI" },
+-        { value: "150+", label: "Companies served" },
+-      ],
+-    },
+-
+-    problem: {
+-      eyebrow: "The challenge",
+-      titleStart: "Where is your company",
+-      titleHighlight: "losing growth?",
+-      subtitle:
+-        "Many companies grow through improvisation. The problem appears when growth no longer matches the effort.",
+-      items: [
+-        {
+-          label: "No visibility",
+-          title: "You invest, but you do not know exactly what comes back.",
+-          text: "Campaigns, creatives and channels running without clear visibility of real ROI.",
+-        },
+-        {
+-          label: "No predictability",
+-          title: "Growth depends on luck, referrals or occasional campaigns.",
+-          text: "Without a clear process, every month becomes a different attempt.",
+-        },
+-        {
+-          label: "Tight margins",
+-          title: "The cost of selling increases, but profit does not keep up.",
+-          text: "Expensive acquisition, pressured average ticket and little commercial intelligence.",
+-        },
+-        {
+-          label: "Reactive operation",
+-          title: "Your team is constantly putting out fires.",
+-          text: "Too much manual effort, little automation and limited time to scale.",
+-        },
+-      ],
+-    },
+-
+-    solution: {
+-      eyebrow: "The difference",
+-      titleStart: "Turn marketing into",
+-      titleHighlight: "predictable revenue",
+-      subtitle:
+-        "Pubird builds growth engines. Not isolated campaigns. Systems that scale.",
+-      items: [
+-        {
+-          title: "Real-time data",
+-          description:
+-            "A centralized dashboard with your business KPIs. No spreadsheets or guesswork. Data that truly matters.",
+-        },
+-        {
+-          title: "Personalized strategy",
+-          description:
+-            "Every business is different. We build the specific growth engine for your market, product and stage.",
+-        },
+-        {
+-          title: "ROI-focused execution",
+-          description:
+-            "Every amount invested is tracked and optimized. Growth without waste. Predictable results.",
+-        },
+-      ],
+-    },
+-
+-    services: {
+-      eyebrow: "Services",
+-      titleStart: "What we do to turn",
+-      titleHighlight: "attention into customers",
+-      subtitle: "Four simple, connected and growth-oriented fronts.",
+-      items: [
+-        {
+-          title: "Acquisition",
+-          desc: "Campaigns and strategies to generate qualified demand.",
+-        },
+-        {
+-          title: "Conversion",
+-          desc: "Landing pages, funnels and optimization focused on results.",
+-        },
+-        {
+-          title: "Automation",
+-          desc: "Processes and integrations to scale without increasing operations.",
+-        },
+-        {
+-          title: "Positioning",
+-          desc: "Brand building and premium digital perception.",
+-        },
+-      ],
+-    },
+-
+-    process: {
+-      eyebrow: "Process",
+-      titleStart: "Growth does not happen by chance.",
+-      titleHighlight: "It happens with direction.",
+-      subtitle:
+-        "We combine marketing, technology and analysis to turn digital presence into a more predictable opportunity-generation system.",
+-      bullets: [
+-        "We identify where the business is losing attention, leads and conversions.",
+-        "We organize channels, offer and communication into a clearer direction.",
+-        "We track data to improve what works and eliminate waste.",
+-      ],
+-      dashboardTitle: "Growth System",
+-      dashboardSubtitle: "From initial analysis to continuous improvement",
+-      cards: [
+-        {
+-          title: "Scenario analysis",
+-          desc: "We analyze digital presence, offer, positioning and friction points.",
+-        },
+-        {
+-          title: "Growth plan",
+-          desc: "We define the most strategic path to attract and convert customers.",
+-        },
+-        {
+-          title: "Implementation",
+-          desc: "We create pages, campaigns, content and processes aligned with the objective.",
+-        },
+-        {
+-          title: "Optimization",
+-          desc: "We measure results, adjust routes and strengthen what generates return.",
+-        },
+-      ],
+-      techStack: ["AI", "Media", "Funnels", "Data"],
+-    },
+-
+-    cta: {
+-      eyebrow: "Next step",
+-      titleStart: "Your brand may be losing customers",
+-      titleHighlight: "because of simple details.",
+-      subtitle:
+-        "We take a look at your website, communication and funnel to understand what can be improved and make things clearer for people who reach your business.",
+-      button: "Request strategic analysis",
+-      timeText: "It only takes a moment to request. Then we’ll get in touch.",
+-      benefits: [
+-        {
+-          title: "No pressure",
+-          desc: "The idea is to understand the scenario first, with no commitment to close anything.",
+-        },
+-        {
+-          title: "Clearer view",
+-          desc: "We point out what may be affecting your presence and conversions.",
+-        },
+-        {
+-          title: "Next steps",
+-          desc: "You leave with a clearer idea of what can be improved online.",
+-        },
+-      ],
++      badge: "Creative Studio",
++      title: "We create films that move brands.",
++      subtitle:
++        "Cinematic productions crafted to elevate brands through storytelling, emotion and visual excellence.",
++      cta: "View Portfolio",
++      scroll: "Scroll",
++    },
++    about: {
++  eyebrow: "About",
++  title: "We turn ideas into cinematic experiences.",
++  description:
++    "Pubird is a creative production studio focused on premium films, commercials and branded content. We combine strategy, storytelling and visual direction to create productions that connect with people and strengthen brands.",
++
++  tags: [
++    "Brand Films",
++    "Commercials",
++    "Documentary",
++    "Automotive",
++  ],
++},
++
++services: {
++  eyebrow: "What We Do",
++  title: "We create films with purpose.",
++  subtitle:
++    "Every project is built with creativity, precision and cinematic quality.",
++
++  items: [
++    {
++      number: "01",
++      title: "Brand Films",
++      description:
++        "Cinematic films that communicate the essence of a brand through emotion and storytelling.",
+     },
+-
+-    footer: {
++    {
++      number: "02",
++      title: "Commercials",
+       description:
+-        "Strategy, technology and predictable growth for companies that want to scale with clarity and positioning.",
+-      navigation: "Navigation",
+-      contact: "Contact",
+-      social: "Social",
+-      services: "Services",
+-      process: "Process",
+-      results: "Results",
+-      rights: "All rights reserved.",
++        "Creative advertising campaigns designed to capture attention and generate impact.",
+     },
++    {
++      number: "03",
++      title: "Documentaries",
++      description:
++        "Authentic stories told with a cinematic language that creates genuine connection.",
++    },
++  ],
++},
++
++portfolio: {
++  eyebrow: "Portfolio",
++  title: "Selected Films",
++  subtitle:
++    "A curated collection of projects created for brands, businesses and creators.",
++  nextProject: "Next Project",
++  viewProject: "View Project",
++  play: "Play",
++},
++project: {
++  about: "About the Project",
++  client: "Client",
++  category: "Category",
++  year: "Year",
++  services: "Services",
++  back: "Portfolio",
++  notFound: "Project not found.",
++},
++
++footer: {
++  title: "Let's create something together.",
++  backToTop: "Back to top",
++  copyright: "All rights reserved.",
++},
++
++},
++
++pt: {
++  navbar: {
++    portfolio: "Portfólio",
++    about: "Sobre",
++    services: "Serviços",
++    contact: "Contato",
++    language: "Idioma",
+   },
+ 
+-  es: {
+-    navbar: {
+-      services: "Servicios",
+-      process: "Proceso",
+-      results: "Resultados",
+-      diagnosis: "Solicitar diagnóstico",
+-      homeAria: "Volver al inicio",
+-      languageAria: "Seleccionar idioma",
+-      portugueseAria: "Cambiar idioma a portugués",
+-      englishAria: "Cambiar idioma a inglés",
+-      spanishAria: "Cambiar idioma a español",
+-    },
+-
+-    hero: {
+-      badge: "Estrategia, tráfico y tecnología",
+-      titleStart: "Marketing y adquisición para empresas que quieren",
+-      titleHighlight: "crecer con claridad.",
+-      subtitle:
+-        "Estructuramos adquisición, posicionamiento y conversión para transformar tráfico en clientes reales.",
+-      primaryCta: "Solicitar diagnóstico",
+-      secondaryCta: "Ver soluciones",
+-      benefits: [
+-        "Estrategia personalizada",
+-        "Adquisición enfocada en conversión",
+-        "Diagnóstico rápido y objetivo",
+-      ],
+-      dashboard: {
+-        title: "Growth Dashboard",
+-        subtitle: "Visión clara del embudo",
+-        status: "Live",
+-        acquisition: "Adquisición calificada",
+-        funnel: "Embudo",
+-        funnelLabel: "más claro",
+-        leads: "Leads",
+-        leadsLabel: "calificados",
+-        brand: "Marca",
+-        brandLabel: "posicionada",
+-        recommendedTitle: "Próxima acción recomendada",
+-        recommendedText:
+-          "Entender los cuellos de botella, priorizar canales y crear una estructura de conversión con seguimiento real.",
+-      },
+-      form: {
+-        closeAria: "Cerrar formulario",
+-        badge: "Diagnóstico gratuito",
+-        title: "Recibe un análisis de tu negocio",
+-        fullName: "¿Cuál es tu nombre y apellido?",
+-        email: "¿Cuál es tu correo corporativo?",
+-        company: "¿Cuál es el nombre de tu empresa?",
+-        phone: "🇪🇸 ¿Cuál es tu teléfono?",
+-        revenue: "¿Cuál es la facturación mensual de tu empresa?",
+-        segment: "¿Cuál es tu segmento?",
+-        loading: "Enviando...",
+-        submit: "Recibir análisis",
+-        successTitle: "¡Enviado con éxito!",
+-        successText: "Nuestro equipo se pondrá en contacto pronto.",
+-        error: "Error al enviar. Inténtalo nuevamente.",
+-        revenueOptions: {
+-          upTo10k: "Hasta R$10 mil",
+-          from10kTo50k: "De R$10 mil a R$50 mil",
+-          from50kTo100k: "De R$50 mil a R$100 mil",
+-          from100kTo300k: "De R$100 mil a R$300 mil",
+-          above300k: "Más de R$300 mil",
+-        },
+-        segmentOptions: {
+-          ecommerce: "E-commerce",
+-          services: "Servicios",
+-          infoproduct: "Infoproducto",
+-          localBusiness: "Negocio local",
+-          other: "Otro",
+-        },
+-      },
+-    },
+-
+-    socialProof: {
+-      eyebrow: "Resultados",
+-      titleStart: "Proyectos construidos para",
+-      titleHighlight: "crecimiento real",
+-      subtitle:
+-        "Campañas, páginas y operaciones digitales aplicadas en negocios reales.",
+-      clientsTitle: "Empresas y proyectos atendidos",
+-      stats: [
+-        { value: "4.2M+", label: "Cuentas alcanzadas" },
+-        { value: "72K+", label: "Ingresos generados" },
+-        { value: "10x", label: "ROI promedio" },
+-        { value: "150+", label: "Empresas atendidas" },
+-      ],
+-    },
+-
+-    problem: {
+-      eyebrow: "El desafío",
+-      titleStart: "¿Dónde tu empresa está",
+-      titleHighlight: "perdiendo crecimiento?",
+-      subtitle:
+-        "Muchas empresas crecen improvisando. El problema aparece cuando el crecimiento deja de acompañar el esfuerzo.",
+-      items: [
+-        {
+-          label: "Sin visibilidad",
+-          title: "Inviertes, pero no sabes exactamente qué retorna.",
+-          text: "Campañas, creativos y canales activos sin claridad sobre el ROI real.",
+-        },
+-        {
+-          label: "Sin previsibilidad",
+-          title:
+-            "El crecimiento depende de suerte, recomendaciones o campañas puntuales.",
+-          text: "Sin un proceso claro, cada mes se convierte en un intento diferente.",
+-        },
+-        {
+-          label: "Margen ajustado",
+-          title: "El costo de vender sube, pero la ganancia no acompaña.",
+-          text: "Adquisición cara, ticket promedio presionado y poca inteligencia comercial.",
+-        },
+-        {
+-          label: "Operación reactiva",
+-          title: "Tu equipo vive apagando incendios.",
+-          text: "Mucho esfuerzo manual, poca automatización y poco tiempo para escalar.",
+-        },
+-      ],
+-    },
+-
+-    solution: {
+-      eyebrow: "La diferencia",
+-      titleStart: "Transforma el marketing en",
+-      titleHighlight: "ingresos previsibles",
+-      subtitle:
+-        "Pubird crea máquinas de crecimiento. No campañas aisladas. Sistemas que escalan.",
+-      items: [
+-        {
+-          title: "Datos en tiempo real",
+-          description:
+-            "Dashboard centralizado con KPIs de tu negocio. Nada de planillas ni suposiciones. Datos que realmente importan.",
+-        },
+-        {
+-          title: "Estrategia personalizada",
+-          description:
+-            "Cada negocio es diferente. Creamos la máquina de crecimiento específica para tu mercado, producto y etapa.",
+-        },
+-        {
+-          title: "Ejecución enfocada en ROI",
+-          description:
+-            "Cada inversión es rastreada y optimizada. Crecimiento sin desperdicio. Resultados previsibles.",
+-        },
+-      ],
+-    },
+-
+-    services: {
+-      eyebrow: "Servicios",
+-      titleStart: "Lo que hacemos para transformar",
+-      titleHighlight: "atención en clientes",
+-      subtitle:
+-        "Cuatro frentes simples, conectados y orientados al crecimiento real.",
+-      items: [
+-        {
+-          title: "Adquisición",
+-          desc: "Campañas y estrategias para generar demanda calificada.",
+-        },
+-        {
+-          title: "Conversión",
+-          desc: "Landing pages, embudos y optimización enfocada en resultados.",
+-        },
+-        {
+-          title: "Automatización",
+-          desc: "Procesos e integraciones para escalar sin aumentar la operación.",
+-        },
+-        {
+-          title: "Posicionamiento",
+-          desc: "Construcción de marca y percepción premium en el digital.",
+-        },
+-      ],
+-    },
+-
+-    process: {
+-      eyebrow: "Proceso",
+-      titleStart: "El crecimiento no sucede por casualidad.",
+-      titleHighlight: "Sucede con dirección.",
+-      subtitle:
+-        "Unimos marketing, tecnología y análisis para transformar presencia digital en un sistema más previsible de generación de oportunidades.",
+-      bullets: [
+-        "Identificamos dónde el negocio está perdiendo atención, leads y conversiones.",
+-        "Organizamos canales, oferta y comunicación en una dirección más clara.",
+-        "Acompañamos datos para mejorar lo que funciona y eliminar desperdicios.",
+-      ],
+-      dashboardTitle: "Growth System",
+-      dashboardSubtitle: "Del análisis inicial a la mejora continua",
+-      cards: [
+-        {
+-          title: "Lectura del escenario",
+-          desc: "Analizamos presencia digital, oferta, posicionamiento y puntos de fricción.",
+-        },
+-        {
+-          title: "Plan de crecimiento",
+-          desc: "Definimos el camino más estratégico para atraer y convertir clientes.",
+-        },
+-        {
+-          title: "Implementación",
+-          desc: "Creamos páginas, campañas, contenidos y procesos alineados al objetivo.",
+-        },
+-        {
+-          title: "Optimización",
+-          desc: "Medimos resultados, ajustamos rutas y fortalecemos lo que genera retorno.",
+-        },
+-      ],
+-      techStack: ["IA", "Medios", "Embudos", "Datos"],
+-    },
++  hero: {
++    badge: "Produtora Criativa",
++    title: "Criamos filmes que movem marcas.",
++    subtitle:
++      "Produções cinematográficas criadas para elevar marcas através de narrativa, emoção e excelência visual.",
++    cta: "Ver Portfólio",
++    scroll: "Deslize",
++  },
+ 
+-    cta: {
+-      eyebrow: "Próximo paso",
+-      titleStart: "Tu marca puede estar perdiendo clientes",
+-      titleHighlight: "por detalles simples.",
+-      subtitle:
+-        "Analizamos tu sitio, tu comunicación y tu embudo para entender qué se puede mejorar y hacerlo más claro para las personas que llegan a tu negocio.",
+-      button: "Solicitar análisis estratégico",
+-      timeText: "Solo toma un momento solicitarlo. Luego nos ponemos en contacto.",
+-      benefits: [
+-        {
+-          title: "Sin presión",
+-          desc: "La idea es entender el escenario primero, sin compromiso de cerrar nada.",
+-        },
+-        {
+-          title: "Mirada más clara",
+-          desc: "Señalamos puntos que pueden estar afectando tu presencia y tus conversiones.",
+-        },
+-        {
+-          title: "Próximos pasos",
+-          desc: "Sales con una idea más clara de lo que se puede mejorar en el digital.",
+-        },
+-      ],
++  about: {
++    eyebrow: "Sobre",
++    title: "Transformamos ideias em experiências cinematográficas.",
++    description:
++      "A Pubird é uma produtora criativa especializada em filmes publicitários, conteúdos para marcas e produções cinematográficas. Unimos estratégia, narrativa e direção visual para criar projetos que conectam pessoas e fortalecem marcas.",
++
++    tags: [
++      "Brand Films",
++      "Comerciais",
++      "Documentários",
++      "Automotivo",
++    ],
++  },
++  services: {
++  eyebrow: "O Que Fazemos",
++  title: "Criamos filmes com propósito.",
++  subtitle:
++    "Cada projeto é desenvolvido com criatividade, precisão e qualidade cinematográfica.",
++
++  items: [
++    {
++      number: "01",
++      title: "Brand Films",
++      description:
++        "Filmes cinematográficos que comunicam a essência de uma marca através da emoção e da narrativa.",
+     },
+-
+-    footer: {
++    {
++      number: "02",
++      title: "Comerciais",
+       description:
+-        "Estrategia, tecnología y crecimiento previsible para empresas que quieren escalar con claridad y posicionamiento.",
+-      navigation: "Navegación",
+-      contact: "Contacto",
+-      social: "Redes",
+-      services: "Servicios",
+-      process: "Proceso",
+-      results: "Resultados",
+-      rights: "Todos los derechos reservados.",
++        "Campanhas publicitárias criativas desenvolvidas para gerar impacto e atrair atenção.",
+     },
+-  },
++    {
++      number: "03",
++      title: "Documentários",
++      description:
++        "Histórias autênticas contadas com linguagem cinematográfica para criar conexões genuínas.",
++    },
++  ],
++},
++
++portfolio: {
++  eyebrow: "Portfólio",
++  title: "Projetos Selecionados",
++  subtitle:
++    "Uma seleção de filmes produzidos para marcas, empresas e criadores.",
++  nextProject: "Próximo Projeto",
++  viewProject: "Ver Projeto",
++  play: "Assistir",
++},
++
++project: {
++  about: "Sobre o Projeto",
++  client: "Cliente",
++  category: "Categoria",
++  year: "Ano",
++  services: "Serviços",
++  back: "Portfólio",
++  notFound: "Projeto não encontrado.",
++},
++
++footer: {
++  title: "Vamos criar algo extraordinário juntos.",
++  backToTop: "Voltar ao topo",
++  copyright: "Todos os direitos reservados.",
++},
++},
+ };
+ 
+-export type Language = keyof typeof translations;
+\ No newline at end of file
++export type Language = "en" | "pt";
++
++export type Translation = typeof translations.en;
+\ No newline at end of file
+diff --git a/src/index.css b/src/index.css
+index 2523284..6a845bb 100644
+--- a/src/index.css
++++ b/src/index.css
+@@ -4,6 +4,50 @@
+ @tailwind components;
+ @tailwind utilities;
+ 
++/* ===========================================
++   Sequel Sans
++=========================================== */
++
++@font-face {
++  font-family: "Sequel Sans";
++  src: url("/fonts/SequelSans-Light.otf") format("opentype");
++  font-weight: 300;
++  font-style: normal;
++  font-display: swap;
++}
++
++@font-face {
++  font-family: "Sequel Sans";
++  src: url("/fonts/SequelSans-Regular.otf") format("opentype");
++  font-weight: 400;
++  font-style: normal;
++  font-display: swap;
++}
++
++@font-face {
++  font-family: "Sequel Sans";
++  src: url("/fonts/SequelSans-Medium.otf") format("opentype");
++  font-weight: 500;
++  font-style: normal;
++  font-display: swap;
++}
++
++@font-face {
++  font-family: "Sequel Sans";
++  src: url("/fonts/SequelSans-SemiBold.otf") format("opentype");
++  font-weight: 600;
++  font-style: normal;
++  font-display: swap;
++}
++
++@font-face {
++  font-family: "Sequel Sans";
++  src: url("/fonts/SequelSans-Bold.otf") format("opentype");
++  font-weight: 700;
++  font-style: normal;
++  font-display: swap;
++}
++
+ @layer base {
+   :root {
+     --background: 260 20% 6%;
+diff --git a/src/pages/NotFound.tsx b/src/pages/NotFound.tsx
+index 2a57a8b..65025b8 100644
+--- a/src/pages/NotFound.tsx
++++ b/src/pages/NotFound.tsx
+@@ -1,19 +1,29 @@
+-import { useLocation } from "react-router-dom";
+ import { useEffect } from "react";
++import { useLocation } from "react-router-dom";
+ 
+ const NotFound = () => {
+   const location = useLocation();
+ 
+   useEffect(() => {
+-    console.error("404 Error: User attempted to access non-existent route:", location.pathname);
++    console.error(
++      "404 Error: User attempted to access non-existent route:",
++      location.pathname
++    );
+   }, [location.pathname]);
+ 
+   return (
+     <div className="flex min-h-screen items-center justify-center bg-muted">
+       <div className="text-center">
+         <h1 className="mb-4 text-4xl font-bold">404</h1>
+-        <p className="mb-4 text-xl text-muted-foreground">Oops! Page not found</p>
+-        <a href="/" className="text-primary underline hover:text-primary/90">
++
++        <p className="mb-4 text-xl text-muted-foreground">
++          Oops! Page not found
++        </p>
++
++        <a
++          href="/"
++          className="text-primary underline transition hover:text-primary/90"
++        >
+           Return to Home
+         </a>
+       </div>
+@@ -21,4 +31,4 @@ const NotFound = () => {
+   );
+ };
+ 
+-export default NotFound;
++export default NotFound;
+\ No newline at end of file
+diff --git a/src/pages/WorkPage.tsx b/src/pages/WorkPage.tsx
+new file mode 100644
+index 0000000..feeff4e
+--- /dev/null
++++ b/src/pages/WorkPage.tsx
+@@ -0,0 +1,234 @@
++import { useEffect } from "react";
++import { Link, useParams } from "react-router-dom";
++import { ArrowLeft } from "lucide-react";
++import { motion } from "framer-motion";
++
++import ProjectVideo from "@/components/ProjectVideo";
++import NextProject from "@/components/NextProject";
++
++import { projects } from "@/data/projects";
++import { useLanguage } from "@/i18n/LanguageContext";
++
++const WorkPage = () => {
++  const { slug } = useParams();
++
++  const { language, t } = useLanguage();
++
++  useEffect(() => {
++    window.scrollTo({
++      top: 0,
++      behavior: "instant",
++    });
++  }, [slug]);
++
++  const project = projects.find(
++    (item) => item.slug === slug
++  );
++
++  const currentIndex = projects.findIndex(
++    (item) => item.slug === slug
++  );
++
++  const nextProject =
++    projects[(currentIndex + 1) % projects.length];
++    if (!project) {
++  return (
++    <main className="flex min-h-screen items-center justify-center bg-[#050505] text-white">
++      <h1 className="text-3xl font-light">
++        {t.project.notFound}
++      </h1>
++    </main>
++  );
++}
++
++return (
++  <main className="min-h-screen bg-[#050505] text-white">
++
++    {/* Header */}
++
++    <motion.header
++      initial={{ opacity: 0, y: -25 }}
++      animate={{ opacity: 1, y: 0 }}
++      transition={{ duration: 0.7 }}
++      className="mx-auto flex max-w-[1800px] items-center justify-between px-8 py-8 md:px-12 lg:px-20"
++    >
++
++      <Link
++        to="/"
++        className="group inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.45em] text-white/35 transition hover:text-white"
++      >
++
++        <ArrowLeft
++          size={16}
++          className="transition-transform duration-300 group-hover:-translate-x-1"
++        />
++
++        {t.project.back}
++
++      </Link>
++
++    </motion.header>
++
++    {/* Hero */}
++
++    <section className="mx-auto max-w-[1800px] px-8 md:px-12 lg:px-20">
++
++      <motion.div
++        initial={{ opacity: 0, y: 35 }}
++        animate={{ opacity: 1, y: 0 }}
++        transition={{
++          duration: 0.8,
++          ease: [0.22, 1, 0.36, 1],
++        }}
++        className="mb-16"
++      >
++
++        <p className="text-[11px] uppercase tracking-[0.45em] text-white/30">
++          {project.category[language]} • {project.year}
++        </p>
++
++        <h1 className="mt-5 font-sequel text-[54px] font-light leading-[0.9] tracking-[-0.06em] text-white md:text-[84px] lg:text-[120px]">
++          {project.title}
++        </h1>
++
++      </motion.div>
++
++      <motion.div
++        initial={{
++          opacity: 0,
++          scale: 0.98,
++        }}
++        animate={{
++          opacity: 1,
++          scale: 1,
++        }}
++        transition={{
++          duration: 1,
++          delay: 0.15,
++          ease: [0.22, 1, 0.36, 1],
++        }}
++      >
++
++        <ProjectVideo
++          key={project.video}
++          src={project.video}
++        />
++
++      </motion.div>
++
++    </section>
++
++    {/* About */}
++
++    <motion.section
++      initial={{ opacity: 0, y: 60 }}
++      whileInView={{ opacity: 1, y: 0 }}
++      viewport={{ once: true }}
++      transition={{ duration: 0.8 }}
++      className="mx-auto mt-32 max-w-[1800px] px-8 md:px-12 lg:px-20"
++    >
++
++      <div className="grid gap-16 lg:grid-cols-[220px_1fr]">
++
++        <span className="text-[11px] uppercase tracking-[0.45em] text-white/30">
++          {t.project.about}
++        </span>
++
++        <p className="max-w-3xl text-2xl font-light leading-relaxed text-white/70">
++          {project.description[language]}
++        </p>
++
++      </div>
++
++    </motion.section>
++        {/* Information */}
++
++    <motion.section
++      initial={{ opacity: 0, y: 60 }}
++      whileInView={{ opacity: 1, y: 0 }}
++      viewport={{ once: true }}
++      transition={{ duration: 0.8 }}
++      className="mx-auto mt-32 max-w-[1800px] px-8 pb-40 md:px-12 lg:px-20"
++    >
++
++      <div className="border-t border-white/10">
++
++        <div className="grid grid-cols-2 gap-y-16 py-16 md:grid-cols-4">
++
++          <div>
++
++            <p className="mb-4 text-[11px] uppercase tracking-[0.45em] text-white/25">
++              {t.project.client}
++            </p>
++
++            <p className="text-lg text-white">
++              {project.client}
++            </p>
++
++          </div>
++
++          <div>
++
++            <p className="mb-4 text-[11px] uppercase tracking-[0.45em] text-white/25">
++              {t.project.category}
++            </p>
++
++            <p className="text-lg text-white">
++              {project.category[language]}
++            </p>
++
++          </div>
++
++          <div>
++
++            <p className="mb-4 text-[11px] uppercase tracking-[0.45em] text-white/25">
++              {t.project.year}
++            </p>
++
++            <p className="text-lg text-white">
++              {project.year}
++            </p>
++
++          </div>
++
++          <div>
++
++            <p className="mb-4 text-[11px] uppercase tracking-[0.45em] text-white/25">
++              {t.project.services}
++            </p>
++
++            <div className="space-y-2">
++
++              {project.services[language].map((service) => (
++
++                <p
++                  key={service}
++                  className="text-lg text-white"
++                >
++                  {service}
++                </p>
++
++              ))}
++
++            </div>
++
++          </div>
++
++        </div>
++
++      </div>
++
++    </motion.section>
++
++    {/* Next Project */}
++
++    <NextProject
++      project={nextProject}
++    />
++
++  </main>
++);
++
++};
++
++export default WorkPage;
+\ No newline at end of file
+diff --git a/src/pages/index.tsx b/src/pages/index.tsx
+index 70d199d..3a22c7d 100644
+--- a/src/pages/index.tsx
++++ b/src/pages/index.tsx
+@@ -1,25 +1,30 @@
+ import Navbar from "@/components/Navbar";
+ import HeroSection from "@/components/HeroSection";
+-import SocialProofSection from "@/components/SocialProofSection";
+-import ProblemSection from "@/components/ProblemSection";
+-import SolutionSection from "@/components/SolutionSection";
+-import ServicesSection from "@/components/ServicesSection";
+-import ProcessSection from "@/components/ProcessSection";
+-import CtaSection from "@/components/CtaSection";
++import SelectedWorksSection from "@/components/SelectedWorksSection";
++import AboutSection from "@/components/AboutSection";
++import WhatWeDoSection from "@/components/WhatWeDoSection";
+ import Footer from "@/components/Footer";
+ 
+ const Index = () => {
+   return (
+-    <div className="min-h-screen bg-background">
++    <div className="min-h-screen bg-[#050505] text-white">
++
+       <Navbar />
+-      <HeroSection />
+-      <SocialProofSection />
+-      <ProblemSection />
+-      <SolutionSection />
+-      <ServicesSection />
+-      <ProcessSection />
+-      <CtaSection />
++
++      <main>
++
++        <HeroSection />
++
++        <SelectedWorksSection />
++
++        <AboutSection />
++
++        <WhatWeDoSection />
++
++      </main>
++
+       <Footer />
++
+     </div>
+   );
+ };
+diff --git a/tailwind.config.ts b/tailwind.config.ts
+index c50a00f..4ad5262 100644
+--- a/tailwind.config.ts
++++ b/tailwind.config.ts
+@@ -16,6 +16,13 @@ export default {
+     extend: {
+       fontFamily: {
+         sans: ["Inter", "system-ui", "sans-serif"],
++
++        sequel: [
++          "Sequel Sans",
++          "Inter",
++          "system-ui",
++          "sans-serif",
++        ],
+       },
+       colors: {
+         border: "hsl(var(--border))",
