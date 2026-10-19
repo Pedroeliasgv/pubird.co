@@ -1,3 +1,4 @@
+
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -8,7 +9,9 @@ import { Analytics } from "@vercel/analytics/react";
 import { LanguageProvider } from "@/i18n/LanguageContext";
 
 import Index from "./pages/index";
+import PortfolioPage from "./pages/PortfolioPage";
 import WorkPage from "./pages/WorkPage";
+import ShowreelPage from "./pages/ShowreelPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,26 +24,13 @@ const App = () => (
         <Sonner />
 
         <BrowserRouter>
-
           <Routes>
-
-            <Route
-              path="/"
-              element={<Index />}
-            />
-
-            <Route
-              path="/work/:slug"
-              element={<WorkPage />}
-            />
-
-            <Route
-              path="*"
-              element={<NotFound />}
-            />
-
+            <Route path="/" element={<Index />} />
+            <Route path="/portfolio" element={<PortfolioPage />} />
+            <Route path="/work/:slug" element={<WorkPage />} />
+            <Route path="/showreel" element={<ShowreelPage />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
-
         </BrowserRouter>
 
         <Analytics />
