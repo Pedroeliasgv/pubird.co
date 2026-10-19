@@ -34,29 +34,6 @@ export const projects = [
   },
 
   {
-    slug: "motocross",
-    title: "2ª Etapa Campeonato Paulista de Motocross",
-    client: "Campeonato Paulista de Motocross",
-    year: 2026,
-    category: {
-      en: "Motocross Film · 4K",
-      pt: "Filme de Motocross · 4K",
-    },
-    video: "",
-    youtubeId: "WMCx3zKX9pk",
-    thumbnail:
-      "https://img.youtube.com/vi/WMCx3zKX9pk/maxresdefault.jpg",
-    description: {
-      en: "A cinematic look at the second round of the São Paulo Motocross Championship, capturing speed, competition and the intensity of the track in 4K.",
-      pt: "Um olhar cinematográfico sobre a segunda etapa do Campeonato Paulista de Motocross, capturando velocidade, competição e a intensidade da pista em 4K.",
-    },
-    services: {
-      en: ["Production", "Cinematography", "Editing"],
-      pt: ["Produção", "Direção de Fotografia", "Edição"],
-    },
-  },
-
-  {
     slug: "bmw",
     title: "BMW",
     client: "BMW",
@@ -87,6 +64,29 @@ export const projects = [
     },
   },
 
+    {
+    slug: "rodrigo-varela-rally-rio-negrinho",
+    title: "Rodrigo Varela",
+    client: "Varela Rally",
+    year: 2026,
+    category: {
+      en: "Rally Film · Rio Negrinho",
+      pt: "Filme de Rally · Rio Negrinho",
+    },
+    video: "",
+    youtubeId: "f347NWWxKos",
+    thumbnail:
+      "https://img.youtube.com/vi/f347NWWxKos/maxresdefault.jpg",
+    description: {
+      en: "A cinematic look at Rodrigo Varela in Rally Rio Negrinho, captured in 4K.",
+      pt: "Um olhar cinematográfico sobre Rodrigo Varela no Rally Rio Negrinho, captado em 4K.",
+    },
+    services: {
+      en: ["Production", "Cinematography", "Editing"],
+      pt: ["Produção", "Direção de Fotografia", "Edição"],
+    },
+  },
+
   {
     slug: "rally-utv",
     title: "Rally UTV",
@@ -110,28 +110,6 @@ export const projects = [
     },
   },
 
-  {
-    slug: "rodrigo-varela-rally-rio-negrinho",
-    title: "Rodrigo Varela",
-    client: "Varela Rally",
-    year: 2026,
-    category: {
-      en: "Rally Film · Rio Negrinho",
-      pt: "Filme de Rally · Rio Negrinho",
-    },
-    video: "",
-    youtubeId: "f347NWWxKos",
-    thumbnail:
-      "https://img.youtube.com/vi/f347NWWxKos/maxresdefault.jpg",
-    description: {
-      en: "A cinematic look at Rodrigo Varela in Rally Rio Negrinho, captured in 4K.",
-      pt: "Um olhar cinematográfico sobre Rodrigo Varela no Rally Rio Negrinho, captado em 4K.",
-    },
-    services: {
-      en: ["Production", "Cinematography", "Editing"],
-      pt: ["Produção", "Direção de Fotografia", "Edição"],
-    },
-  },
   
 {
   slug: "monster-festival-interlagos",
@@ -154,5 +132,28 @@ export const projects = [
     pt: ["Produção", "Direção de Fotografia", "Edição"],
   },
 },
+
+  {
+    slug: "motocross",
+    title: "2ª Etapa Campeonato Paulista de Motocross",
+    client: "Campeonato Paulista de Motocross",
+    year: 2026,
+    category: {
+      en: "Motocross Film · 4K",
+      pt: "Filme de Motocross · 4K",
+    },
+    video: "",
+    youtubeId: "WMCx3zKX9pk",
+    thumbnail:
+      "https://img.youtube.com/vi/WMCx3zKX9pk/maxresdefault.jpg",
+    description: {
+      en: "A cinematic look at the second round of the São Paulo Motocross Championship, capturing speed, competition and the intensity of the track in 4K.",
+      pt: "Um olhar cinematográfico sobre a segunda etapa do Campeonato Paulista de Motocross, capturando velocidade, competição e a intensidade da pista em 4K.",
+    },
+    services: {
+      en: ["Production", "Cinematography", "Editing"],
+      pt: ["Produção", "Direção de Fotografia", "Edição"],
+    },
+  },
 
 ];
