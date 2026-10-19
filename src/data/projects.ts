@@ -1,4 +1,3 @@
-
 export const projects = [
   {
     slug: "carhaus",
@@ -64,7 +63,7 @@ export const projects = [
     },
   },
 
-    {
+  {
     slug: "rodrigo-varela-rally-rio-negrinho",
     title: "Rodrigo Varela",
     client: "Varela Rally",
@@ -75,8 +74,7 @@ export const projects = [
     },
     video: "",
     youtubeId: "f347NWWxKos",
-    thumbnail:
-      "https://img.youtube.com/vi/f347NWWxKos/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/f347NWWxKos/maxresdefault.jpg",
     description: {
       en: "A cinematic look at Rodrigo Varela in Rally Rio Negrinho, captured in 4K.",
       pt: "Um olhar cinematográfico sobre Rodrigo Varela no Rally Rio Negrinho, captado em 4K.",
@@ -98,8 +96,7 @@ export const projects = [
     },
     video: "",
     youtubeId: "miJ0R8A7XNM",
-    thumbnail:
-      "https://img.youtube.com/vi/miJ0R8A7XNM/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/miJ0R8A7XNM/maxresdefault.jpg",
     description: {
       en: "An off-road film capturing the intensity, terrain and adrenaline of UTV rally.",
       pt: "Um filme off-road que captura a intensidade, o terreno e a adrenalina do rally de UTV.",
@@ -110,28 +107,27 @@ export const projects = [
     },
   },
 
-  
-{
-  slug: "monster-festival-interlagos",
-  title: "MONSTER Festival Interlagos",
-  client: "MONSTER",
-  year: 2026,
-  category: {
-    en: "Event Film · Festival Interlagos",
-    pt: "Filme de Evento · Festival Interlagos",
+  {
+    slug: "monster-festival-interlagos",
+    title: "MONSTER Festival Interlagos",
+    client: "MONSTER",
+    year: 2026,
+    category: {
+      en: "Event Film · Festival Interlagos",
+      pt: "Filme de Evento · Festival Interlagos",
+    },
+    video: "",
+    youtubeId: "3uYYNigfNnY",
+    thumbnail: "https://img.youtube.com/vi/3uYYNigfNnY/maxresdefault.jpg",
+    description: {
+      en: "A cinematic film capturing the energy, atmosphere and action of MONSTER at Festival Interlagos.",
+      pt: "Um filme cinematográfico que captura a energia, a atmosfera e a ação da MONSTER no Festival Interlagos.",
+    },
+    services: {
+      en: ["Production", "Cinematography", "Editing"],
+      pt: ["Produção", "Direção de Fotografia", "Edição"],
+    },
   },
-  video: "",
-  youtubeId: "3uYYNigfNnY",
-  thumbnail: "https://img.youtube.com/vi/3uYYNigfNnY/maxresdefault.jpg",
-  description: {
-    en: "A cinematic film capturing the energy, atmosphere and action of MONSTER at Festival Interlagos.",
-    pt: "Um filme cinematográfico que captura a energia, a atmosfera e a ação da MONSTER no Festival Interlagos.",
-  },
-  services: {
-    en: ["Production", "Cinematography", "Editing"],
-    pt: ["Produção", "Direção de Fotografia", "Edição"],
-  },
-},
 
   {
     slug: "motocross",
@@ -144,8 +140,7 @@ export const projects = [
     },
     video: "",
     youtubeId: "WMCx3zKX9pk",
-    thumbnail:
-      "https://img.youtube.com/vi/WMCx3zKX9pk/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/WMCx3zKX9pk/maxresdefault.jpg",
     description: {
       en: "A cinematic look at the second round of the São Paulo Motocross Championship, capturing speed, competition and the intensity of the track in 4K.",
       pt: "Um olhar cinematográfico sobre a segunda etapa do Campeonato Paulista de Motocross, capturando velocidade, competição e a intensidade da pista em 4K.",
@@ -155,5 +150,4 @@ export const projects = [
       pt: ["Produção", "Direção de Fotografia", "Edição"],
     },
   },
-
 ];
