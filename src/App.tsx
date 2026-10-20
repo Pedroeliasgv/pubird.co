@@ -12,6 +12,7 @@ import Index from "./pages/index";
 import PortfolioPage from "./pages/PortfolioPage";
 import WorkPage from "./pages/WorkPage";
 import ShowreelPage from "./pages/ShowreelPage";
+import WhoIsPubirdPage from "./pages/WhoIsPubirdPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
             <Route path="/portfolio" element={<PortfolioPage />} />
             <Route path="/work/:slug" element={<WorkPage />} />
             <Route path="/showreel" element={<ShowreelPage />} />
+            <Route path="/who-is-pubird" element={<WhoIsPubirdPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

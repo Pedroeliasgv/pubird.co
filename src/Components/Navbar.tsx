@@ -99,20 +99,39 @@ const Navbar = () => {
             />
           </button>
 
-          <div className="hidden items-center gap-10 lg:flex xl:gap-14">
+          <div className="hidden items-center gap-7 lg:flex xl:gap-10">
             <Link to="/portfolio" className={navLinkClass}>
               {t.navbar.portfolio}
             </Link>
 
-            <button onClick={() => scrollToSection("about")} className={navLinkClass}>
+            <Link
+              to="/who-is-pubird"
+              className="whitespace-nowrap text-[10px] uppercase tracking-[0.2em] text-white/75 transition hover:text-white xl:text-[11px] xl:tracking-[0.25em]"
+            >
+              WHO IS PUBIRD?!
+            </Link>
+
+            <button
+              type="button"
+              onClick={() => scrollToSection("about")}
+              className={navLinkClass}
+            >
               {t.navbar.about}
             </button>
 
-            <button onClick={() => scrollToSection("services")} className={navLinkClass}>
+            <button
+              type="button"
+              onClick={() => scrollToSection("services")}
+              className={navLinkClass}
+            >
               {t.navbar.services}
             </button>
 
-            <button onClick={() => scrollToSection("contact")} className={navLinkClass}>
+            <button
+              type="button"
+              onClick={() => scrollToSection("contact")}
+              className={navLinkClass}
+            >
               {t.navbar.contact}
             </button>
           </div>
@@ -127,7 +146,9 @@ const Navbar = () => {
                 {currentLanguage.label}
                 <ChevronDown
                   size={14}
-                  className={`transition duration-300 ${isLanguageOpen ? "rotate-180" : ""}`}
+                  className={`transition duration-300 ${
+                    isLanguageOpen ? "rotate-180" : ""
+                  }`}
                 />
               </button>
 
@@ -178,7 +199,11 @@ const Navbar = () => {
       >
         <div className="mx-auto flex h-20 max-w-[1800px] items-center justify-between px-8 md:px-12">
           <Link to="/" onClick={() => setIsMenuOpen(false)}>
-            <img src="/logo-pubird-icon.png" alt="Pubird" className="h-7 w-auto" />
+            <img
+              src="/logo-pubird-icon.png"
+              alt="Pubird"
+              className="h-7 w-auto"
+            />
           </Link>
 
           <button
@@ -200,6 +225,14 @@ const Navbar = () => {
             {t.navbar.portfolio}
           </Link>
 
+          <Link
+            to="/who-is-pubird"
+            onClick={() => setIsMenuOpen(false)}
+            className="border-b border-white/10 py-6 font-sequel text-4xl font-light tracking-[-0.05em] text-white transition duration-300 hover:translate-x-2 md:py-8 md:text-[42px]"
+          >
+            WHO IS PUBIRD?!
+          </Link>
+
           {(["about", "services", "contact"] as const).map((id) => (
             <button
               type="button"
@@ -218,7 +251,9 @@ const Navbar = () => {
                 key={lang}
                 onClick={() => handleLanguageChange(lang)}
                 className={`text-sm uppercase tracking-[0.3em] transition ${
-                  language === lang ? "text-white" : "text-white/40 hover:text-white"
+                  language === lang
+                    ? "text-white"
+                    : "text-white/40 hover:text-white"
                 }`}
               >
                 {languages[lang].label}
