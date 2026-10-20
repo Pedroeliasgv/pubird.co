@@ -7,8 +7,8 @@ import { useLanguage } from "@/i18n/LanguageContext";
 
 const SelectedWorksSection = () => {
   const { language } = useLanguage();
+  const isPortuguese = language === "pt";
 
-  // Destaca os três projetos hospedados no YouTube.
   const featuredProjects = projects
     .filter((project) => Boolean(project.youtubeId))
     .slice(0, 3);
@@ -16,22 +16,22 @@ const SelectedWorksSection = () => {
   return (
     <section
       id="projects"
-      className="bg-[#050505] py-24 md:py-36"
+      className="w-full bg-[#050505] py-20 sm:py-24 md:py-36"
     >
-      <div className="mx-auto max-w-[1800px]">
+      <div className="mx-auto w-full max-w-[1800px]">
         {/* Section heading */}
-        <div className="mb-12 flex flex-col justify-between gap-8 px-8 md:mb-16 md:flex-row md:items-end md:px-12 lg:px-20">
-          <div>
-            <p className="text-[10px] uppercase tracking-[0.55em] text-white/35">
+        <div className="mb-10 flex min-w-0 flex-col justify-between gap-7 px-5 sm:mb-12 sm:px-8 md:mb-16 md:flex-row md:items-end md:gap-8 md:px-12 lg:px-20">
+          <div className="min-w-0">
+            <p className="text-[9px] uppercase tracking-[0.3em] text-white/40 sm:text-[10px] sm:tracking-[0.45em] md:tracking-[0.55em]">
               PUBIRD FILM PRODUCTION
             </p>
 
-            <h2 className="mt-6 font-sequel text-4xl font-light leading-none tracking-[-0.05em] text-white md:text-6xl lg:text-7xl">
-              {language === "pt" ? "Filmes em destaque." : "Selected films."}
+            <h2 className="mt-5 max-w-full break-words font-sequel text-[clamp(2.25rem,7.5vw,4.5rem)] font-light leading-[0.98] tracking-[-0.055em] text-white sm:mt-6 md:text-6xl lg:text-7xl">
+              {isPortuguese ? "Filmes em destaque." : "Selected films."}
             </h2>
 
-            <p className="mt-6 max-w-xl text-sm leading-relaxed text-white/45 md:text-base">
-              {language === "pt"
+            <p className="mt-5 max-w-xl text-sm leading-6 text-white/50 [overflow-wrap:anywhere] sm:mt-6 sm:text-base sm:leading-relaxed">
+              {isPortuguese
                 ? "Velocidade, movimento e histórias capturadas através da nossa perspectiva."
                 : "Speed, movement and stories captured through our perspective."}
             </p>
@@ -39,43 +39,46 @@ const SelectedWorksSection = () => {
 
           <Link
             to="/portfolio"
-            className="group hidden w-fit items-center gap-3 border-b border-white/25 pb-3 text-[10px] uppercase tracking-[0.3em] text-white/70 transition hover:border-white hover:text-white md:inline-flex"
+            className="group hidden w-fit max-w-full shrink-0 items-center gap-3 border-b border-white/25 pb-3 text-[10px] uppercase tracking-[0.2em] text-white/70 transition-colors hover:border-white hover:text-white md:inline-flex md:tracking-[0.25em]"
           >
-            {language === "pt" ? "Ver mais trabalhos" : "View all work"}
+            <span>
+              {isPortuguese ? "Ver mais trabalhos" : "View all work"}
+            </span>
 
             <ArrowRight
               size={15}
-              className="transition-transform duration-300 group-hover:translate-x-1"
+              className="shrink-0 transition-transform duration-300 group-hover:translate-x-1"
             />
           </Link>
         </div>
 
-        {/* Featured YouTube projects */}
+        {/* Featured projects */}
         {featuredProjects.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid min-w-0 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
             {featuredProjects.map((project) => (
-              <WorkCard
-                key={project.slug}
-                project={project}
-              />
+              <div key={project.slug} className="min-w-0">
+                <WorkCard project={project} />
+              </div>
             ))}
           </div>
         ) : (
-          <p className="px-8 text-sm text-white/50 md:px-12 lg:px-20">
-            {language === "pt"
+          <p className="px-5 text-sm leading-6 text-white/50 sm:px-8 md:px-12 lg:px-20">
+            {isPortuguese
               ? "Os filmes em destaque serão exibidos aqui."
               : "Featured films will appear here."}
           </p>
         )}
 
         {/* Mobile button */}
-        <div className="mt-10 flex justify-center px-8 md:hidden">
+        <div className="mt-9 flex justify-center px-5 sm:mt-10 sm:px-8 md:hidden">
           <Link
             to="/portfolio"
-            className="inline-flex items-center gap-3 border border-white/20 px-6 py-4 text-[10px] uppercase tracking-[0.3em] text-white transition hover:bg-white hover:text-black"
+            className="inline-flex min-h-12 max-w-full items-center justify-center gap-3 border border-white/20 px-5 py-3 text-center text-[9px] uppercase tracking-[0.18em] text-white transition-colors hover:bg-white hover:text-black sm:px-6 sm:text-[10px] sm:tracking-[0.25em]"
           >
-            {language === "pt" ? "Ver mais trabalhos" : "View all work"}
-            <ArrowRight size={15} />
+            <span>
+              {isPortuguese ? "Ver mais trabalhos" : "View all work"}
+            </span>
+            <ArrowRight size={15} className="shrink-0" />
           </Link>
         </div>
       </div>
